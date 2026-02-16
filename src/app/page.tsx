@@ -504,69 +504,205 @@ export default function Home() {
         </>
       )}
 
-      {/* 隐藏的海报模板 - 保持之前设计好的精美版本 */}
+      {/* 隐藏的海报模板 - 使用内联样式确保兼容性 */}
       <div style={{ position: 'absolute', left: '-9999px' }}>
         <div 
           ref={posterRef}
-          className="w-[1080px] h-[1920px] bg-paper relative overflow-hidden"
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E")`
+            width: '1080px',
+            height: '1920px',
+            backgroundColor: '#F9F4E8',
+            position: 'relative',
+            overflow: 'hidden',
+            fontFamily: '"Noto Serif SC", serif'
           }}
         >
-          {/* 顶部线 */}
-          <div className="absolute top-16 left-20 right-20 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          {/* 背景纹理 */}
+          <div style={{
+            position: 'absolute',
+            inset: 0,
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E")`,
+            opacity: 0.5
+          }} />
           
-          {/* 右上角印章 */}
-          <div className="absolute top-20 right-20 w-20 h-20 border-2 border-cinnabar/70 rotate-6 flex items-center justify-center bg-cinnabar/5">
-            <span className="text-cinnabar text-2xl writing-mode-vertical tracking-widest">墨香</span>
+          {/* 顶部线 */}
+          <div style={{
+            position: 'absolute',
+            top: '64px',
+            left: '80px',
+            right: '80px',
+            height: '1px',
+            background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+          }} />
+          
+          {/* 左上角标题 */}
+          <div style={{
+            position: 'absolute',
+            top: '80px',
+            left: '60px',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px'
+          }}>
+            <span style={{
+              writingMode: 'vertical-rl',
+              textOrientation: 'mixed',
+              fontSize: '28px',
+              color: '#B22222',
+              fontWeight: 'bold',
+              letterSpacing: '0.3em'
+            }}>墨香</span>
+            <span style={{
+              writingMode: 'vertical-rl',
+              textOrientation: 'mixed',
+              fontSize: '24px',
+              color: '#2C2C2C',
+              letterSpacing: '0.2em'
+            }}>取名</span>
           </div>
           
+          {/* 顶部标题 */}
+          <div style={{
+            position: 'absolute',
+            top: '80px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            fontSize: '20px',
+            color: '#C5A367',
+            letterSpacing: '0.3em'
+          }}>为子寻雅名</div>
+          
           {/* 左侧竖排 */}
-          <div className="absolute left-16 top-40 writing-vertical text-gold/60 text-lg tracking-[0.5em]">
+          <div style={{
+            position: 'absolute',
+            left: '60px',
+            top: '200px',
+            writingMode: 'vertical-rl',
+            textOrientation: 'mixed',
+            fontSize: '24px',
+            color: 'rgba(197,163,103,0.6)',
+            letterSpacing: '0.5em'
+          }}>
             雅名共赏 · 文墨传家
           </div>
           
-          {/* 主内容 */}
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
+          {/* 主内容区域 */}
+          <div style={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            textAlign: 'center',
+            width: '100%'
+          }}>
             {/* 名字 */}
-            <div className="text-[200px] text-ink tracking-[0.4em] ml-20 font-bold" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.08)' }}>
+            <div style={{
+              fontSize: '180px',
+              color: '#2C2C2C',
+              letterSpacing: '0.4em',
+              marginLeft: '80px',
+              fontWeight: 'bold',
+              textShadow: '2px 2px 8px rgba(0,0,0,0.08)',
+              marginBottom: '40px'
+            }}>
               {selectedName?.name}
             </div>
             
             {/* 拼音 */}
-            <div className="text-3xl text-gold/70 tracking-[0.5em] mt-8 italic">
+            <div style={{
+              fontSize: '32px',
+              color: 'rgba(197,163,103,0.7)',
+              letterSpacing: '0.5em',
+              fontStyle: 'italic',
+              marginBottom: '48px'
+            }}>
               {selectedName?.pinyin}
             </div>
             
-            {/* 分隔 */}
-            <div className="w-28 h-px bg-gold/40 my-12" />
+            {/* 分隔线 */}
+            <div style={{
+              width: '112px',
+              height: '1px',
+              backgroundColor: 'rgba(197,163,103,0.4)',
+              margin: '48px auto'
+            }} />
             
             {/* 寓意 */}
-            <div className="text-2xl text-ink/80 leading-relaxed max-w-[700px] text-center px-10">
+            <div style={{
+              fontSize: '28px',
+              color: 'rgba(44,44,44,0.8)',
+              lineHeight: 1.6,
+              maxWidth: '700px',
+              margin: '0 auto',
+              padding: '0 40px',
+              marginBottom: '32px'
+            }}>
               {selectedName?.meaning}
             </div>
             
             {/* 出处 */}
-            <div className="mt-10 text-xl text-gold/60">
+            <div style={{
+              fontSize: '24px',
+              color: 'rgba(197,163,103,0.6)'
+            }}>
               —— {selectedName?.source}
             </div>
           </div>
           
           {/* 底部 */}
-          <div className="absolute bottom-20 left-0 right-0 text-center">
-            <div className="w-40 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto mb-6" />
-            <div className="text-gold/50 text-base tracking-[0.3em]">墨香取名 · 为子寻雅名</div>
+          <div style={{
+            position: 'absolute',
+            bottom: '80px',
+            left: 0,
+            right: 0,
+            textAlign: 'center'
+          }}>
+            <div style={{
+              width: '160px',
+              height: '1px',
+              background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)',
+              margin: '0 auto 24px'
+            }} />
+            <div style={{
+              fontSize: '18px',
+              color: 'rgba(197,163,103,0.5)',
+              letterSpacing: '0.3em'
+            }}>墨香取名 · 为子寻雅名</div>
           </div>
           
           {/* 姓氏印章 */}
           {surname && (
-            <div className="absolute bottom-20 right-20 w-24 h-24 border-3 border-cinnabar rounded-lg flex items-center justify-center -rotate-3 bg-cinnabar/5">
-              <span className="text-cinnabar text-4xl font-bold">{surname}</span>
+            <div style={{
+              position: 'absolute',
+              bottom: '80px',
+              right: '80px',
+              width: '96px',
+              height: '96px',
+              border: '3px solid #B22222',
+              borderRadius: '8px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              transform: 'rotate(-3deg)',
+              backgroundColor: 'rgba(178,34,34,0.05)'
+            }}>
+              <span style={{
+                fontSize: '36px',
+                color: '#B22222',
+                fontWeight: 'bold'
+              }}>{surname}</span>
             </div>
           )}
           
           {/* 底部线 */}
-          <div className="absolute bottom-16 left-20 right-20 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          <div style={{
+            position: 'absolute',
+            bottom: '64px',
+            left: '80px',
+            right: '80px',
+            height: '1px',
+            background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+          }} />
         </div>
       </div>
     </div>
