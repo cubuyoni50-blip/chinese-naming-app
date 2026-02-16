@@ -74,9 +74,17 @@ export default function Home() {
   // 处理名字点击/触摸结束
   const handleNameClick = (name: any, event: React.MouseEvent | React.TouchEvent) => {
     // 如果是触摸事件且发生了滑动，不打开抽屉
-    if ('touches' in event && isScrolling.current) {
+    const isTouchEvent = event.type === 'touchend';
+    if (isTouchEvent && isScrolling.current) {
+      // 重置滚动状态，避免影响下次点击
+      isScrolling.current = false;
+      touchStartPos.current = null;
       return;
     }
+    
+    // 重置状态
+    isScrolling.current = false;
+    touchStartPos.current = null;
     
     event.preventDefault();
     event.stopPropagation();
