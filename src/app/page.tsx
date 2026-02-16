@@ -11,10 +11,6 @@ export default function Home() {
   const [isGenerating, setIsGenerating] = useState(false);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
-  
-  // 用于检测滑动还是点击
-  const touchStartPos = useRef<{ x: number; y: number } | null>(null);
-  const isScrolling = useRef(false);
 
   const getSurnameTone = (s: string): number => {
     if (!s) return 1;
@@ -49,45 +45,8 @@ export default function Home() {
     return processed.filter(n => n.style === activeStyle);
   }, [activeStyle, surname]);
 
-  // 处理触摸开始
-  const handleTouchStart = (e: React.TouchEvent) => {
-    touchStartPos.current = {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY
-    };
-    isScrolling.current = false;
-  };
-
-  // 处理触摸移动（检测是否滑动）
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!touchStartPos.current) return;
-    
-    const deltaX = Math.abs(e.touches[0].clientX - touchStartPos.current.x);
-    const deltaY = Math.abs(e.touches[0].clientY - touchStartPos.current.y);
-    
-    // 如果移动超过 10px，认为是滑动
-    if (deltaX > 10 || deltaY > 10) {
-      isScrolling.current = true;
-    }
-  };
-
-  // 处理名字点击/触摸结束
-  const handleNameClick = (name: any, event: React.MouseEvent | React.TouchEvent) => {
-    // 如果是触摸事件且发生了滑动，不打开抽屉
-    const isTouchEvent = event.type === 'touchend';
-    if (isTouchEvent && isScrolling.current) {
-      // 重置滚动状态，避免影响下次点击
-      isScrolling.current = false;
-      touchStartPos.current = null;
-      return;
-    }
-    
-    // 重置状态
-    isScrolling.current = false;
-    touchStartPos.current = null;
-    
-    event.preventDefault();
-    event.stopPropagation();
+  // 简化的点击处理 - 只在 onClick 中处理，避免与 onTouchEnd 冲突
+  const handleNameClick = (name: any) => {
     console.log('点击了名字:', name.name);
     setSelectedName(name);
     setShowDrawer(true);
@@ -329,10 +288,7 @@ export default function Home() {
         {filteredNames.map((item) => (
           <button
             key={item.name}
-            onClick={(e) => handleNameClick(item, e)}
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={(e) => handleNameClick(item, e)}
+            onClick={() => handleNameClick(item)}
             style={{
               backgroundColor: 'white',
               border: '1px solid #ddd',
@@ -340,8 +296,7 @@ export default function Home() {
               padding: '20px',
               textAlign: 'center',
               cursor: 'pointer',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
-              touchAction: 'pan-y'
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
           >
             <div style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '5px' }}>
