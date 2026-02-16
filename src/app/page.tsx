@@ -595,17 +595,46 @@ export default function Home() {
             textAlign: 'center',
             width: '100%'
           }}>
-            {/* 名字 */}
+            {/* 姓氏+名字 */}
             <div style={{
-              fontSize: '180px',
-              color: '#2C2C2C',
-              letterSpacing: '0.4em',
-              marginLeft: '80px',
-              fontWeight: 'bold',
-              textShadow: '2px 2px 8px rgba(0,0,0,0.08)',
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '20px',
               marginBottom: '40px'
             }}>
-              {selectedName?.name}
+              {/* 姓氏 */}
+              {surname && (
+                <div style={{
+                  width: '140px',
+                  height: '140px',
+                  border: '4px solid #B22222',
+                  borderRadius: '12px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transform: 'rotate(-5deg)',
+                  backgroundColor: 'rgba(178,34,34,0.08)',
+                  boxShadow: '3px 3px 10px rgba(0,0,0,0.1)'
+                }}>
+                  <span style={{
+                    fontSize: '80px',
+                    color: '#B22222',
+                    fontWeight: 'bold'
+                  }}>{surname}</span>
+                </div>
+              )}
+              
+              {/* 名字 */}
+              <div style={{
+                fontSize: '180px',
+                color: '#2C2C2C',
+                letterSpacing: '0.3em',
+                fontWeight: 'bold',
+                textShadow: '2px 2px 8px rgba(0,0,0,0.08)'
+              }}>
+                {selectedName?.name}
+              </div>
             </div>
             
             {/* 拼音 */}
