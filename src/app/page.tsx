@@ -606,22 +606,13 @@ export default function Home() {
               {/* 姓氏 */}
               {surname && (
                 <div style={{
-                  width: '140px',
-                  height: '140px',
-                  border: '4px solid #B22222',
-                  borderRadius: '12px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transform: 'rotate(-5deg)',
-                  backgroundColor: 'rgba(178,34,34,0.08)',
-                  boxShadow: '3px 3px 10px rgba(0,0,0,0.1)'
+                  fontSize: '160px',
+                  color: '#B22222',
+                  fontWeight: 'bold',
+                  marginRight: '30px',
+                  textShadow: '3px 3px 6px rgba(178,34,34,0.2)'
                 }}>
-                  <span style={{
-                    fontSize: '80px',
-                    color: '#B22222',
-                    fontWeight: 'bold'
-                  }}>{surname}</span>
+                  {surname}
                 </div>
               )}
               
