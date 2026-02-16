@@ -1,0 +1,531 @@
+"use client";
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { names } from '@/data/names';
+import { Download, X, Smartphone } from 'lucide-react';
+
+export default function Home() {
+  const [activeStyle, setActiveStyle] = useState('全部');
+  const [surname, setSurname] = useState('');
+  const [selectedName, setSelectedName] = useState<any>(null);
+  const [showDrawer, setShowDrawer] = useState(false);
+  const [isGenerating, setIsGenerating] = useState(false);
+  const posterRef = useRef<HTMLDivElement>(null);
+  const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
+
+  const getSurnameTone = (s: string): number => {
+    if (!s) return 1;
+    const lastChar = s[s.length - 1];
+    const pingToneChars = ['张', '王', '周', '林', '高', '陈', '李', '刘', '孙'];
+    return pingToneChars.includes(lastChar) ? 1 : 2;
+  };
+
+  const calculateHarmony = (surnameTone: number, nameTone1: number, nameTone2: number): number => {
+    if (!surname) return 0;
+    let score = 60;
+    if (surnameTone !== nameTone1) score += 25;
+    if (nameTone1 !== nameTone2) score += 35;
+    return Math.min(100, score);
+  };
+
+  const filteredNames = useMemo(() => {
+    const currentSurnameTone = getSurnameTone(surname);
+    
+    const processed = names.map(item => {
+      const tone1 = item.tone?.[0] || 1;
+      const tone2 = item.tone?.[1] || 2;
+      return {
+        ...item,
+        harmonyScore: calculateHarmony(currentSurnameTone, tone1, tone2)
+      };
+    });
+    
+    processed.sort((a, b) => b.harmonyScore - a.harmonyScore);
+    
+    if (activeStyle === '全部') return processed;
+    return processed.filter(n => n.style === activeStyle);
+  }, [activeStyle, surname]);
+
+  const handleNameClick = (name: any, event: React.MouseEvent | React.TouchEvent) => {
+    event.preventDefault();
+    event.stopPropagation();
+    console.log('点击了名字:', name.name);
+    setSelectedName(name);
+    setShowDrawer(true);
+  };
+
+  const closeDrawer = () => {
+    setShowDrawer(false);
+    setTimeout(() => setSelectedName(null), 300);
+  };
+
+  const handleDownload = async () => {
+    if (!posterRef.current || !selectedName) return;
+    
+    setIsGenerating(true);
+    try {
+      const { toPng } = await import('html-to-image');
+      const dataUrl = await toPng(posterRef.current, { quality: 0.95 });
+      
+      const link = document.createElement('a');
+      link.download = `墨香取名-${selectedName.name}.png`;
+      link.href = dataUrl;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } catch (err) {
+      console.error('生成失败:', err);
+      alert('生成失败，请重试');
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
+    let lastX = 0, lastY = 0, lastZ = 0;
+    let lastUpdate = 0;
+    
+    const handleMotion = (event: DeviceMotionEvent) => {
+      const acc = event.accelerationIncludingGravity;
+      if (!acc) return;
+      
+      const now = Date.now();
+      if (now - lastUpdate < 200) return;
+      
+      const { x, y, z } = acc;
+      const delta = Math.abs(x! - lastX) + Math.abs(y! - lastY) + Math.abs(z! - lastZ);
+      
+      if (delta > 15) {
+        const randomName = names[Math.floor(Math.random() * names.length)];
+        setSelectedName(randomName);
+        setShowDrawer(true);
+      }
+      
+      lastX = x!; lastY = y!; lastZ = z!;
+      lastUpdate = now;
+    };
+
+    const setupMotion = async () => {
+      if ('DeviceMotionEvent' in window) {
+        const DeviceMotionEventAny = DeviceMotionEvent as any;
+        if (typeof DeviceMotionEventAny.requestPermission === 'function') {
+          try {
+            const permission = await DeviceMotionEventAny.requestPermission();
+            if (permission === 'granted') {
+              window.addEventListener('devicemotion', handleMotion);
+            }
+          } catch (e) {}
+        } else {
+          window.addEventListener('devicemotion', handleMotion);
+        }
+      }
+    };
+    
+    setupMotion();
+    return () => window.removeEventListener('devicemotion', handleMotion);
+  }, []);
+
+  return (
+    <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', position: 'relative' }}>
+      {/* 背景纹理 */}
+      <div style={{ position: 'fixed', inset: 0, backgroundImage: 'url(https://www.transparenttextures.com/patterns/p6.png)', opacity: 0.5, pointerEvents: 'none' }} />
+
+      {/* 头部 */}
+      <header style={{ textAlign: 'center', padding: '40px 20px 30px' }}>
+        {/* 顶部装饰线 */}
+        <div style={{ 
+          width: '60px', 
+          height: '2px', 
+          backgroundColor: '#C5A367', 
+          margin: '0 auto 25px',
+          opacity: 0.6 
+        }} />
+        
+        {/* 英文小字 */}
+        <div style={{ 
+          fontSize: '10px', 
+          color: '#999', 
+          letterSpacing: '3px',
+          marginBottom: '15px',
+          textTransform: 'uppercase'
+        }}>
+          Chinese Naming
+        </div>
+        
+        {/* 主标题 - 精致排版 */}
+        <div style={{ 
+          display: 'inline-flex', 
+          alignItems: 'center',
+          gap: '3px',
+          marginBottom: '12px'
+        }}>
+          {/* 墨 */}
+          <span style={{
+            fontSize: '42px',
+            fontWeight: 'bold',
+            color: '#2C2C2C',
+            letterSpacing: '0',
+            fontFamily: '"Noto Serif SC", serif'
+          }}>墨</span>
+          
+          {/* 香 - 朱砂色，稍小 */}
+          <span style={{
+            fontSize: '38px',
+            fontWeight: '500',
+            color: '#B22222',
+            letterSpacing: '0',
+            marginTop: '-5px',
+            fontFamily: '"Noto Serif SC", serif'
+          }}>香</span>
+          
+          {/* 装饰点 */}
+          <span style={{
+            width: '4px',
+            height: '4px',
+            backgroundColor: '#C5A367',
+            borderRadius: '50%',
+            margin: '0 8px'
+          }} />
+          
+          {/* 取 - 稍小 */}
+          <span style={{
+            fontSize: '40px',
+            fontWeight: 'bold',
+            color: '#2C2C2C',
+            letterSpacing: '0',
+            fontFamily: '"Noto Serif SC", serif'
+          }}>取</span>
+          
+          {/* 名 - 朱砂色 */}
+          <span style={{
+            fontSize: '42px',
+            fontWeight: 'bold',
+            color: '#B22222',
+            letterSpacing: '0',
+            marginTop: '3px',
+            fontFamily: '"Noto Serif SC", serif'
+          }}>名</span>
+        </div>
+        
+        {/* 分隔装饰 */}
+        <div style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: '10px',
+          marginBottom: '15px'
+        }}>
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C5A367', opacity: 0.4 }} />
+          <div style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#C5A367', opacity: 0.6 }} />
+          <div style={{ width: '30px', height: '1px', backgroundColor: '#C5A367', opacity: 0.4 }} />
+        </div>
+        
+        {/* 副标题 */}
+        <p style={{ 
+          color: '#888', 
+          fontSize: '13px',
+          letterSpacing: '2px'
+        }}>雅名共赏 · 文墨传家</p>
+      </header>
+
+      {/* 姓氏输入 */}
+      <div style={{ textAlign: 'center', marginBottom: '30px' }}>
+        <input
+          type="text"
+          placeholder="输入您的姓氏"
+          value={surname}
+          onChange={(e) => setSurname(e.target.value.slice(0, 2))}
+          style={{
+            padding: '10px 20px',
+            fontSize: '18px',
+            border: 'none',
+            borderBottom: '2px solid #C5A367',
+            background: 'transparent',
+            textAlign: 'center',
+            outline: 'none'
+          }}
+        />
+        {surname && (
+          <p style={{ fontSize: '12px', color: '#666', marginTop: '10px' }}>
+            分析「{surname}」姓的音律契合度
+          </p>
+        )}
+      </div>
+
+      {/* 风格筛选 */}
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        gap: '15px', 
+        marginBottom: '30px',
+        flexWrap: 'wrap'
+      }}>
+        {styles.map(s => (
+          <button 
+            key={s}
+            onClick={() => setActiveStyle(s)}
+            style={{
+              padding: '8px 16px',
+              borderRadius: '20px',
+              border: 'none',
+              cursor: 'pointer',
+              backgroundColor: activeStyle === s ? '#B22222' : 'transparent',
+              color: activeStyle === s ? 'white' : '#666'
+            }}
+          >
+            {s}
+          </button>
+        ))}
+      </div>
+
+      {/* 名字网格 */}
+      <div style={{ 
+        display: 'grid', 
+        gridTemplateColumns: 'repeat(2, 1fr)', 
+        gap: '15px',
+        padding: '0 20px 100px'
+      }}>
+        {filteredNames.map((item) => (
+          <button
+            key={item.name}
+            onClick={(e) => handleNameClick(item, e)}
+            onTouchStart={(e) => handleNameClick(item, e)}
+            style={{
+              backgroundColor: 'white',
+              border: '1px solid #ddd',
+              borderRadius: '8px',
+              padding: '20px',
+              textAlign: 'center',
+              cursor: 'pointer',
+              boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
+            }}
+          >
+            <div style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '5px' }}>
+              {item.name}
+            </div>
+            <div style={{ fontSize: '11px', color: '#999', marginBottom: '5px' }}>
+              {item.pinyin}
+            </div>
+            {surname && item.harmonyScore > 0 && (
+              <div style={{
+                fontSize: '11px',
+                color: item.harmonyScore >= 80 ? '#B22222' : '#666'
+              }}>
+                契合度 {item.harmonyScore}%
+              </div>
+            )}
+            <div style={{ fontSize: '10px', color: '#999', marginTop: '5px' }}>
+              {item.meaning.slice(0, 20)}...
+            </div>
+          </button>
+        ))}
+      </div>
+
+      {/* 底部提示 */}
+      <div style={{
+        position: 'fixed',
+        bottom: '20px',
+        left: '50%',
+        transform: 'translateX(-50%)',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '5px',
+        fontSize: '12px',
+        color: '#999',
+        backgroundColor: 'rgba(255,255,255,0.9)',
+        padding: '8px 16px',
+        borderRadius: '20px'
+      }}>
+        <Smartphone size={14} />
+        <span>手机摇一摇，随机推荐雅名</span>
+      </div>
+
+      {/* 抽屉 */}
+      {showDrawer && selectedName && (
+        <>
+          <div 
+            style={{
+              position: 'fixed',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              backgroundColor: 'rgba(0,0,0,0.5)',
+              zIndex: 100
+            }}
+            onClick={closeDrawer}
+          />
+          <div 
+            style={{
+              position: 'fixed',
+              bottom: 0,
+              left: 0,
+              right: 0,
+              backgroundColor: '#F9F4E8',
+              padding: '30px 20px',
+              borderRadius: '20px 20px 0 0',
+              zIndex: 101,
+              maxHeight: '80vh',
+              overflowY: 'auto'
+            }}
+          >
+            <button
+              onClick={closeDrawer}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: 'none',
+                border: 'none',
+                fontSize: '24px',
+                cursor: 'pointer'
+              }}
+            >
+              <X size={24} />
+            </button>
+
+            <div style={{ textAlign: 'center', padding: '20px 0' }}>
+              <div style={{ 
+                fontSize: '48px', 
+                fontWeight: 'bold', 
+                marginBottom: '10px',
+                display: 'flex',
+                justifyContent: 'center',
+                gap: '10px'
+              }}>
+                {selectedName.name.split('').map((char: string, i: number) => (
+                  <span 
+                    key={i}
+                    style={{
+                      border: '2px solid #C5A367',
+                      padding: '10px 15px',
+                      borderRadius: '4px'
+                    }}
+                  >
+                    {char}
+                  </span>
+                ))}
+              </div>
+              
+              <p style={{ color: '#B22222', fontSize: '16px', marginBottom: '20px' }}>
+                {selectedName.pinyin}
+              </p>
+              
+              <p style={{ fontSize: '14px', lineHeight: 1.6, marginBottom: '10px' }}>
+                {selectedName.meaning}
+              </p>
+              
+              <p style={{ fontSize: '12px', color: '#999' }}>
+                出自 {selectedName.source}
+              </p>
+
+              {surname && selectedName.harmonyScore > 0 && (
+                <p style={{
+                  marginTop: '15px',
+                  padding: '8px 16px',
+                  backgroundColor: selectedName.harmonyScore >= 80 ? '#B22222' : '#f0f0f0',
+                  color: selectedName.harmonyScore >= 80 ? 'white' : '#666',
+                  borderRadius: '20px',
+                  display: 'inline-block'
+                }}>
+                  与「{surname}」姓契合度：{selectedName.harmonyScore}%
+                </p>
+              )}
+
+              {/* 生成名片按钮 */}
+              <button
+                onClick={handleDownload}
+                disabled={isGenerating}
+                style={{
+                  marginTop: '25px',
+                  padding: '12px 32px',
+                  backgroundColor: '#B22222',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: '25px',
+                  fontSize: '16px',
+                  cursor: isGenerating ? 'not-allowed' : 'pointer',
+                  opacity: isGenerating ? 0.7 : 1,
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  margin: '25px auto 0'
+                }}
+              >
+                <Download size={20} />
+                {isGenerating ? '生成中...' : '生成名片'}
+              </button>
+            </div>
+          </div>
+        </>
+      )}
+
+      {/* 隐藏的海报模板 - 保持之前设计好的精美版本 */}
+      <div style={{ position: 'absolute', left: '-9999px' }}>
+        <div 
+          ref={posterRef}
+          className="w-[1080px] h-[1920px] bg-paper relative overflow-hidden"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E")`
+          }}
+        >
+          {/* 顶部线 */}
+          <div className="absolute top-16 left-20 right-20 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+          
+          {/* 右上角印章 */}
+          <div className="absolute top-20 right-20 w-20 h-20 border-2 border-cinnabar/70 rotate-6 flex items-center justify-center bg-cinnabar/5">
+            <span className="text-cinnabar text-2xl writing-mode-vertical tracking-widest">墨香</span>
+          </div>
+          
+          {/* 左侧竖排 */}
+          <div className="absolute left-16 top-40 writing-vertical text-gold/60 text-lg tracking-[0.5em]">
+            雅名共赏 · 文墨传家
+          </div>
+          
+          {/* 主内容 */}
+          <div className="absolute inset-0 flex flex-col items-center justify-center">
+            {/* 名字 */}
+            <div className="text-[200px] text-ink tracking-[0.4em] ml-20 font-bold" style={{ textShadow: '2px 2px 8px rgba(0,0,0,0.08)' }}>
+              {selectedName?.name}
+            </div>
+            
+            {/* 拼音 */}
+            <div className="text-3xl text-gold/70 tracking-[0.5em] mt-8 italic">
+              {selectedName?.pinyin}
+            </div>
+            
+            {/* 分隔 */}
+            <div className="w-28 h-px bg-gold/40 my-12" />
+            
+            {/* 寓意 */}
+            <div className="text-2xl text-ink/80 leading-relaxed max-w-[700px] text-center px-10">
+              {selectedName?.meaning}
+            </div>
+            
+            {/* 出处 */}
+            <div className="mt-10 text-xl text-gold/60">
+              —— {selectedName?.source}
+            </div>
+          </div>
+          
+          {/* 底部 */}
+          <div className="absolute bottom-20 left-0 right-0 text-center">
+            <div className="w-40 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent mx-auto mb-6" />
+            <div className="text-gold/50 text-base tracking-[0.3em]">墨香取名 · 为子寻雅名</div>
+          </div>
+          
+          {/* 姓氏印章 */}
+          {surname && (
+            <div className="absolute bottom-20 right-20 w-24 h-24 border-3 border-cinnabar rounded-lg flex items-center justify-center -rotate-3 bg-cinnabar/5">
+              <span className="text-cinnabar text-4xl font-bold">{surname}</span>
+            </div>
+          )}
+          
+          {/* 底部线 */}
+          <div className="absolute bottom-16 left-20 right-20 h-px bg-gradient-to-r from-transparent via-gold/40 to-transparent" />
+        </div>
+      </div>
+    </div>
+  );
+}
