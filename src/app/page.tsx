@@ -79,27 +79,46 @@ export default function Home() {
     }
   };
 
+  // 调试日志
+  useEffect(() => {
+    console.log('Component mounted, filteredNames:', filteredNames.length);
+  }, []);
+
   // 使用原生事件监听器确保在静态导出后点击仍然有效
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
-    // 为名字卡片添加点击事件
-    const nameCards = document.querySelectorAll('[data-name-card]');
-    const handleCardClick = (e: Event) => {
-      const target = e.currentTarget as HTMLElement;
-      const nameData = target.getAttribute('data-name');
-      if (nameData) {
-        const nameObj = JSON.parse(decodeURIComponent(nameData));
-        console.log('点击了名字:', nameObj.name);
-        setSelectedName(nameObj);
-        setShowDrawer(true);
-      }
-    };
-    
-    nameCards.forEach(card => {
-      card.addEventListener('click', handleCardClick);
-      card.addEventListener('touchend', handleCardClick);
-    });
+    // 延迟绑定以确保 DOM 完全准备好
+    const timer = setTimeout(() => {
+      console.log('Binding click events...');
+      
+      // 为名字卡片添加点击事件
+      const nameCards = document.querySelectorAll('[data-name-card]');
+      console.log('Found name cards:', nameCards.length);
+      
+      const handleCardClick = (e: Event) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const target = e.currentTarget as HTMLElement;
+        const nameData = target.getAttribute('data-name');
+        console.log('Card clicked, nameData:', nameData);
+        if (nameData) {
+          try {
+            const nameObj = JSON.parse(decodeURIComponent(nameData));
+            console.log('Opening drawer for:', nameObj.name);
+            setSelectedName(nameObj);
+            setShowDrawer(true);
+          } catch (err) {
+            console.error('Failed to parse name data:', err);
+          }
+        }
+      };
+      
+      nameCards.forEach((card, index) => {
+        console.log(`Binding events to card ${index}`);
+        card.addEventListener('click', handleCardClick);
+      });
+    }, 100);
     
     // 摇一摇功能
     let lastX = 0, lastY = 0, lastZ = 0;
@@ -144,10 +163,7 @@ export default function Home() {
     setupMotion();
     
     return () => {
-      nameCards.forEach(card => {
-        card.removeEventListener('click', handleCardClick);
-        card.removeEventListener('touchend', handleCardClick);
-      });
+      clearTimeout(timer);
       window.removeEventListener('devicemotion', handleMotion);
     };
   }, [filteredNames]);
