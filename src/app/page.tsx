@@ -45,7 +45,7 @@ export default function Home() {
     return processed.filter(n => n.style === activeStyle);
   }, [activeStyle, surname]);
 
-  // 简化的点击处理 - 只在 onClick 中处理，避免与 onTouchEnd 冲突
+  // 简化的点击处理
   const handleNameClick = (name: any) => {
     console.log('点击了名字:', name.name);
     setSelectedName(name);
@@ -79,9 +79,29 @@ export default function Home() {
     }
   };
 
+  // 使用原生事件监听器确保在静态导出后点击仍然有效
   useEffect(() => {
     if (typeof window === 'undefined') return;
     
+    // 为名字卡片添加点击事件
+    const nameCards = document.querySelectorAll('[data-name-card]');
+    const handleCardClick = (e: Event) => {
+      const target = e.currentTarget as HTMLElement;
+      const nameData = target.getAttribute('data-name');
+      if (nameData) {
+        const nameObj = JSON.parse(decodeURIComponent(nameData));
+        console.log('点击了名字:', nameObj.name);
+        setSelectedName(nameObj);
+        setShowDrawer(true);
+      }
+    };
+    
+    nameCards.forEach(card => {
+      card.addEventListener('click', handleCardClick);
+      card.addEventListener('touchend', handleCardClick);
+    });
+    
+    // 摇一摇功能
     let lastX = 0, lastY = 0, lastZ = 0;
     let lastUpdate = 0;
     
@@ -122,8 +142,15 @@ export default function Home() {
     };
     
     setupMotion();
-    return () => window.removeEventListener('devicemotion', handleMotion);
-  }, []);
+    
+    return () => {
+      nameCards.forEach(card => {
+        card.removeEventListener('click', handleCardClick);
+        card.removeEventListener('touchend', handleCardClick);
+      });
+      window.removeEventListener('devicemotion', handleMotion);
+    };
+  }, [filteredNames]);
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', position: 'relative' }}>
@@ -288,6 +315,8 @@ export default function Home() {
         {filteredNames.map((item) => (
           <button
             key={item.name}
+            data-name-card
+            data-name={encodeURIComponent(JSON.stringify(item))}
             onClick={() => handleNameClick(item)}
             style={{
               backgroundColor: 'white',
