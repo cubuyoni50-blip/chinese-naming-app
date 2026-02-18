@@ -669,10 +669,10 @@ export default function Home() {
             雅名共赏 · 文墨传家
           </div>
           
-          {/* 主内容区域 */}
+          {/* 名字区域 - 上半部分 */}
           <div style={{
             position: 'absolute',
-            top: '50%',
+            top: '38%',
             left: '50%',
             transform: 'translate(-50%, -50%)',
             textAlign: 'center',
@@ -683,8 +683,8 @@ export default function Home() {
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: '20px',
-              marginBottom: '40px'
+              gap: '30px',
+              marginBottom: '30px'
             }}>
               {/* 姓氏 */}
               {surname && (
@@ -692,7 +692,6 @@ export default function Home() {
                   fontSize: '180px',
                   color: '#B22222',
                   fontWeight: 'bold',
-                  marginRight: '30px',
                   textShadow: '3px 3px 6px rgba(178,34,34,0.2)'
                 }}>
                   {surname}
@@ -703,7 +702,7 @@ export default function Home() {
               <div style={{
                 fontSize: '180px',
                 color: '#2C2C2C',
-                letterSpacing: '0.3em',
+                letterSpacing: '0.2em',
                 fontWeight: 'bold',
                 textShadow: '2px 2px 8px rgba(0,0,0,0.08)'
               }}>
@@ -716,29 +715,37 @@ export default function Home() {
               fontSize: '32px',
               color: 'rgba(197,163,103,0.7)',
               letterSpacing: '0.5em',
-              fontStyle: 'italic',
-              marginBottom: '48px'
+              fontStyle: 'italic'
             }}>
               {selectedName?.pinyin}
             </div>
-            
+          </div>
+          
+          {/* 寓意区域 - 下半部分 */}
+          <div style={{
+            position: 'absolute',
+            top: '62%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            textAlign: 'center',
+            width: '100%',
+            padding: '0 80px'
+          }}>
             {/* 分隔线 */}
             <div style={{
-              width: '112px',
+              width: '120px',
               height: '1px',
               backgroundColor: 'rgba(197,163,103,0.4)',
-              margin: '48px auto'
+              margin: '0 auto 40px'
             }} />
             
             {/* 寓意 */}
             <div style={{
               fontSize: '28px',
               color: 'rgba(44,44,44,0.8)',
-              lineHeight: 1.6,
-              maxWidth: '700px',
-              margin: '0 auto',
-              padding: '0 40px',
-              marginBottom: '32px'
+              lineHeight: 1.8,
+              maxWidth: '800px',
+              margin: '0 auto 30px'
             }}>
               {selectedName?.meaning}
             </div>
