@@ -946,10 +946,10 @@ export default function Home() {
                 雅名共赏 · 文墨传家
               </div>
               
-              {/* 名字区域 - 上半部分 */}
+              {/* 名字区域 - 上下居中 */}
               <div style={{
                 position: 'absolute',
-                top: '22%',
+                top: '45%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
@@ -1002,7 +1002,7 @@ export default function Home() {
               {/* 寓意区域 - 下半部分 */}
               <div style={{
                 position: 'absolute',
-                top: '58%',
+                top: '72%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
