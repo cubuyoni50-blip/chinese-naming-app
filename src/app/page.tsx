@@ -508,6 +508,20 @@ export default function Home() {
                 justifyContent: 'center',
                 gap: '10px'
               }}>
+                {/* 姓氏 */}
+                {surname && (
+                  <span 
+                    style={{
+                      border: '2px solid #B22222',
+                      padding: '10px 15px',
+                      borderRadius: '4px',
+                      color: '#B22222'
+                    }}
+                  >
+                    {surname}
+                  </span>
+                )}
+                {/* 名字 */}
                 {selectedName.name.split('').map((char: string, i: number) => (
                   <span 
                     key={i}
