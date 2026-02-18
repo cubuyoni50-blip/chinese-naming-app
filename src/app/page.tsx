@@ -939,10 +939,10 @@ export default function Home() {
                 雅名共赏 · 文墨传家
               </div>
               
-              {/* 主内容区域 */}
+              {/* 名字区域 - 上半部分 */}
               <div style={{
                 position: 'absolute',
-                top: '28%',
+                top: '22%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
@@ -954,7 +954,7 @@ export default function Home() {
                   justifyContent: 'center',
                   alignItems: 'center',
                   gap: '6px',
-                  marginBottom: '11px'
+                  marginBottom: '8px'
                 }}>
                   {/* 姓氏 */}
                   {surname && (
@@ -986,18 +986,28 @@ export default function Home() {
                   fontSize: '9px',
                   color: 'rgba(197,163,103,0.7)',
                   letterSpacing: '0.5em',
-                  fontStyle: 'italic',
-                  marginBottom: '13px'
+                  fontStyle: 'italic'
                 }}>
                   {selectedName?.pinyin}
                 </div>
-                
+              </div>
+              
+              {/* 寓意区域 - 下半部分 */}
+              <div style={{
+                position: 'absolute',
+                top: '58%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                textAlign: 'center',
+                width: '100%',
+                padding: '0 20px'
+              }}>
                 {/* 分隔线 */}
                 <div style={{
-                  width: '31px',
+                  width: '40px',
                   height: '1px',
                   backgroundColor: 'rgba(197,163,103,0.4)',
-                  margin: '13px auto'
+                  margin: '0 auto 15px'
                 }} />
                 
                 {/* 寓意 */}
