@@ -928,7 +928,7 @@ export default function Home() {
               {/* 主内容区域 */}
               <div style={{
                 position: 'absolute',
-                top: '28%',
+                top: '42%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',

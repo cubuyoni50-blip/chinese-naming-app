@@ -314,7 +314,7 @@ curatedSingleNames.forEach(item => {
     meaning: item.meaning,
     source: item.source,
     style: item.style as any,
-    tone: [info?.tone || 1]
+    tone: [info?.tone || 1, 0]
   });
 });
 
@@ -339,7 +339,7 @@ while (singleNames.length < 1000) {
             style === '宋词' ? '宋词意境' :
             style === '自然' ? '山水意境' : '现代意境',
     style: style as any,
-    tone: [info?.tone || 1]
+    tone: [info?.tone || 1, 0]
   });
 }
 
