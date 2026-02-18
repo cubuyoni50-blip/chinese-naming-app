@@ -10,8 +10,10 @@ export default function Home() {
   const [showDrawer, setShowDrawer] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+  const [nameLength, setNameLength] = useState<'全部' | '单字' | '双字'>('全部');
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
+  const lengthOptions = ['全部', '单字', '双字'];
 
   // 简转繁函数
   const toTraditional = (s: string): string => {
@@ -70,9 +72,22 @@ export default function Home() {
     
     processed.sort((a, b) => b.harmonyScore - a.harmonyScore);
     
-    if (activeStyle === '全部') return processed;
-    return processed.filter(n => n.style === activeStyle);
-  }, [activeStyle, surname]);
+    let result = processed;
+    
+    // 风格筛选
+    if (activeStyle !== '全部') {
+      result = result.filter(n => n.style === activeStyle);
+    }
+    
+    // 名字长度筛选
+    if (nameLength === '单字') {
+      result = result.filter(n => n.name.length === 1);
+    } else if (nameLength === '双字') {
+      result = result.filter(n => n.name.length === 2);
+    }
+    
+    return result;
+  }, [activeStyle, surname, nameLength]);
 
   // 简化的点击处理
   const handleNameClick = (name: any) => {
@@ -329,7 +344,7 @@ export default function Home() {
         display: 'flex', 
         justifyContent: 'center', 
         gap: '15px', 
-        marginBottom: '30px',
+        marginBottom: '20px',
         flexWrap: 'wrap'
       }}>
         {styles.map(s => (
@@ -346,6 +361,33 @@ export default function Home() {
             }}
           >
             {s}
+          </button>
+        ))}
+      </div>
+
+      {/* 字数筛选 */}
+      <div style={{ 
+        display: 'flex', 
+        justifyContent: 'center', 
+        gap: '10px', 
+        marginBottom: '30px',
+        flexWrap: 'wrap'
+      }}>
+        {lengthOptions.map(l => (
+          <button 
+            key={l}
+            onClick={() => setNameLength(l as '全部' | '单字' | '双字')}
+            style={{
+              padding: '6px 14px',
+              borderRadius: '15px',
+              border: '1px solid #C5A367',
+              cursor: 'pointer',
+              backgroundColor: nameLength === l ? '#C5A367' : 'transparent',
+              color: nameLength === l ? 'white' : '#C5A367',
+              fontSize: '13px'
+            }}
+          >
+            {l}名
           </button>
         ))}
       </div>
@@ -886,7 +928,7 @@ export default function Home() {
               {/* 主内容区域 */}
               <div style={{
                 position: 'absolute',
-                top: '50%',
+                top: '42%',
                 left: '50%',
                 transform: 'translate(-50%, -50%)',
                 textAlign: 'center',
