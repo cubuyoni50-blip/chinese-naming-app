@@ -9,6 +9,7 @@ export default function Home() {
   const [selectedName, setSelectedName] = useState<any>(null);
   const [showDrawer, setShowDrawer] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
+  const [showPreview, setShowPreview] = useState(false);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
 
@@ -504,10 +505,9 @@ export default function Home() {
                 </p>
               )}
 
-              {/* 生成名片按钮 */}
+              {/* 预览名片按钮 */}
               <button
-                onClick={handleDownload}
-                disabled={isGenerating}
+                onClick={() => setShowPreview(true)}
                 style={{
                   marginTop: '25px',
                   padding: '12px 32px',
@@ -516,16 +516,15 @@ export default function Home() {
                   border: 'none',
                   borderRadius: '25px',
                   fontSize: '16px',
-                  cursor: isGenerating ? 'not-allowed' : 'pointer',
-                  opacity: isGenerating ? 0.7 : 1,
+                  cursor: 'pointer',
                   display: 'flex',
                   alignItems: 'center',
                   gap: '8px',
                   margin: '25px auto 0'
                 }}
               >
-                <Download size={20} />
-                {isGenerating ? '生成中...' : '生成名片'}
+                <Smartphone size={20} />
+                预览名片
               </button>
             </div>
           </div>
@@ -753,6 +752,311 @@ export default function Home() {
           }} />
         </div>
       </div>
+
+      {/* 名片预览模态框 */}
+      {showPreview && selectedName && (
+        <div style={{
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          backgroundColor: 'rgba(0,0,0,0.85)',
+          zIndex: 200,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px'
+        }}>
+          {/* 关闭按钮 */}
+          <button
+            onClick={() => setShowPreview(false)}
+            style={{
+              position: 'absolute',
+              top: '20px',
+              right: '20px',
+              background: 'none',
+              border: 'none',
+              color: 'white',
+              fontSize: '24px',
+              cursor: 'pointer',
+              padding: '10px'
+            }}
+          >
+            <X size={32} />
+          </button>
+
+          {/* 预览标题 */}
+          <div style={{
+            color: 'white',
+            fontSize: '18px',
+            marginBottom: '20px',
+            textAlign: 'center'
+          }}>
+            名片预览
+          </div>
+
+          {/* 名片预览区域 */}
+          <div style={{
+            maxWidth: '100%',
+            maxHeight: '60vh',
+            overflow: 'auto',
+            backgroundColor: '#F9F4E8',
+            borderRadius: '8px',
+            boxShadow: '0 10px 40px rgba(0,0,0,0.3)'
+          }}>
+            <div style={{
+              width: '300px',
+              height: '533px',
+              position: 'relative',
+              overflow: 'hidden',
+              fontFamily: '"Noto Serif SC", serif',
+              backgroundColor: '#F9F4E8'
+            }}>
+              {/* 背景纹理 */}
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E")`,
+                opacity: 0.5
+              }} />
+              
+              {/* 顶部线 */}
+              <div style={{
+                position: 'absolute',
+                top: '18px',
+                left: '22px',
+                right: '22px',
+                height: '1px',
+                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+              }} />
+              
+              {/* 左上角标题 */}
+              <div style={{
+                position: 'absolute',
+                top: '22px',
+                left: '17px',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '2px'
+              }}>
+                <span style={{
+                  writingMode: 'vertical-rl',
+                  textOrientation: 'mixed',
+                  fontSize: '8px',
+                  color: '#B22222',
+                  fontWeight: 'bold',
+                  letterSpacing: '0.3em'
+                }}>墨香</span>
+                <span style={{
+                  writingMode: 'vertical-rl',
+                  textOrientation: 'mixed',
+                  fontSize: '7px',
+                  color: '#2C2C2C',
+                  letterSpacing: '0.2em'
+                }}>取名</span>
+              </div>
+              
+              {/* 顶部标题 */}
+              <div style={{
+                position: 'absolute',
+                top: '22px',
+                left: '50%',
+                transform: 'translateX(-50%)',
+                fontSize: '6px',
+                color: '#C5A367',
+                letterSpacing: '0.3em'
+              }}>为子寻雅名</div>
+              
+              {/* 左侧竖排 */}
+              <div style={{
+                position: 'absolute',
+                left: '17px',
+                top: '55px',
+                writingMode: 'vertical-rl',
+                textOrientation: 'mixed',
+                fontSize: '7px',
+                color: 'rgba(197,163,103,0.6)',
+                letterSpacing: '0.5em'
+              }}>
+                雅名共赏 · 文墨传家
+              </div>
+              
+              {/* 主内容区域 */}
+              <div style={{
+                position: 'absolute',
+                top: '50%',
+                left: '50%',
+                transform: 'translate(-50%, -50%)',
+                textAlign: 'center',
+                width: '100%'
+              }}>
+                {/* 姓氏+名字 */}
+                <div style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '6px',
+                  marginBottom: '11px'
+                }}>
+                  {/* 姓氏 */}
+                  {surname && (
+                    <div style={{
+                      fontSize: '50px',
+                      color: '#B22222',
+                      fontWeight: 'bold',
+                      marginRight: '8px',
+                      textShadow: '1px 1px 3px rgba(178,34,34,0.2)'
+                    }}>
+                      {surname}
+                    </div>
+                  )}
+                  
+                  {/* 名字 */}
+                  <div style={{
+                    fontSize: '50px',
+                    color: '#2C2C28',
+                    letterSpacing: '0.3em',
+                    fontWeight: 'bold',
+                    textShadow: '1px 1px 3px rgba(0,0,0,0.08)'
+                  }}>
+                    {selectedName?.name}
+                  </div>
+                </div>
+                
+                {/* 拼音 */}
+                <div style={{
+                  fontSize: '9px',
+                  color: 'rgba(197,163,103,0.7)',
+                  letterSpacing: '0.5em',
+                  fontStyle: 'italic',
+                  marginBottom: '13px'
+                }}>
+                  {selectedName?.pinyin}
+                </div>
+                
+                {/* 分隔线 */}
+                <div style={{
+                  width: '31px',
+                  height: '1px',
+                  backgroundColor: 'rgba(197,163,103,0.4)',
+                  margin: '13px auto'
+                }} />
+                
+                {/* 寓意 */}
+                <div style={{
+                  fontSize: '8px',
+                  color: 'rgba(44,44,44,0.8)',
+                  lineHeight: 1.6,
+                  maxWidth: '194px',
+                  margin: '0 auto',
+                  padding: '0 11px',
+                  marginBottom: '9px'
+                }}>
+                  {selectedName?.meaning}
+                </div>
+                
+                {/* 出处 */}
+                <div style={{
+                  fontSize: '7px',
+                  color: 'rgba(197,163,103,0.6)'
+                }}>
+                  —— {selectedName?.source}
+                </div>
+              </div>
+              
+              {/* 底部 */}
+              <div style={{
+                position: 'absolute',
+                bottom: '22px',
+                left: 0,
+                right: 0,
+                textAlign: 'center'
+              }}>
+                <div style={{
+                  width: '44px',
+                  height: '1px',
+                  background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)',
+                  margin: '0 auto 7px'
+                }} />
+                <div style={{
+                  fontSize: '5px',
+                  color: 'rgba(197,163,103,0.5)',
+                  letterSpacing: '0.3em'
+                }}>墨香取名 · 为子寻雅名</div>
+              </div>
+              
+              {/* 姓氏印章（繁体） */}
+              {surname && (
+                <div style={{
+                  position: 'absolute',
+                  bottom: '22px',
+                  right: '22px',
+                  width: '27px',
+                  height: '27px',
+                  border: '1px solid #B22222',
+                  borderRadius: '2px',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  transform: 'rotate(-3deg)',
+                  backgroundColor: 'rgba(178,34,34,0.05)'
+                }}>
+                  <span style={{
+                    fontSize: '10px',
+                    color: '#B22222',
+                    fontWeight: 'bold'
+                  }}>{toTraditional(surname)}</span>
+                </div>
+              )}
+              
+              {/* 底部线 */}
+              <div style={{
+                position: 'absolute',
+                bottom: '18px',
+                left: '22px',
+                right: '22px',
+                height: '1px',
+                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+              }} />
+            </div>
+          </div>
+
+          {/* 下载按钮 */}
+          <button
+            onClick={handleDownload}
+            disabled={isGenerating}
+            style={{
+              marginTop: '30px',
+              padding: '14px 48px',
+              backgroundColor: '#C5A367',
+              color: 'white',
+              border: 'none',
+              borderRadius: '25px',
+              fontSize: '18px',
+              cursor: isGenerating ? 'not-allowed' : 'pointer',
+              opacity: isGenerating ? 0.7 : 1,
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px',
+              boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
+            }}
+          >
+            <Download size={22} />
+            {isGenerating ? '下载中...' : '下载名片'}
+          </button>
+
+          {/* 提示文字 */}
+          <div style={{
+            color: 'rgba(255,255,255,0.6)',
+            fontSize: '14px',
+            marginTop: '15px'
+          }}>
+            点击下载可保存高清名片图片
+          </div>
+        </div>
+      )}
     </div>
   );
 }
