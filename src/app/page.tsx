@@ -483,22 +483,209 @@ export default function Home() {
             backgroundColor: '#F9F4E8',
             position: 'relative',
             overflow: 'hidden',
-            fontFamily: '"Noto Serif SC", serif',
-            padding: '40px 30px'
+            fontFamily: '"Noto Serif SC", serif'
           }}>
-            <div style={{ fontSize: '32px', fontWeight: 'bold', textAlign: 'center', marginTop: '80px', color: '#2C2C2C' }}>
-              {surname && <span style={{ color: '#B22222', marginRight: '20px' }}>{surname}</span>}
-              {selectedName.name}
+            {/* 顶部装饰线 */}
+            <div style={{
+              position: 'absolute',
+              top: '20px',
+              left: '20px',
+              right: '20px',
+              height: '1px',
+              background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+            }} />
+
+            {/* 左上角标题 */}
+            <div style={{
+              position: 'absolute',
+              top: '25px',
+              left: '15px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '2px'
+            }}>
+              <span style={{
+                writingMode: 'vertical-rl',
+                textOrientation: 'mixed',
+                fontSize: '10px',
+                color: '#B22222',
+                fontWeight: 'bold',
+                letterSpacing: '0.3em'
+              }}>墨香</span>
+              <span style={{
+                writingMode: 'vertical-rl',
+                textOrientation: 'mixed',
+                fontSize: '9px',
+                color: '#2C2C2C',
+                letterSpacing: '0.2em'
+              }}>取名</span>
             </div>
-            <div style={{ textAlign: 'center', marginTop: '20px', color: '#C5A367', fontStyle: 'italic' }}>
-              {selectedName.pinyin}
+
+            {/* 顶部标题 */}
+            <div style={{
+              position: 'absolute',
+              top: '25px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              fontSize: '8px',
+              color: '#C5A367',
+              letterSpacing: '0.3em'
+            }}>为子寻雅名</div>
+
+            {/* 左侧竖排 */}
+            <div style={{
+              position: 'absolute',
+              left: '15px',
+              top: '70px',
+              writingMode: 'vertical-rl',
+              textOrientation: 'mixed',
+              fontSize: '8px',
+              color: 'rgba(197,163,103,0.6)',
+              letterSpacing: '0.5em'
+            }}>
+              雅名共赏 · 文墨传家
             </div>
-            <div style={{ marginTop: '60px', fontSize: '14px', lineHeight: 1.6, color: '#333', textAlign: 'center' }}>
-              {selectedName.meaning}
+
+            {/* 名字区域 - 上半部分居中 */}
+            <div style={{
+              position: 'absolute',
+              top: '45%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              textAlign: 'center',
+              width: '100%'
+            }}>
+              {/* 姓氏+名字 */}
+              <div style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '8px',
+                marginBottom: '10px'
+              }}>
+                {surname && (
+                  <div style={{
+                    fontSize: '42px',
+                    color: '#B22222',
+                    fontWeight: 'bold',
+                    textShadow: '1px 1px 3px rgba(178,34,34,0.2)'
+                  }}>
+                    {surname}
+                  </div>
+                )}
+                <div style={{
+                  fontSize: '42px',
+                  color: '#2C2C2C',
+                  letterSpacing: '0.2em',
+                  fontWeight: 'bold',
+                  textShadow: '1px 1px 3px rgba(0,0,0,0.08)'
+                }}>
+                  {selectedName.name}
+                </div>
+              </div>
+
+              {/* 拼音 */}
+              <div style={{
+                fontSize: '12px',
+                color: 'rgba(197,163,103,0.7)',
+                letterSpacing: '0.5em',
+                fontStyle: 'italic'
+              }}>
+                {selectedName.pinyin}
+              </div>
             </div>
-            <div style={{ marginTop: '40px', textAlign: 'center', color: '#999', fontSize: '12px' }}>
-              —— {selectedName.source}
+
+            {/* 寓意区域 - 下半部分 */}
+            <div style={{
+              position: 'absolute',
+              top: '72%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              textAlign: 'center',
+              width: '100%',
+              padding: '0 25px'
+            }}>
+              {/* 分隔线 */}
+              <div style={{
+                width: '40px',
+                height: '1px',
+                backgroundColor: 'rgba(197,163,103,0.4)',
+                margin: '0 auto 15px'
+              }} />
+
+              {/* 寓意 */}
+              <div style={{
+                fontSize: '11px',
+                color: 'rgba(44,44,44,0.8)',
+                lineHeight: 1.6,
+                marginBottom: '10px'
+              }}>
+                {selectedName.meaning}
+              </div>
+
+              {/* 出处 */}
+              <div style={{
+                fontSize: '10px',
+                color: 'rgba(197,163,103,0.6)'
+              }}>
+                —— {selectedName.source}
+              </div>
             </div>
+
+            {/* 底部 */}
+            <div style={{
+              position: 'absolute',
+              bottom: '25px',
+              left: 0,
+              right: 0,
+              textAlign: 'center'
+            }}>
+              <div style={{
+                width: '40px',
+                height: '1px',
+                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)',
+                margin: '0 auto 8px'
+              }} />
+              <div style={{
+                fontSize: '8px',
+                color: 'rgba(197,163,103,0.5)',
+                letterSpacing: '0.3em'
+              }}>墨香取名 · 为子寻雅名</div>
+            </div>
+
+            {/* 姓氏印章 */}
+            {surname && (
+              <div style={{
+                position: 'absolute',
+                bottom: '25px',
+                right: '25px',
+                width: '35px',
+                height: '35px',
+                border: '2px solid #B22222',
+                borderRadius: '4px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                transform: 'rotate(-3deg)',
+                backgroundColor: 'rgba(178,34,34,0.05)'
+              }}>
+                <span style={{
+                  fontSize: '14px',
+                  color: '#B22222',
+                  fontWeight: 'bold'
+                }}>{toTraditional(surname)}</span>
+              </div>
+            )}
+
+            {/* 底部装饰线 */}
+            <div style={{
+              position: 'absolute',
+              bottom: '20px',
+              left: '20px',
+              right: '20px',
+              height: '1px',
+              background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+            }} />
           </div>
 
           <button
