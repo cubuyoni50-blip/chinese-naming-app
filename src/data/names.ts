@@ -10,7 +10,7 @@ export interface NameItem {
   tone: number[];
 }
 
-// 合并单字名和双字名
+// 合并单字名和双字名（使用全部数据）
 export const names: NameItem[] = [...singleNames, ...doubleNames];
 
 // 导出统计信息

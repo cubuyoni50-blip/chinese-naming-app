@@ -94,8 +94,8 @@ const singleCharDB = {
   '睿': { meaning: '睿智、明智，寓意聪明睿智', category: '才华', tone: 4, pinyin: 'ruì' },
 };
 
-// 双字名数据（200个精选）
-const doubleNames = [
+// 精选双字名（20个）
+const curatedDoubleNames = [
   { name: "沐辰", pinyin: "mù chén", meaning: "如沐星辰之光，心怀广阔宇宙，寓意前程似锦，气度不凡。", source: "现代意境", style: "现代", tone: [4, 2] },
   { name: "望舒", pinyin: "wàng shū", meaning: "取自月神之名，如月光般高洁明亮，寓意温柔智慧，清辉普照。", source: "《楚辞·离骚》", style: "楚辞", tone: [4, 1] },
   { name: "呦呦", pinyin: "yōu yōu", meaning: "鹿鸣之声，悠扬动听，寓意生命力旺盛，性格开朗阳光。", source: "《诗经·小雅》", style: "诗经", tone: [1, 1] },
@@ -118,10 +118,63 @@ const doubleNames = [
   { name: "若华", pinyin: "ruò huá", meaning: "若木之花，光彩照人，寓意容貌华美，生命璀璨。", source: "《楚辞·天问》", style: "楚辞", tone: [4, 2] },
 ];
 
-// 生成1000个单字名
-const singleNames = [];
+// 生成双字名寓意描述
+function generateDoubleMeaning(char1, char2, style) {
+  const info1 = singleCharDB[char1];
+  const info2 = singleCharDB[char2];
+  
+  if (!info1 || !info2) {
+    return `${char1}${char2}相映成趣，寓意美好吉祥，${style}意境深远。`;
+  }
+  
+  const templates = [
+    `${info1.meaning.split('，')[0]}；${info2.meaning.split('，')[0]}。两字相配，${style}气韵浓厚。`,
+    `取"${char1}"之${info1.meaning.split('，')[0]}，配"${char2}"之${info2.meaning.split('，')[0]}，寓意${style}意境深远。`,
+    `${char1}${char2}合璧，${info1.meaning.split('，')[0]}，${info2.meaning.split('，')[0]}，${style}风雅自成。`,
+    `"${char1}"者，${info1.meaning.split('，')[0]}；"${char2}"者，${info2.meaning.split('，')[0]}。合而为名，${style}意蕴悠长。`,
+    `${char1}${char2}相生，${info1.meaning}；${info2.meaning}。整体寓意${style}之美。`,
+  ];
+  
+  return templates[Math.floor(Math.random() * templates.length)];
+}
+
+// 生成2000个双字名
+const doubleNames = [...curatedDoubleNames];
 const availableChars = Object.keys(singleCharDB);
 const styles = ['诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
+
+while (doubleNames.length < 2000) {
+  const char1 = availableChars[Math.floor(Math.random() * availableChars.length)];
+  const char2 = availableChars[Math.floor(Math.random() * availableChars.length)];
+  
+  if (char1 === char2) continue;
+  
+  const name = char1 + char2;
+  
+  // 检查是否已存在
+  if (doubleNames.some(item => item.name === name)) continue;
+  
+  const style = styles[Math.floor(Math.random() * styles.length)];
+  const info1 = singleCharDB[char1];
+  const info2 = singleCharDB[char2];
+  const meaning = generateDoubleMeaning(char1, char2, style);
+  
+  doubleNames.push({
+    name,
+    pinyin: `${info1?.pinyin || char1} ${info2?.pinyin || char2}`,
+    meaning,
+    source: style === '诗经' ? '《诗经》意境' : 
+            style === '楚辞' ? '《楚辞》意境' :
+            style === '唐诗' ? '唐诗意境' :
+            style === '宋词' ? '宋词意境' :
+            style === '自然' ? '山水意境' : '现代意境',
+    style: style,
+    tone: [info1?.tone || 1, info2?.tone || 2]
+  });
+}
+
+// 生成1000个单字名
+const singleNames = [];
 
 for (let i = 0; i < 1000; i++) {
   const char = availableChars[i % availableChars.length];
