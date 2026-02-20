@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import { Download, X, Smartphone } from 'lucide-react';
+import { Download, X, Smartphone, ArrowUp } from 'lucide-react';
 
 interface NameItem {
   name: string;
@@ -22,10 +22,25 @@ export default function Home() {
   const [showPreview, setShowPreview] = useState(false);
   const [nameLength, setNameLength] = useState<'全部' | '单字' | '双字'>('全部');
   const [displayCount, setDisplayCount] = useState(50);
+  const [showBackToTop, setShowBackToTop] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
   const lengthOptions = ['全部', '单字', '双字'];
+
+  // 监听滚动显示/隐藏回到顶部按钮
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 500);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // 回到顶部
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // 加载名字数据
   useEffect(() => {
@@ -504,6 +519,34 @@ export default function Home() {
             {isGenerating ? '生成中...' : '下载名片'}
           </button>
         </div>
+      )}
+
+      {/* 回到顶部按钮 */}
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          style={{
+            position: 'fixed',
+            bottom: '100px',
+            right: '20px',
+            width: '50px',
+            height: '50px',
+            borderRadius: '50%',
+            backgroundColor: '#C5A367',
+            color: 'white',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+            zIndex: 99,
+            transition: 'opacity 0.3s'
+          }}
+          title="回到顶部"
+        >
+          <ArrowUp size={24} />
+        </button>
       )}
     </div>
   );
