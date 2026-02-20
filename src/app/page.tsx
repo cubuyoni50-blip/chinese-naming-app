@@ -21,6 +21,8 @@ export default function Home() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
   const [nameLength, setNameLength] = useState<'全部' | '单字' | '双字'>('全部');
+  const [displayCount, setDisplayCount] = useState(50);
+  const gridRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
   const lengthOptions = ['全部', '单字', '双字'];
@@ -116,6 +118,23 @@ export default function Home() {
     
     return result;
   }, [names, activeStyle, surname, nameLength]);
+
+  // 无限滚动
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
+        setDisplayCount(prev => Math.min(prev + 30, filteredNames.length));
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [filteredNames.length]);
+
+  // 筛选条件改变时重置显示数量
+  useEffect(() => {
+    setDisplayCount(50);
+  }, [activeStyle, nameLength, surname]);
 
   const handleNameClick = (name: NameItem) => {
     setSelectedName(name);
@@ -260,13 +279,13 @@ export default function Home() {
       </div>
 
       {/* 名字网格 */}
-      <div style={{ 
+      <div ref={gridRef} style={{ 
         display: 'grid', 
         gridTemplateColumns: 'repeat(2, 1fr)', 
         gap: '15px',
         padding: '0 20px 100px'
       }}>
-        {filteredNames.slice(0, 50).map((item) => (
+        {filteredNames.slice(0, displayCount).map((item) => (
           <button
             key={item.name + item.pinyin}
             onClick={() => handleNameClick(item)}
@@ -294,9 +313,15 @@ export default function Home() {
       </div>
 
       {/* 加载更多提示 */}
-      {filteredNames.length > 50 && (
+      {filteredNames.length > displayCount && (
         <div style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '14px' }}>
-          已显示 50 个名字，共 {filteredNames.length} 个
+          已显示 {displayCount} 个名字，共 {filteredNames.length} 个<br />
+          <span style={{ fontSize: '12px' }}>继续滚动加载更多...</span>
+        </div>
+      )}
+      {filteredNames.length <= displayCount && filteredNames.length > 0 && (
+        <div style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '14px' }}>
+          已显示全部 {filteredNames.length} 个名字
         </div>
       )}
 
