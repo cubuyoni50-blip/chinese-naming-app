@@ -70,9 +70,28 @@ export default function Home() {
       };
     });
     
+    // 先按契合度排序
     processed.sort((a, b) => b.harmonyScore - a.harmonyScore);
     
-    let result = processed;
+    // 分离单双字名
+    const doubleNames = processed.filter(n => n.name.length === 2);
+    const singleNames = processed.filter(n => n.name.length === 1);
+    
+    // 交错合并：双字优先，每2个双字配1个单字
+    let result: typeof processed = [];
+    let doubleIndex = 0;
+    let singleIndex = 0;
+    
+    while (doubleIndex < doubleNames.length || singleIndex < singleNames.length) {
+      // 先加2个双字名
+      for (let i = 0; i < 2 && doubleIndex < doubleNames.length; i++) {
+        result.push(doubleNames[doubleIndex++]);
+      }
+      // 再加1个单字名
+      if (singleIndex < singleNames.length) {
+        result.push(singleNames[singleIndex++]);
+      }
+    }
     
     // 风格筛选
     if (activeStyle !== '全部') {
@@ -123,9 +142,9 @@ export default function Home() {
     }
   };
 
-  // 调试日志
+  // 组件挂载时记录名字总数
   useEffect(() => {
-    console.log('Component mounted, filteredNames:', filteredNames.length);
+    console.log(`已加载 ${names.length} 个名字`);
   }, []);
 
   // 使用原生事件监听器确保在静态导出后点击仍然有效
