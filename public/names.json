@@ -1,0 +1,11222 @@
+[
+  {
+    "name": "沐辰",
+    "pinyin": "mù chén",
+    "meaning": "如沐星辰之光，心怀广阔宇宙，寓意前程似锦，气度不凡。",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      2
+    ]
+  },
+  {
+    "name": "望舒",
+    "pinyin": "wàng shū",
+    "meaning": "取自月神之名，如月光般高洁明亮，寓意温柔智慧，清辉普照。",
+    "source": "《楚辞·离骚》",
+    "style": "楚辞",
+    "tone": [
+      4,
+      1
+    ]
+  },
+  {
+    "name": "呦呦",
+    "pinyin": "yōu yōu",
+    "meaning": "鹿鸣之声，悠扬动听，寓意生命力旺盛，性格开朗阳光。",
+    "source": "《诗经·小雅》",
+    "style": "诗经",
+    "tone": [
+      1,
+      1
+    ]
+  },
+  {
+    "name": "思齐",
+    "pinyin": "sī qí",
+    "meaning": "见贤思齐焉，见不贤而内自省也，寓意见贤思齐，追求卓越。",
+    "source": "《诗经·大雅》",
+    "style": "诗经",
+    "tone": [
+      1,
+      2
+    ]
+  },
+  {
+    "name": "怀瑾",
+    "pinyin": "huái jǐn",
+    "meaning": "怀揣美玉，怀抱美德，寓意品德高尚，内心纯洁如玉。",
+    "source": "《楚辞·九章》",
+    "style": "楚辞",
+    "tone": [
+      2,
+      3
+    ]
+  },
+  {
+    "name": "景行",
+    "pinyin": "jǐng xíng",
+    "meaning": "高山仰止，景行行止，寓意德行高尚，令人敬仰。",
+    "source": "《诗经·小雅》",
+    "style": "诗经",
+    "tone": [
+      3,
+      2
+    ]
+  },
+  {
+    "name": "清越",
+    "pinyin": "qīng yuè",
+    "meaning": "声音清脆悠扬，超越凡俗，寓意才华出众，气质高雅。",
+    "source": "自然意象",
+    "style": "自然",
+    "tone": [
+      1,
+      4
+    ]
+  },
+  {
+    "name": "星阑",
+    "pinyin": "xīng lán",
+    "meaning": "夜色深沉，星光灿烂，寓意深邃迷人，光彩照人。",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      2
+    ]
+  },
+  {
+    "name": "晓岚",
+    "pinyin": "xiǎo lán",
+    "meaning": "清晨山间雾气，缥缈如梦，寓意清新脱俗，灵动优雅。",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      2
+    ]
+  },
+  {
+    "name": "逸然",
+    "pinyin": "yì rán",
+    "meaning": "安逸自然，超然物外，寓意生活从容，性情洒脱。",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      2
+    ]
+  },
+  {
+    "name": "峻峰",
+    "pinyin": "jùn fēng",
+    "meaning": "高峻山峰，巍峨挺拔，寓意意志坚定，成就卓越。",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      1
+    ]
+  },
+  {
+    "name": "语冰",
+    "pinyin": "yǔ bīng",
+    "meaning": "夏虫不可语冰，寓意见识广博，思想深刻，卓尔不群。",
+    "source": "《庄子》",
+    "style": "宋词",
+    "tone": [
+      3,
+      1
+    ]
+  },
+  {
+    "name": "令仪",
+    "pinyin": "lìng yí",
+    "meaning": "仪态端庄优美，令人生敬，寓意举止大方，气质高贵。",
+    "source": "《诗经·大雅》",
+    "style": "诗经",
+    "tone": [
+      4,
+      2
+    ]
+  },
+  {
+    "name": "海晏",
+    "pinyin": "hǎi yàn",
+    "meaning": "沧海平静，河清海晏，寓意天下太平，生活安稳顺遂。",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      4
+    ]
+  },
+  {
+    "name": "予安",
+    "pinyin": "yǔ ān",
+    "meaning": "给予安宁，平安喜乐，寓意一生顺遂，内心宁静。",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      1
+    ]
+  },
+  {
+    "name": "锦书",
+    "pinyin": "jǐn shū",
+    "meaning": "华美的书信，云中谁寄锦书来，寓意才华横溢，情意绵长。",
+    "source": "《一剪梅》",
+    "style": "宋词",
+    "tone": [
+      3,
+      1
+    ]
+  },
+  {
+    "name": "云舒",
+    "pinyin": "yún shū",
+    "meaning": "去留无意，漫随天外云卷云舒，寓意心境豁达，从容自在。",
+    "source": "《幽窗小记》",
+    "style": "现代",
+    "tone": [
+      2,
+      1
+    ]
+  },
+  {
+    "name": "知秋",
+    "pinyin": "zhī qiū",
+    "meaning": "一叶知秋，见微知著，寓意洞察敏锐，聪慧过人。",
+    "source": "《淮南子》",
+    "style": "现代",
+    "tone": [
+      1,
+      1
+    ]
+  },
+  {
+    "name": "明哲",
+    "pinyin": "míng zhé",
+    "meaning": "明智睿哲，洞察世事，寓意聪明智慧，明辨是非。",
+    "source": "《诗经》",
+    "style": "诗经",
+    "tone": [
+      2,
+      2
+    ]
+  },
+  {
+    "name": "若华",
+    "pinyin": "ruò huá",
+    "meaning": "若木之花，光彩照人，寓意容貌华美，生命璀璨。",
+    "source": "《楚辞·天问》",
+    "style": "楚辞",
+    "tone": [
+      4,
+      2
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "瑾",
+    "pinyin": "jǐn",
+    "meaning": "美玉、美德，寓意品德高尚，如玉般温润",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "瑜",
+    "pinyin": "yú",
+    "meaning": "美玉、优点，寓意完美无瑕，才华出众",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琛",
+    "pinyin": "chēn",
+    "meaning": "珍宝、宝物，寓意珍贵稀有，价值连城",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑶",
+    "pinyin": "yáo",
+    "meaning": "美玉、美好，寓意珍贵美好，光彩照人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琪",
+    "pinyin": "qí",
+    "meaning": "美玉、珍异，寓意珍贵美好，才华出众",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "琬",
+    "pinyin": "wǎn",
+    "meaning": "美玉、美好，寓意温婉美好，品德高尚",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "琰",
+    "pinyin": "yǎn",
+    "meaning": "美玉、光泽，寓意光彩照人，品德高尚",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "璇",
+    "pinyin": "xuán",
+    "meaning": "美玉、北斗星，寓意珍贵美好，光彩夺目",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "苒",
+    "pinyin": "rǎn",
+    "meaning": "草木茂盛，寓意生机勃勃，岁月静好",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "桐",
+    "pinyin": "tóng",
+    "meaning": "梧桐树，寓意高洁品格，凤凰来仪",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "枫",
+    "pinyin": "fēng",
+    "meaning": "枫树、红叶，寓意热情浪漫，成熟稳重",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "松",
+    "pinyin": "sōng",
+    "meaning": "松树，寓意坚韧不拔，品格高洁",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "柏",
+    "pinyin": "bǎi",
+    "meaning": "柏树，寓意正直坚强，长青不老",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "竹",
+    "pinyin": "zhú",
+    "meaning": "竹子，寓意虚心有节，君子之风",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "梅",
+    "pinyin": "méi",
+    "meaning": "梅花，寓意傲雪凌霜，坚强不屈",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "兰",
+    "pinyin": "lán",
+    "meaning": "兰花，寓意幽雅高洁，清香自持",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "荷",
+    "pinyin": "hé",
+    "meaning": "荷花、荷叶，寓意出淤泥而不染",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "莲",
+    "pinyin": "lián",
+    "meaning": "莲花、莲子，寓意纯洁美好",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "芷",
+    "pinyin": "zhǐ",
+    "meaning": "白芷、香草，寓意芬芳美好",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "若",
+    "pinyin": "ruò",
+    "meaning": "如同、好像，寓意温柔美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "芙",
+    "pinyin": "fú",
+    "meaning": "芙蓉、荷花，寓意美丽动人",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "蓉",
+    "pinyin": "róng",
+    "meaning": "芙蓉、蓉城，寓意美丽动人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "薇",
+    "pinyin": "wēi",
+    "meaning": "蔷薇、紫薇，寓意美丽坚强",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "萱",
+    "pinyin": "xuān",
+    "meaning": "萱草、忘忧，寓意无忧无虑",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "棠",
+    "pinyin": "táng",
+    "meaning": "海棠、棠梨，寓意美丽动人",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "景",
+    "pinyin": "jǐng",
+    "meaning": "景色、景象，寓意前程美好",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "星",
+    "pinyin": "xīng",
+    "meaning": "星辰、星光，寓意闪耀独特",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "云",
+    "pinyin": "yún",
+    "meaning": "云彩、飘逸，寓意自由自在",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霞",
+    "pinyin": "xiá",
+    "meaning": "彩霞、晚霞，寓意绚烂多彩",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "怀",
+    "pinyin": "huái",
+    "meaning": "怀抱、怀念，寓意心胸宽广",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "嘉",
+    "pinyin": "jiā",
+    "meaning": "美好、赞许，寓意优秀出众",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "懿",
+    "pinyin": "yì",
+    "meaning": "美好、德行，寓意品德完美",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "宁",
+    "pinyin": "níng",
+    "meaning": "安宁、平静，寓意心境平和",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "安",
+    "pinyin": "ān",
+    "meaning": "平安、安定，寓意一生平安",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "行",
+    "pinyin": "xíng",
+    "meaning": "行走、品行，寓意行动力强",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "翔",
+    "pinyin": "xiáng",
+    "meaning": "飞翔、翱翔，寓意志向高远",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "思",
+    "pinyin": "sī",
+    "meaning": "思考、思念，寓意聪慧善思",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "语",
+    "pinyin": "yǔ",
+    "meaning": "言语、说话，寓意善于表达",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "鸿",
+    "pinyin": "hóng",
+    "meaning": "大雁、宏大，寓意志向远大",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "鹤",
+    "pinyin": "hè",
+    "meaning": "仙鹤、长寿，寓意高洁长寿",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "鹏",
+    "pinyin": "péng",
+    "meaning": "大鹏、前程，寓意鹏程万里",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "宇",
+    "pinyin": "yǔ",
+    "meaning": "宇宙、空间，寓意胸怀广阔",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "轩",
+    "pinyin": "xuān",
+    "meaning": "轩窗、高大，寓意气度不凡",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "婉",
+    "pinyin": "wǎn",
+    "meaning": "温婉、柔顺，寓意温柔贤淑",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "柔",
+    "pinyin": "róu",
+    "meaning": "柔和、温柔，寓意温柔体贴",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "雅",
+    "pinyin": "yǎ",
+    "meaning": "优雅、高雅，寓意举止优雅",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "静",
+    "pinyin": "jìng",
+    "meaning": "安静、宁静，寓意心境平和",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "初",
+    "pinyin": "chū",
+    "meaning": "开始、最初，寓意不忘初心",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "夏",
+    "pinyin": "xià",
+    "meaning": "夏天、华夏，寓意热情奔放",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "秋",
+    "pinyin": "qiū",
+    "meaning": "秋天、收获，寓意成熟稳重",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "悠",
+    "pinyin": "yōu",
+    "meaning": "悠然、长远，寓意悠然自得",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "雨",
+    "pinyin": "yǔ",
+    "meaning": "雨水、恩泽，寓意滋润万物",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "晴",
+    "pinyin": "qíng",
+    "meaning": "晴天、晴朗，寓意阳光开朗",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霖",
+    "pinyin": "lín",
+    "meaning": "甘霖、连雨，寓意恩泽深厚",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "霏",
+    "pinyin": "fēi",
+    "meaning": "雨雪纷飞，寓意温柔细腻",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "峻",
+    "pinyin": "jùn",
+    "meaning": "高峻、严厉，寓意高大挺拔",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "峰",
+    "pinyin": "fēng",
+    "meaning": "山峰、顶峰，寓意勇攀高峰",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "岳",
+    "pinyin": "yuè",
+    "meaning": "山岳、岳父，寓意稳重可靠",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "明",
+    "pinyin": "míng",
+    "meaning": "明亮、智慧，寓意聪明睿智",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "辉",
+    "pinyin": "huī",
+    "meaning": "光辉、辉煌，寓意光彩照人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "耀",
+    "pinyin": "yào",
+    "meaning": "照耀、显耀，寓意光芒四射",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "书",
+    "pinyin": "shū",
+    "meaning": "书籍、书写，寓意学识渊博",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "墨",
+    "pinyin": "mò",
+    "meaning": "墨水、书画，寓意文采出众",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "诗",
+    "pinyin": "shī",
+    "meaning": "诗歌、诗意，寓意文采斐然",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "瑞",
+    "pinyin": "ruì",
+    "meaning": "祥瑞、吉祥，寓意吉祥如意",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "祥",
+    "pinyin": "xiáng",
+    "meaning": "吉祥、祥瑞，寓意吉祥如意",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "博",
+    "pinyin": "bó",
+    "meaning": "博学、广博，寓意学识渊博",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "睿",
+    "pinyin": "ruì",
+    "meaning": "睿智、明智，寓意聪明睿智",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "辰",
+    "pinyin": "chén",
+    "meaning": "星辰、时光，寓意如星辰般璀璨，把握美好时光",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "昕",
+    "pinyin": "xīn",
+    "meaning": "黎明、日出，寓意充满希望，朝气蓬勃",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "晓",
+    "pinyin": "xiǎo",
+    "meaning": "清晨、明白，寓意聪慧明理，如晨光般清新",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      3,
+      0
+    ]
+  },
+  {
+    "name": "曦",
+    "pinyin": "xī",
+    "meaning": "晨光、阳光，寓意温暖光明，前程似锦",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "旭",
+    "pinyin": "xù",
+    "meaning": "旭日东升，寓意朝气蓬勃，前程光明",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "晨",
+    "pinyin": "chén",
+    "meaning": "清晨、早晨，寓意朝气蓬勃，充满希望",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "晖",
+    "pinyin": "huī",
+    "meaning": "阳光、光辉，寓意光彩照人，前程辉煌",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "曜",
+    "pinyin": "yào",
+    "meaning": "日光、照耀，寓意光芒万丈，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "沐",
+    "pinyin": "mù",
+    "meaning": "沐浴、润泽，寓意受恩泽滋养，心灵纯净",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "汐",
+    "pinyin": "xī",
+    "meaning": "潮汐、晚潮，寓意有规律、有节奏，温婉动人",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "溪",
+    "pinyin": "xī",
+    "meaning": "溪流、小河，寓意清澈纯净，源远流长",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "清",
+    "pinyin": "qīng",
+    "meaning": "清澈、纯净，寓意品性高洁，心思澄明",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "涵",
+    "pinyin": "hán",
+    "meaning": "包容、涵养，寓意有内涵，心胸宽广",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "泽",
+    "pinyin": "zé",
+    "meaning": "恩泽、光泽，寓意仁慈博爱，光彩照人",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "澜",
+    "pinyin": "lán",
+    "meaning": "波澜、波浪，寓意气势磅礴，心胸宽广",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "润",
+    "pinyin": "rùn",
+    "meaning": "滋润、润泽，寓意温润如玉，泽被万物",
+    "source": "现代意境",
+    "style": "现代",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "潇",
+    "pinyin": "xiāo",
+    "meaning": "潇洒、洒脱，寓意洒脱不羁，风流倜傥",
+    "source": "山水意境",
+    "style": "自然",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "湘",
+    "pinyin": "xiāng",
+    "meaning": "湘江、湖南，寓意温婉秀丽，才华横溢",
+    "source": "《诗经》意境",
+    "style": "诗经",
+    "tone": [
+      1,
+      0
+    ]
+  },
+  {
+    "name": "淇",
+    "pinyin": "qí",
+    "meaning": "淇水、美好，寓意温柔贤淑，品质高洁",
+    "source": "《楚辞》意境",
+    "style": "楚辞",
+    "tone": [
+      2,
+      0
+    ]
+  },
+  {
+    "name": "洛",
+    "pinyin": "luò",
+    "meaning": "洛水、洛阳，寓意温婉动人，才华出众",
+    "source": "唐诗意境",
+    "style": "唐诗",
+    "tone": [
+      4,
+      0
+    ]
+  },
+  {
+    "name": "玥",
+    "pinyin": "yuè",
+    "meaning": "神珠、明珠，寓意珍贵美好，光彩夺目",
+    "source": "宋词意境",
+    "style": "宋词",
+    "tone": [
+      4,
+      0
+    ]
+  }
+]

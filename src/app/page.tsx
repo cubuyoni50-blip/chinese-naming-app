@@ -1,12 +1,22 @@
 "use client";
-import React, { useState, useMemo, useEffect, useRef } from 'react';
-import { names } from '@/data/names';
+import React, { useState, useEffect, useRef } from 'react';
 import { Download, X, Smartphone } from 'lucide-react';
 
+interface NameItem {
+  name: string;
+  pinyin: string;
+  meaning: string;
+  source: string;
+  style: '诗经' | '楚辞' | '唐诗' | '宋词' | '现代' | '自然';
+  tone: number[];
+}
+
 export default function Home() {
+  const [names, setNames] = useState<NameItem[]>([]);
+  const [loading, setLoading] = useState(true);
   const [activeStyle, setActiveStyle] = useState('全部');
   const [surname, setSurname] = useState('');
-  const [selectedName, setSelectedName] = useState<any>(null);
+  const [selectedName, setSelectedName] = useState<NameItem | null>(null);
   const [showDrawer, setShowDrawer] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
@@ -14,6 +24,21 @@ export default function Home() {
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
   const lengthOptions = ['全部', '单字', '双字'];
+
+  // 加载名字数据
+  useEffect(() => {
+    fetch('/chinese-naming-app/names.json')
+      .then(res => res.json())
+      .then(data => {
+        setNames(data);
+        setLoading(false);
+        console.log(`✅ 加载了 ${data.length} 个名字`);
+      })
+      .catch(err => {
+        console.error('加载名字失败:', err);
+        setLoading(false);
+      });
+  }, []);
 
   // 简转繁函数
   const toTraditional = (s: string): string => {
@@ -58,7 +83,10 @@ export default function Home() {
     return Math.min(100, score);
   };
 
-  const filteredNames = useMemo(() => {
+  // 筛选和排序名字
+  const filteredNames = React.useMemo(() => {
+    if (names.length === 0) return [];
+    
     const currentSurnameTone = getSurnameTone(surname);
     
     const processed = names.map(item => {
@@ -70,28 +98,9 @@ export default function Home() {
       };
     });
     
-    // 先按契合度排序
     processed.sort((a, b) => b.harmonyScore - a.harmonyScore);
     
-    // 分离单双字名
-    const doubleNames = processed.filter(n => n.name.length === 2);
-    const singleNames = processed.filter(n => n.name.length === 1);
-    
-    // 交错合并：双字优先，每2个双字配1个单字
-    let result: typeof processed = [];
-    let doubleIndex = 0;
-    let singleIndex = 0;
-    
-    while (doubleIndex < doubleNames.length || singleIndex < singleNames.length) {
-      // 先加2个双字名
-      for (let i = 0; i < 2 && doubleIndex < doubleNames.length; i++) {
-        result.push(doubleNames[doubleIndex++]);
-      }
-      // 再加1个单字名
-      if (singleIndex < singleNames.length) {
-        result.push(singleNames[singleIndex++]);
-      }
-    }
+    let result = processed;
     
     // 风格筛选
     if (activeStyle !== '全部') {
@@ -106,11 +115,9 @@ export default function Home() {
     }
     
     return result;
-  }, [activeStyle, surname, nameLength]);
+  }, [names, activeStyle, surname, nameLength]);
 
-  // 简化的点击处理
-  const handleNameClick = (name: any) => {
-    console.log('点击了名字:', name.name);
+  const handleNameClick = (name: NameItem) => {
     setSelectedName(name);
     setShowDrawer(true);
   };
@@ -142,220 +149,61 @@ export default function Home() {
     }
   };
 
-  // 组件挂载时记录名字总数
-  useEffect(() => {
-    console.log(`已加载 ${names.length} 个名字`);
-  }, []);
-
-  // 使用原生事件监听器确保在静态导出后点击仍然有效
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    
-    // 延迟绑定以确保 DOM 完全准备好
-    const timer = setTimeout(() => {
-      console.log('Binding click events...');
-      
-      // 为名字卡片添加点击事件
-      const nameCards = document.querySelectorAll('[data-name-card]');
-      console.log('Found name cards:', nameCards.length);
-      
-      const handleCardClick = (e: Event) => {
-        e.preventDefault();
-        e.stopPropagation();
-        const target = e.currentTarget as HTMLElement;
-        const nameData = target.getAttribute('data-name');
-        console.log('Card clicked, nameData:', nameData);
-        if (nameData) {
-          try {
-            const nameObj = JSON.parse(decodeURIComponent(nameData));
-            console.log('Opening drawer for:', nameObj.name);
-            setSelectedName(nameObj);
-            setShowDrawer(true);
-          } catch (err) {
-            console.error('Failed to parse name data:', err);
-          }
-        }
-      };
-      
-      nameCards.forEach((card, index) => {
-        console.log(`Binding events to card ${index}`);
-        card.addEventListener('click', handleCardClick);
-      });
-    }, 100);
-    
-    // 摇一摇功能
-    let lastX = 0, lastY = 0, lastZ = 0;
-    let lastUpdate = 0;
-    
-    const handleMotion = (event: DeviceMotionEvent) => {
-      const acc = event.accelerationIncludingGravity;
-      if (!acc) return;
-      
-      const now = Date.now();
-      if (now - lastUpdate < 200) return;
-      
-      const { x, y, z } = acc;
-      const delta = Math.abs(x! - lastX) + Math.abs(y! - lastY) + Math.abs(z! - lastZ);
-      
-      if (delta > 15) {
-        const randomName = names[Math.floor(Math.random() * names.length)];
-        setSelectedName(randomName);
-        setShowDrawer(true);
-      }
-      
-      lastX = x!; lastY = y!; lastZ = z!;
-      lastUpdate = now;
-    };
-
-    const setupMotion = async () => {
-      if ('DeviceMotionEvent' in window) {
-        const DeviceMotionEventAny = DeviceMotionEvent as any;
-        if (typeof DeviceMotionEventAny.requestPermission === 'function') {
-          try {
-            const permission = await DeviceMotionEventAny.requestPermission();
-            if (permission === 'granted') {
-              window.addEventListener('devicemotion', handleMotion);
-            }
-          } catch (e) {}
-        } else {
-          window.addEventListener('devicemotion', handleMotion);
-        }
-      }
-    };
-    
-    setupMotion();
-    
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('devicemotion', handleMotion);
-    };
-  }, [filteredNames]);
+  if (loading) {
+    return (
+      <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+        <div style={{ textAlign: 'center' }}>
+          <div style={{ fontSize: '24px', color: '#C5A367', marginBottom: '10px' }}>墨香取名</div>
+          <div style={{ fontSize: '14px', color: '#666' }}>正在加载名字数据...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', position: 'relative' }}>
       {/* 背景纹理 */}
-      <div style={{ position: 'fixed', inset: 0, backgroundImage: 'url(https://www.transparenttextures.com/patterns/p6.png)', opacity: 0.5, pointerEvents: 'none' }} />
-
-      {/* 头部 */}
+      <div style={{
+        position: 'fixed',
+        inset: 0,
+        backgroundImage: 'url(https://www.transparenttextures.com/patterns/p6.png)',
+        opacity: 0.5,
+        pointerEvents: 'none'
+      }} />
+      
       <header style={{ textAlign: 'center', padding: '40px 20px 30px' }}>
-        {/* 顶部装饰线 */}
-        <div style={{ 
-          width: '60px', 
-          height: '2px', 
-          backgroundColor: '#C5A367', 
-          margin: '0 auto 25px',
-          opacity: 0.6 
-        }} />
-        
-        {/* 英文小字 */}
-        <div style={{ 
-          fontSize: '10px', 
-          color: '#999', 
-          letterSpacing: '3px',
-          marginBottom: '15px',
-          textTransform: 'uppercase'
-        }}>
-          Chinese Naming
+        <div style={{ width: '60px', height: '2px', backgroundColor: '#C5A367', margin: '0 auto 25px', opacity: 0.6 }} />
+        <div style={{ fontSize: '10px', color: '#999', letterSpacing: '3px', marginBottom: '15px', textTransform: 'uppercase' }}>Chinese Naming</div>
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', marginBottom: '12px' }}>
+          <span style={{ fontSize: '42px', fontWeight: 'bold', color: '#2C2C2C', letterSpacing: 0, fontFamily: '"Noto Serif SC", serif' }}>墨</span>
+          <span style={{ fontSize: '38px', fontWeight: '500', color: '#B22222', letterSpacing: 0, marginTop: '2px', fontFamily: '"Noto Serif SC", serif' }}>香</span>
+          <span style={{ fontSize: '28px', color: '#C5A367', margin: '0 8px' }}>·</span>
+          <span style={{ fontSize: '42px', fontWeight: 'bold', color: '#2C2C2C', letterSpacing: 0, fontFamily: '"Noto Serif SC", serif' }}>取</span>
+          <span style={{ fontSize: '38px', fontWeight: '500', color: '#B22222', letterSpacing: 0, marginTop: '2px', fontFamily: '"Noto Serif SC", serif' }}>名</span>
         </div>
-        
-        {/* 主标题 - 精致排版 */}
-        <div style={{ 
-          display: 'inline-flex', 
-          alignItems: 'center',
-          gap: '3px',
-          marginBottom: '12px'
-        }}>
-          {/* 墨 */}
-          <span style={{
-            fontSize: '42px',
-            fontWeight: 'bold',
-            color: '#2C2C2C',
-            letterSpacing: '0',
-            fontFamily: '"Noto Serif SC", serif'
-          }}>墨</span>
-          
-          {/* 香 - 朱砂色，稍小 */}
-          <span style={{
-            fontSize: '38px',
-            fontWeight: '500',
-            color: '#B22222',
-            letterSpacing: '0',
-            marginTop: '-5px',
-            fontFamily: '"Noto Serif SC", serif'
-          }}>香</span>
-          
-          {/* 装饰点 */}
-          <span style={{
-            width: '4px',
-            height: '4px',
-            backgroundColor: '#C5A367',
-            borderRadius: '50%',
-            margin: '0 8px'
-          }} />
-          
-          {/* 取 - 稍小 */}
-          <span style={{
-            fontSize: '40px',
-            fontWeight: 'bold',
-            color: '#2C2C2C',
-            letterSpacing: '0',
-            fontFamily: '"Noto Serif SC", serif'
-          }}>取</span>
-          
-          {/* 名 - 朱砂色 */}
-          <span style={{
-            fontSize: '42px',
-            fontWeight: 'bold',
-            color: '#B22222',
-            letterSpacing: '0',
-            marginTop: '3px',
-            fontFamily: '"Noto Serif SC", serif'
-          }}>名</span>
-        </div>
-        
-        {/* 分隔装饰 */}
-        <div style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          gap: '10px',
-          marginBottom: '15px'
-        }}>
-          <div style={{ width: '30px', height: '1px', backgroundColor: '#C5A367', opacity: 0.4 }} />
-          <div style={{ width: '4px', height: '4px', borderRadius: '50%', backgroundColor: '#C5A367', opacity: 0.6 }} />
-          <div style={{ width: '30px', height: '1px', backgroundColor: '#C5A367', opacity: 0.4 }} />
-        </div>
-        
-        {/* 副标题 */}
-        <p style={{ 
-          color: '#888', 
-          fontSize: '13px',
-          letterSpacing: '2px'
-        }}>雅名共赏 · 文墨传家</p>
+        <p style={{ fontSize: '14px', color: '#666', letterSpacing: '2px', marginTop: '10px' }}>文墨传家，雅名共赏</p>
       </header>
 
       {/* 姓氏输入 */}
       <div style={{ textAlign: 'center', marginBottom: '30px' }}>
         <input
           type="text"
-          placeholder="输入您的姓氏"
           value={surname}
-          onChange={(e) => setSurname(e.target.value.slice(0, 2))}
+          onChange={(e) => setSurname(e.target.value)}
+          placeholder="输入您的姓氏"
+          maxLength={2}
           style={{
-            padding: '10px 20px',
+            padding: '12px 20px',
             fontSize: '18px',
-            border: 'none',
-            borderBottom: '2px solid #C5A367',
-            background: 'transparent',
+            border: '2px solid #C5A367',
+            borderRadius: '25px',
+            width: '200px',
             textAlign: 'center',
-            outline: 'none'
+            backgroundColor: 'white',
+            outline: 'none',
+            fontFamily: '"Noto Serif SC", serif'
           }}
         />
-        {surname && (
-          <p style={{ fontSize: '12px', color: '#666', marginTop: '10px' }}>
-            分析「{surname}」姓的音律契合度
-          </p>
-        )}
       </div>
 
       {/* 风格筛选 */}
@@ -418,11 +266,9 @@ export default function Home() {
         gap: '15px',
         padding: '0 20px 100px'
       }}>
-        {filteredNames.map((item) => (
+        {filteredNames.slice(0, 50).map((item) => (
           <button
-            key={item.name}
-            data-name-card
-            data-name={encodeURIComponent(JSON.stringify(item))}
+            key={item.name + item.pinyin}
             onClick={() => handleNameClick(item)}
             style={{
               backgroundColor: 'white',
@@ -434,45 +280,25 @@ export default function Home() {
               boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
             }}
           >
-            <div style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '5px' }}>
+            <div style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '8px', color: '#2C2C2C' }}>
               {item.name}
             </div>
-            <div style={{ fontSize: '11px', color: '#999', marginBottom: '5px' }}>
+            <div style={{ fontSize: '12px', color: '#999', marginBottom: '8px' }}>
               {item.pinyin}
             </div>
-            {surname && item.harmonyScore > 0 && (
-              <div style={{
-                fontSize: '11px',
-                color: item.harmonyScore >= 80 ? '#B22222' : '#666'
-              }}>
-                契合度 {item.harmonyScore}%
-              </div>
-            )}
-            <div style={{ fontSize: '10px', color: '#999', marginTop: '5px' }}>
-              {item.meaning.slice(0, 20)}...
+            <div style={{ fontSize: '11px', color: '#666', lineHeight: 1.4, height: '30px', overflow: 'hidden' }}>
+              {item.meaning.slice(0, 30)}...
             </div>
           </button>
         ))}
       </div>
 
-      {/* 底部提示 */}
-      <div style={{
-        position: 'fixed',
-        bottom: '20px',
-        left: '50%',
-        transform: 'translateX(-50%)',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '5px',
-        fontSize: '12px',
-        color: '#999',
-        backgroundColor: 'rgba(255,255,255,0.9)',
-        padding: '8px 16px',
-        borderRadius: '20px'
-      }}>
-        <Smartphone size={14} />
-        <span>手机摇一摇，随机推荐雅名</span>
-      </div>
+      {/* 加载更多提示 */}
+      {filteredNames.length > 50 && (
+        <div style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '14px' }}>
+          已显示 50 个名字，共 {filteredNames.length} 个
+        </div>
+      )}
 
       {/* 抽屉 */}
       {showDrawer && selectedName && (
@@ -527,29 +353,13 @@ export default function Home() {
                 justifyContent: 'center',
                 gap: '10px'
               }}>
-                {/* 姓氏 */}
                 {surname && (
-                  <span 
-                    style={{
-                      border: '2px solid #B22222',
-                      padding: '10px 15px',
-                      borderRadius: '4px',
-                      color: '#B22222'
-                    }}
-                  >
+                  <span style={{ border: '2px solid #B22222', padding: '10px 15px', borderRadius: '4px', color: '#B22222' }}>
                     {surname}
                   </span>
                 )}
-                {/* 名字 */}
-                {selectedName.name.split('').map((char: string, i: number) => (
-                  <span 
-                    key={i}
-                    style={{
-                      border: '2px solid #C5A367',
-                      padding: '10px 15px',
-                      borderRadius: '4px'
-                    }}
-                  >
+                {selectedName.name.split('').map((char, i) => (
+                  <span key={i} style={{ border: '2px solid #C5A367', padding: '10px 15px', borderRadius: '4px' }}>
                     {char}
                   </span>
                 ))}
@@ -567,20 +377,6 @@ export default function Home() {
                 出自 {selectedName.source}
               </p>
 
-              {surname && selectedName.harmonyScore > 0 && (
-                <p style={{
-                  marginTop: '15px',
-                  padding: '8px 16px',
-                  backgroundColor: selectedName.harmonyScore >= 80 ? '#B22222' : '#f0f0f0',
-                  color: selectedName.harmonyScore >= 80 ? 'white' : '#666',
-                  borderRadius: '20px',
-                  display: 'inline-block'
-                }}>
-                  与「{surname}」姓契合度：{selectedName.harmonyScore}%
-                </p>
-              )}
-
-              {/* 预览名片按钮 */}
               <button
                 onClick={() => setShowPreview(true)}
                 style={{
@@ -606,236 +402,7 @@ export default function Home() {
         </>
       )}
 
-      {/* 隐藏的海报模板 - 使用内联样式确保兼容性 */}
-      <div style={{ position: 'absolute', left: '-9999px' }}>
-        <div 
-          ref={posterRef}
-          style={{
-            width: '1080px',
-            height: '1920px',
-            backgroundColor: '#F9F4E8',
-            position: 'relative',
-            overflow: 'hidden',
-            fontFamily: '"Noto Serif SC", serif'
-          }}
-        >
-          {/* 背景纹理 */}
-          <div style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E")`,
-            opacity: 0.5
-          }} />
-          
-          {/* 顶部线 */}
-          <div style={{
-            position: 'absolute',
-            top: '64px',
-            left: '80px',
-            right: '80px',
-            height: '1px',
-            background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
-          }} />
-          
-          {/* 左上角标题 */}
-          <div style={{
-            position: 'absolute',
-            top: '80px',
-            left: '60px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '8px'
-          }}>
-            <span style={{
-              writingMode: 'vertical-rl',
-              textOrientation: 'mixed',
-              fontSize: '28px',
-              color: '#B22222',
-              fontWeight: 'bold',
-              letterSpacing: '0.3em'
-            }}>墨香</span>
-            <span style={{
-              writingMode: 'vertical-rl',
-              textOrientation: 'mixed',
-              fontSize: '24px',
-              color: '#2C2C2C',
-              letterSpacing: '0.2em'
-            }}>取名</span>
-          </div>
-          
-          {/* 顶部标题 */}
-          <div style={{
-            position: 'absolute',
-            top: '80px',
-            left: '50%',
-            transform: 'translateX(-50%)',
-            fontSize: '20px',
-            color: '#C5A367',
-            letterSpacing: '0.3em'
-          }}>为子寻雅名</div>
-          
-          {/* 左侧竖排 */}
-          <div style={{
-            position: 'absolute',
-            left: '60px',
-            top: '200px',
-            writingMode: 'vertical-rl',
-            textOrientation: 'mixed',
-            fontSize: '24px',
-            color: 'rgba(197,163,103,0.6)',
-            letterSpacing: '0.5em'
-          }}>
-            雅名共赏 · 文墨传家
-          </div>
-          
-          {/* 名字区域 - 上下居中 */}
-          <div style={{
-            position: 'absolute',
-            top: '45%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            textAlign: 'center',
-            width: '100%'
-          }}>
-            {/* 姓氏+名字 */}
-            <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '30px',
-              marginBottom: '30px'
-            }}>
-              {/* 姓氏 */}
-              {surname && (
-                <div style={{
-                  fontSize: '180px',
-                  color: '#B22222',
-                  fontWeight: 'bold',
-                  textShadow: '3px 3px 6px rgba(178,34,34,0.2)'
-                }}>
-                  {surname}
-                </div>
-              )}
-              
-              {/* 名字 */}
-              <div style={{
-                fontSize: '180px',
-                color: '#2C2C2C',
-                letterSpacing: '0.2em',
-                fontWeight: 'bold',
-                textShadow: '2px 2px 8px rgba(0,0,0,0.08)'
-              }}>
-                {selectedName?.name}
-              </div>
-            </div>
-            
-            {/* 拼音 */}
-            <div style={{
-              fontSize: '32px',
-              color: 'rgba(197,163,103,0.7)',
-              letterSpacing: '0.5em',
-              fontStyle: 'italic'
-            }}>
-              {selectedName?.pinyin}
-            </div>
-          </div>
-          
-          {/* 寓意区域 - 下半部分 */}
-          <div style={{
-            position: 'absolute',
-            top: '72%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            textAlign: 'center',
-            width: '100%',
-            padding: '0 80px'
-          }}>
-            {/* 分隔线 */}
-            <div style={{
-              width: '120px',
-              height: '1px',
-              backgroundColor: 'rgba(197,163,103,0.4)',
-              margin: '0 auto 40px'
-            }} />
-            
-            {/* 寓意 */}
-            <div style={{
-              fontSize: '28px',
-              color: 'rgba(44,44,44,0.8)',
-              lineHeight: 1.8,
-              maxWidth: '800px',
-              margin: '0 auto 30px'
-            }}>
-              {selectedName?.meaning}
-            </div>
-            
-            {/* 出处 */}
-            <div style={{
-              fontSize: '24px',
-              color: 'rgba(197,163,103,0.6)'
-            }}>
-              —— {selectedName?.source}
-            </div>
-          </div>
-          
-          {/* 底部 */}
-          <div style={{
-            position: 'absolute',
-            bottom: '80px',
-            left: 0,
-            right: 0,
-            textAlign: 'center'
-          }}>
-            <div style={{
-              width: '160px',
-              height: '1px',
-              background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)',
-              margin: '0 auto 24px'
-            }} />
-            <div style={{
-              fontSize: '18px',
-              color: 'rgba(197,163,103,0.5)',
-              letterSpacing: '0.3em'
-            }}>墨香取名 · 为子寻雅名</div>
-          </div>
-          
-          {/* 姓氏印章（繁体） */}
-          {surname && (
-            <div style={{
-              position: 'absolute',
-              bottom: '80px',
-              right: '80px',
-              width: '96px',
-              height: '96px',
-              border: '3px solid #B22222',
-              borderRadius: '8px',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              transform: 'rotate(-3deg)',
-              backgroundColor: 'rgba(178,34,34,0.05)'
-            }}>
-              <span style={{
-                fontSize: '36px',
-                color: '#B22222',
-                fontWeight: 'bold'
-              }}>{toTraditional(surname)}</span>
-            </div>
-          )}
-          
-          {/* 底部线 */}
-          <div style={{
-            position: 'absolute',
-            bottom: '64px',
-            left: '80px',
-            right: '80px',
-            height: '1px',
-            background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
-          }} />
-        </div>
-      </div>
-
-      {/* 名片预览模态框 */}
+      {/* 预览模态框 */}
       {showPreview && selectedName && (
         <div style={{
           position: 'fixed',
@@ -851,7 +418,6 @@ export default function Home() {
           justifyContent: 'center',
           padding: '20px'
         }}>
-          {/* 关闭按钮 */}
           <button
             onClick={() => setShowPreview(false)}
             style={{
@@ -862,260 +428,39 @@ export default function Home() {
               border: 'none',
               color: 'white',
               fontSize: '24px',
-              cursor: 'pointer',
-              padding: '10px'
+              cursor: 'pointer'
             }}
           >
             <X size={32} />
           </button>
 
-          {/* 预览标题 */}
-          <div style={{
-            color: 'white',
-            fontSize: '18px',
-            marginBottom: '20px',
-            textAlign: 'center'
-          }}>
-            名片预览
-          </div>
+          <div style={{ color: 'white', fontSize: '18px', marginBottom: '20px' }}>名片预览</div>
 
-          {/* 名片预览区域 */}
-          <div style={{
-            maxWidth: '100%',
-            maxHeight: '60vh',
-            overflow: 'auto',
+          {/* 预览名片 */}
+          <div ref={posterRef} style={{
+            width: '300px',
+            height: '533px',
             backgroundColor: '#F9F4E8',
-            borderRadius: '8px',
-            boxShadow: '0 10px 40px rgba(0,0,0,0.3)'
+            position: 'relative',
+            overflow: 'hidden',
+            fontFamily: '"Noto Serif SC", serif',
+            padding: '40px 30px'
           }}>
-            <div style={{
-              width: '300px',
-              height: '533px',
-              position: 'relative',
-              overflow: 'hidden',
-              fontFamily: '"Noto Serif SC", serif',
-              backgroundColor: '#F9F4E8'
-            }}>
-              {/* 背景纹理 */}
-              <div style={{
-                position: 'absolute',
-                inset: 0,
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E")`,
-                opacity: 0.5
-              }} />
-              
-              {/* 顶部线 */}
-              <div style={{
-                position: 'absolute',
-                top: '18px',
-                left: '22px',
-                right: '22px',
-                height: '1px',
-                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
-              }} />
-              
-              {/* 左上角标题 */}
-              <div style={{
-                position: 'absolute',
-                top: '22px',
-                left: '17px',
-                display: 'flex',
-                alignItems: 'center',
-                gap: '2px'
-              }}>
-                <span style={{
-                  writingMode: 'vertical-rl',
-                  textOrientation: 'mixed',
-                  fontSize: '8px',
-                  color: '#B22222',
-                  fontWeight: 'bold',
-                  letterSpacing: '0.3em'
-                }}>墨香</span>
-                <span style={{
-                  writingMode: 'vertical-rl',
-                  textOrientation: 'mixed',
-                  fontSize: '7px',
-                  color: '#2C2C2C',
-                  letterSpacing: '0.2em'
-                }}>取名</span>
-              </div>
-              
-              {/* 顶部标题 */}
-              <div style={{
-                position: 'absolute',
-                top: '22px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                fontSize: '6px',
-                color: '#C5A367',
-                letterSpacing: '0.3em'
-              }}>为子寻雅名</div>
-              
-              {/* 左侧竖排 */}
-              <div style={{
-                position: 'absolute',
-                left: '17px',
-                top: '55px',
-                writingMode: 'vertical-rl',
-                textOrientation: 'mixed',
-                fontSize: '7px',
-                color: 'rgba(197,163,103,0.6)',
-                letterSpacing: '0.5em'
-              }}>
-                雅名共赏 · 文墨传家
-              </div>
-              
-              {/* 名字区域 - 上下居中 */}
-              <div style={{
-                position: 'absolute',
-                top: '45%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                textAlign: 'center',
-                width: '100%'
-              }}>
-                {/* 姓氏+名字 */}
-                <div style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  gap: '6px',
-                  marginBottom: '8px'
-                }}>
-                  {/* 姓氏 */}
-                  {surname && (
-                    <div style={{
-                      fontSize: '50px',
-                      color: '#B22222',
-                      fontWeight: 'bold',
-                      marginRight: '8px',
-                      textShadow: '1px 1px 3px rgba(178,34,34,0.2)'
-                    }}>
-                      {surname}
-                    </div>
-                  )}
-                  
-                  {/* 名字 */}
-                  <div style={{
-                    fontSize: '50px',
-                    color: '#2C2C28',
-                    letterSpacing: '0.3em',
-                    fontWeight: 'bold',
-                    textShadow: '1px 1px 3px rgba(0,0,0,0.08)'
-                  }}>
-                    {selectedName?.name}
-                  </div>
-                </div>
-                
-                {/* 拼音 */}
-                <div style={{
-                  fontSize: '9px',
-                  color: 'rgba(197,163,103,0.7)',
-                  letterSpacing: '0.5em',
-                  fontStyle: 'italic'
-                }}>
-                  {selectedName?.pinyin}
-                </div>
-              </div>
-              
-              {/* 寓意区域 - 下半部分 */}
-              <div style={{
-                position: 'absolute',
-                top: '72%',
-                left: '50%',
-                transform: 'translate(-50%, -50%)',
-                textAlign: 'center',
-                width: '100%',
-                padding: '0 20px'
-              }}>
-                {/* 分隔线 */}
-                <div style={{
-                  width: '40px',
-                  height: '1px',
-                  backgroundColor: 'rgba(197,163,103,0.4)',
-                  margin: '0 auto 15px'
-                }} />
-                
-                {/* 寓意 */}
-                <div style={{
-                  fontSize: '8px',
-                  color: 'rgba(44,44,44,0.8)',
-                  lineHeight: 1.6,
-                  maxWidth: '194px',
-                  margin: '0 auto',
-                  padding: '0 11px',
-                  marginBottom: '9px'
-                }}>
-                  {selectedName?.meaning}
-                </div>
-                
-                {/* 出处 */}
-                <div style={{
-                  fontSize: '7px',
-                  color: 'rgba(197,163,103,0.6)'
-                }}>
-                  —— {selectedName?.source}
-                </div>
-              </div>
-              
-              {/* 底部 */}
-              <div style={{
-                position: 'absolute',
-                bottom: '22px',
-                left: 0,
-                right: 0,
-                textAlign: 'center'
-              }}>
-                <div style={{
-                  width: '44px',
-                  height: '1px',
-                  background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)',
-                  margin: '0 auto 7px'
-                }} />
-                <div style={{
-                  fontSize: '5px',
-                  color: 'rgba(197,163,103,0.5)',
-                  letterSpacing: '0.3em'
-                }}>墨香取名 · 为子寻雅名</div>
-              </div>
-              
-              {/* 姓氏印章（繁体） */}
-              {surname && (
-                <div style={{
-                  position: 'absolute',
-                  bottom: '22px',
-                  right: '22px',
-                  width: '27px',
-                  height: '27px',
-                  border: '1px solid #B22222',
-                  borderRadius: '2px',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  transform: 'rotate(-3deg)',
-                  backgroundColor: 'rgba(178,34,34,0.05)'
-                }}>
-                  <span style={{
-                    fontSize: '10px',
-                    color: '#B22222',
-                    fontWeight: 'bold'
-                  }}>{toTraditional(surname)}</span>
-                </div>
-              )}
-              
-              {/* 底部线 */}
-              <div style={{
-                position: 'absolute',
-                bottom: '18px',
-                left: '22px',
-                right: '22px',
-                height: '1px',
-                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
-              }} />
+            <div style={{ fontSize: '32px', fontWeight: 'bold', textAlign: 'center', marginTop: '80px', color: '#2C2C2C' }}>
+              {surname && <span style={{ color: '#B22222', marginRight: '20px' }}>{surname}</span>}
+              {selectedName.name}
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '20px', color: '#C5A367', fontStyle: 'italic' }}>
+              {selectedName.pinyin}
+            </div>
+            <div style={{ marginTop: '60px', fontSize: '14px', lineHeight: 1.6, color: '#333', textAlign: 'center' }}>
+              {selectedName.meaning}
+            </div>
+            <div style={{ marginTop: '40px', textAlign: 'center', color: '#999', fontSize: '12px' }}>
+              —— {selectedName.source}
             </div>
           </div>
 
-          {/* 下载按钮 */}
           <button
             onClick={handleDownload}
             disabled={isGenerating}
@@ -1128,25 +473,11 @@ export default function Home() {
               borderRadius: '25px',
               fontSize: '18px',
               cursor: isGenerating ? 'not-allowed' : 'pointer',
-              opacity: isGenerating ? 0.7 : 1,
-              display: 'flex',
-              alignItems: 'center',
-              gap: '10px',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.3)'
+              opacity: isGenerating ? 0.7 : 1
             }}
           >
-            <Download size={22} />
-            {isGenerating ? '下载中...' : '下载名片'}
+            {isGenerating ? '生成中...' : '下载名片'}
           </button>
-
-          {/* 提示文字 */}
-          <div style={{
-            color: 'rgba(255,255,255,0.6)',
-            fontSize: '14px',
-            marginTop: '15px'
-          }}>
-            点击下载可保存高清名片图片
-          </div>
         </div>
       )}
     </div>
