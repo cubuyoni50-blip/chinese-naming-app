@@ -134,17 +134,43 @@ export default function Home() {
     return result;
   }, [names, activeStyle, surname, nameLength]);
 
+  // 混合单字名和双字名（交替显示）
+  const mixedNames = React.useMemo(() => {
+    if (nameLength !== '全部') return filteredNames;
+    
+    const single = filteredNames.filter(n => n.name.length === 1);
+    const double = filteredNames.filter(n => n.name.length === 2);
+    const mixed: NameItem[] = [];
+    
+    // 每5个双字名插入1个单字名
+    let singleIndex = 0;
+    for (let i = 0; i < double.length; i++) {
+      mixed.push(double[i]);
+      if ((i + 1) % 5 === 0 && singleIndex < single.length) {
+        mixed.push(single[singleIndex]);
+        singleIndex++;
+      }
+    }
+    // 添加剩余的单字名
+    while (singleIndex < single.length) {
+      mixed.push(single[singleIndex]);
+      singleIndex++;
+    }
+    
+    return mixed;
+  }, [filteredNames, nameLength]);
+
   // 无限滚动
   useEffect(() => {
     const handleScroll = () => {
       if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 500) {
-        setDisplayCount(prev => Math.min(prev + 30, filteredNames.length));
+        setDisplayCount(prev => Math.min(prev + 30, mixedNames.length));
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, [filteredNames.length]);
+  }, [mixedNames.length]);
 
   // 筛选条件改变时重置显示数量
   useEffect(() => {
@@ -300,7 +326,7 @@ export default function Home() {
         gap: '15px',
         padding: '0 20px 100px'
       }}>
-        {filteredNames.slice(0, displayCount).map((item) => (
+        {mixedNames.slice(0, displayCount).map((item) => (
           <button
             key={item.name + item.pinyin}
             onClick={() => handleNameClick(item)}
@@ -328,15 +354,15 @@ export default function Home() {
       </div>
 
       {/* 加载更多提示 */}
-      {filteredNames.length > displayCount && (
+      {mixedNames.length > displayCount && (
         <div style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '14px' }}>
-          已显示 {displayCount} 个名字，共 {filteredNames.length} 个<br />
+          已显示 {displayCount} 个名字，共 {mixedNames.length} 个<br />
           <span style={{ fontSize: '12px' }}>继续滚动加载更多...</span>
         </div>
       )}
-      {filteredNames.length <= displayCount && filteredNames.length > 0 && (
+      {mixedNames.length <= displayCount && mixedNames.length > 0 && (
         <div style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '14px' }}>
-          已显示全部 {filteredNames.length} 个名字
+          已显示全部 {mixedNames.length} 个名字
         </div>
       )}
 
