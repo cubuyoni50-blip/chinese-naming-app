@@ -93,26 +93,53 @@ export default function Home() {
     return pingToneChars.includes(lastChar) ? 1 : 2;
   };
 
-  const calculateHarmony = (surnameTone: number, nameTone1: number, nameTone2: number): number => {
-    if (!surname) return 0;
-    let score = 60;
-    if (surnameTone !== nameTone1) score += 25;
-    if (nameTone1 !== nameTone2) score += 35;
-    return Math.min(100, score);
+  const calculateHarmony = (s: string, nameItem: NameItem): number => {
+    if (!s) return 0;
+    
+    const surnameTone = getSurnameTone(s);
+    const nameTone1 = nameItem.tone?.[0] || 1;
+    const nameTone2 = nameItem.tone?.[1] || 2;
+    
+    // 1. 声调平仄基础分 (30分)
+    let toneScore = 15;
+    if (surnameTone !== nameTone1) toneScore += 8;
+    if (nameTone1 !== nameTone2 && nameItem.name.length > 1) toneScore += 7;
+    
+    // 2. 姓名哈希权重 (确保同一个名字分值固定，模拟"生辰八字/五行")
+    // 使用简单的字符编码累加作为哈希
+    const combined = s + nameItem.name;
+    let hash = 0;
+    for (let i = 0; i < combined.length; i++) {
+      hash = ((hash << 5) - hash) + combined.charCodeAt(i);
+      hash |= 0; 
+    }
+    const destinyFactor = Math.abs(hash % 40); // 0-39分
+    
+    // 3. 字形结构平衡 (模拟笔画数平衡，20分)
+    // 奇偶哈希模拟
+    const visualBalance = Math.abs((combined.charCodeAt(0) + combined.charCodeAt(combined.length-1)) % 21); // 0-20分
+    
+    // 4. 基础起步分 (确保大部分名字在80分以上)
+    const baseScore = 10;
+    
+    const totalScore = baseScore + toneScore + destinyFactor + visualBalance;
+    
+    // 限制最高99分，只有极少数特定组合能到100分
+    if (totalScore >= 100) {
+      return (hash % 100 === 7) ? 100 : 99;
+    }
+    
+    return Math.max(60, totalScore);
   };
 
   // 筛选和排序名字
   const filteredNames = React.useMemo(() => {
     if (names.length === 0) return [];
     
-    const currentSurnameTone = getSurnameTone(surname);
-    
     const processed = names.map(item => {
-      const tone1 = item.tone?.[0] || 1;
-      const tone2 = item.tone?.[1] || 2;
       return {
         ...item,
-        harmonyScore: calculateHarmony(currentSurnameTone, tone1, tone2)
+        harmonyScore: calculateHarmony(surname, item)
       };
     });
     
