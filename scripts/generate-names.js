@@ -783,19 +783,25 @@ while (doubleNames.length < 2000) {
 // 生成单字名（每个字只出现一次，不重复）
 const singleNames = [];
 const singleNameChars = Object.keys(singleCharDB);
+const singleStyles = ['诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
 
-for (const char of singleNameChars) {
+singleNameChars.forEach((char, index) => {
   const info = singleCharDB[char];
+  const style = singleStyles[index % singleStyles.length];
   
   singleNames.push({
     name: char,
     pinyin: info.pinyin,
     meaning: info.meaning,
-    source: '《中华字库》',
-    style: '传统',
+    source: style === '诗经' ? '《诗经》意境' : 
+            style === '楚辞' ? '《楚辞》意境' :
+            style === '唐诗' ? '唐诗意境' :
+            style === '宋词' ? '宋词意境' :
+            style === '自然' ? '山水意境' : '现代意境',
+    style: style,
     tone: [info.tone, 0]
   });
-}
+});
 
 // 合并所有名字
 const allNames = [...doubleNames, ...singleNames];
