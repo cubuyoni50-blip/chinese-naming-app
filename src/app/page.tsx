@@ -9,6 +9,7 @@ interface NameItem {
   source: string;
   style: '诗经' | '楚辞' | '唐诗' | '宋词' | '现代' | '自然';
   tone: number[];
+  harmonyScore?: number;
 }
 
 export default function Home() {
@@ -407,11 +408,32 @@ export default function Home() {
                 ))}
               </div>
               
-              <p style={{ color: '#B22222', fontSize: '16px', marginBottom: '20px' }}>
+              <p style={{ color: '#B22222', fontSize: '16px', marginBottom: '10px' }}>
                 {selectedName.pinyin}
               </p>
               
-              <p style={{ fontSize: '14px', lineHeight: 1.6, marginBottom: '10px' }}>
+              {surname && selectedName.harmonyScore !== undefined && (
+                <div style={{ 
+                  marginBottom: '15px',
+                  padding: '8px 16px',
+                  backgroundColor: selectedName.harmonyScore >= 85 ? '#e8f5e9' : 
+                                  selectedName.harmonyScore >= 70 ? '#fff3e0' : '#ffebee',
+                  borderRadius: '20px',
+                  display: 'inline-block'
+                }}>
+                  <span style={{ fontSize: '14px', color: '#666' }}>契合度: </span>
+                  <span style={{ 
+                    fontSize: '18px', 
+                    fontWeight: 'bold',
+                    color: selectedName.harmonyScore >= 85 ? '#2e7d32' : 
+                           selectedName.harmonyScore >= 70 ? '#f57c00' : '#c62828'
+                  }}>
+                    {selectedName.harmonyScore}%
+                  </span>
+                </div>
+              )}
+              
+              <p style={{ fontSize: '14px', lineHeight: 1.6, marginBottom: '10px', marginTop: '10px' }}>
                 {selectedName.meaning}
               </p>
               
