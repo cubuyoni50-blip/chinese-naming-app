@@ -229,13 +229,32 @@ export default function Home() {
       {/* 全局动画样式 */}
       <style jsx global>{`
         @keyframes shimmer {
-          0% { background-position: -200% 0; }
-          100% { background-position: 200% 0; }
+          0% { transform: translateX(-150%) skewX(-20deg); }
+          100% { transform: translateX(150%) skewX(-20deg); }
         }
         .gold-card-shimmer {
-          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
-          background-size: 200% 100%;
-          animation: shimmer 3s infinite linear;
+          background: linear-gradient(
+            to right, 
+            transparent 0%, 
+            rgba(255, 255, 255, 0) 30%,
+            rgba(197, 163, 103, 0.4) 50%, 
+            rgba(255, 255, 255, 0) 70%,
+            transparent 100%
+          );
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation: shimmer 3s infinite ease-in-out;
+          pointer-events: none;
+        }
+        .gold-name-card {
+          transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+        }
+        .gold-name-card:hover {
+          transform: translateY(-8px) scale(1.02);
+          box-shadow: 0 15px 30px rgba(197,163,103,0.4) !important;
         }
       `}</style>
 
@@ -349,58 +368,70 @@ export default function Home() {
             <button
               key={item.name + item.pinyin}
               onClick={() => handleNameClick(item)}
+              className={isGold ? 'gold-name-card' : ''}
               style={{
-                backgroundColor: 'white',
+                backgroundColor: isGold ? '#FFFDF5' : 'white',
                 border: isGold ? '2px solid #C5A367' : '1px solid #ddd',
-                borderRadius: '8px',
-                padding: '20px',
+                borderRadius: '12px',
+                padding: '24px 20px',
                 textAlign: 'center',
                 cursor: 'pointer',
-                boxShadow: isGold ? '0 4px 12px rgba(197,163,103,0.3)' : '0 2px 4px rgba(0,0,0,0.1)',
+                boxShadow: isGold 
+                  ? '0 6px 16px rgba(197,163,103,0.25), inset 0 0 10px rgba(255,255,255,0.5)' 
+                  : '0 2px 4px rgba(0,0,0,0.05)',
                 position: 'relative',
-                overflow: 'hidden'
+                overflow: 'hidden',
               }}
             >
               {isGold && (
                 <>
-                  <div className="gold-card-shimmer" style={{
-                    position: 'absolute',
-                    top: 0, left: 0, right: 0, bottom: 0,
-                    pointerEvents: 'none',
-                    opacity: 0.3
-                  }} />
+                  <div className="gold-card-shimmer" />
                   <div style={{
                     position: 'absolute',
                     top: '0',
-                    right: '10px',
+                    right: '12px',
                     backgroundColor: '#B22222',
                     color: 'white',
-                    fontSize: '10px',
-                    padding: '4px 2px',
+                    fontSize: '11px',
+                    padding: '6px 3px',
                     writingMode: 'vertical-rl',
                     borderRadius: '0 0 4px 4px',
                     letterSpacing: '1px',
                     fontWeight: 'bold',
-                    boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)',
+                    zIndex: 1
                   }}>
                     金榜
                   </div>
                 </>
               )}
               <div style={{ 
-                fontSize: '28px', 
+                fontSize: '32px', 
                 fontWeight: 'bold', 
-                marginBottom: '8px', 
+                marginBottom: '10px', 
                 color: isGold ? '#B22222' : '#2C2C2C',
-                textShadow: isGold ? '1px 1px 0px rgba(197,163,103,0.2)' : 'none'
+                textShadow: isGold ? '1px 1px 2px rgba(197,163,103,0.3)' : 'none',
+                position: 'relative'
               }}>
                 {item.name}
               </div>
-              <div style={{ fontSize: '12px', color: isGold ? '#C5A367' : '#999', marginBottom: '8px' }}>
+              <div style={{ 
+                fontSize: '13px', 
+                color: isGold ? '#C5A367' : '#999', 
+                marginBottom: '10px',
+                letterSpacing: '1px' 
+              }}>
                 {item.pinyin}
               </div>
-              <div style={{ fontSize: '11px', color: '#666', lineHeight: 1.4, height: '30px', overflow: 'hidden' }}>
-                {item.meaning.slice(0, 30)}...
+              <div style={{ 
+                fontSize: '12px', 
+                color: '#666', 
+                lineHeight: 1.5, 
+                height: '36px', 
+                overflow: 'hidden',
+                opacity: 0.8 
+              }}>
+                {item.meaning.slice(0, 32)}...
               </div>
             </button>
           );
