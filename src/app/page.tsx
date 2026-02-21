@@ -226,6 +226,19 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', position: 'relative' }}>
+      {/* 全局动画样式 */}
+      <style jsx global>{`
+        @keyframes shimmer {
+          0% { background-position: -200% 0; }
+          100% { background-position: 200% 0; }
+        }
+        .gold-card-shimmer {
+          background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+          background-size: 200% 100%;
+          animation: shimmer 3s infinite linear;
+        }
+      `}</style>
+
       {/* 背景纹理 */}
       <div style={{
         position: 'fixed',
@@ -330,31 +343,68 @@ export default function Home() {
         gap: '15px',
         padding: '0 20px 100px'
       }}>
-        {filteredNames.slice(0, displayCount).map((item) => (
-          <button
-            key={item.name + item.pinyin}
-            onClick={() => handleNameClick(item)}
-            style={{
-              backgroundColor: 'white',
-              border: '1px solid #ddd',
-              borderRadius: '8px',
-              padding: '20px',
-              textAlign: 'center',
-              cursor: 'pointer',
-              boxShadow: '0 2px 4px rgba(0,0,0,0.1)'
-            }}
-          >
-            <div style={{ fontSize: '28px', fontWeight: 'bold', marginBottom: '8px', color: '#2C2C2C' }}>
-              {item.name}
-            </div>
-            <div style={{ fontSize: '12px', color: '#999', marginBottom: '8px' }}>
-              {item.pinyin}
-            </div>
-            <div style={{ fontSize: '11px', color: '#666', lineHeight: 1.4, height: '30px', overflow: 'hidden' }}>
-              {item.meaning.slice(0, 30)}...
-            </div>
-          </button>
-        ))}
+        {filteredNames.slice(0, displayCount).map((item) => {
+          const isGold = (item.harmonyScore || 0) >= 95;
+          return (
+            <button
+              key={item.name + item.pinyin}
+              onClick={() => handleNameClick(item)}
+              style={{
+                backgroundColor: 'white',
+                border: isGold ? '2px solid #C5A367' : '1px solid #ddd',
+                borderRadius: '8px',
+                padding: '20px',
+                textAlign: 'center',
+                cursor: 'pointer',
+                boxShadow: isGold ? '0 4px 12px rgba(197,163,103,0.3)' : '0 2px 4px rgba(0,0,0,0.1)',
+                position: 'relative',
+                overflow: 'hidden'
+              }}
+            >
+              {isGold && (
+                <>
+                  <div className="gold-card-shimmer" style={{
+                    position: 'absolute',
+                    top: 0, left: 0, right: 0, bottom: 0,
+                    pointerEvents: 'none',
+                    opacity: 0.3
+                  }} />
+                  <div style={{
+                    position: 'absolute',
+                    top: '0',
+                    right: '10px',
+                    backgroundColor: '#B22222',
+                    color: 'white',
+                    fontSize: '10px',
+                    padding: '4px 2px',
+                    writingMode: 'vertical-rl',
+                    borderRadius: '0 0 4px 4px',
+                    letterSpacing: '1px',
+                    fontWeight: 'bold',
+                    boxShadow: '0 1px 3px rgba(0,0,0,0.2)'
+                  }}>
+                    金榜
+                  </div>
+                </>
+              )}
+              <div style={{ 
+                fontSize: '28px', 
+                fontWeight: 'bold', 
+                marginBottom: '8px', 
+                color: isGold ? '#B22222' : '#2C2C2C',
+                textShadow: isGold ? '1px 1px 0px rgba(197,163,103,0.2)' : 'none'
+              }}>
+                {item.name}
+              </div>
+              <div style={{ fontSize: '12px', color: isGold ? '#C5A367' : '#999', marginBottom: '8px' }}>
+                {item.pinyin}
+              </div>
+              <div style={{ fontSize: '11px', color: '#666', lineHeight: 1.4, height: '30px', overflow: 'hidden' }}>
+                {item.meaning.slice(0, 30)}...
+              </div>
+            </button>
+          );
+        })}
       </div>
 
       {/* 加载更多提示 */}
