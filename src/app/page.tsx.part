@@ -1,0 +1,59 @@
+<file>
+00870: 
+00871:             {/* 姓氏印章 */}
+00872:             {surname && (
+00873:               <div style={{
+00874:                 position: 'absolute',
+00875:                 bottom: '35px',
+00876:                 right: '35px',
+00877:                 width: '38px',
+00878:                 height: '38px',
+00879:                 border: isPremiumUnlocked ? '2px solid #C5A367' : '2px solid #B22222',
+00880:                 borderRadius: '4px',
+00881:                 display: 'flex',
+00882:                 alignItems: 'center',
+00883:                 justifyContent: 'center',
+00884:                 transform: 'rotate(-5deg)',
+00885:                 backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.1)' : 'rgba(178,34,34,0.05)'
+00886:               }}>
+00887:                 <span style={{
+00888:                   fontSize: '16px',
+00889:                   color: isPremiumUnlocked ? '#C5A367' : '#B22222',
+00890:                   fontWeight: 'bold'
+00891:                 }}>{toTraditional(surname)}</span>
+00892:               </div>
+00893:             )}
+00894: 
+00895:             {/* 底部装饰线 */}
+00896:             <div style={{
+00897:               position: 'absolute',
+00898:               bottom: '20px',
+00899:               left: '20px',
+00900:               right: '20px',
+00901:               height: '1px',
+00902:               background: isPremiumUnlocked
+00903:                 ? 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+00904:                 : 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+00905:             }} />
+00906:           </div>
+00907: 
+00908:           <button
+00909:             onClick={handleDownload}
+00910:             disabled={isGenerating}
+00911:             style={{
+00912:               marginTop: '30px',
+00913:               padding: '14px 48px',
+00914:               backgroundColor: '#C5A367',
+00915:               color: 'white',
+00916:               border: 'none',
+00917:               borderRadius: '25px',
+00918:               fontSize: '18px',
+00919:               cursor: isGenerating ? 'not-allowed' : 'pointer',
+00920:               opacity: isGenerating ? 0.7 : 1
+00921:             }}
+00922:           >
+00923:             {isGenerating ? '生成中...' : '下载名片'}
+00924:           </button>
+00925:         </div>
+00926:       )}
+</file>

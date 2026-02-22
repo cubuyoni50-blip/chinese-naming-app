@@ -21,6 +21,8 @@ export default function Home() {
   const [showDrawer, setShowDrawer] = useState(false);
   const [isGenerating, setIsGenerating] = useState(false);
   const [showPreview, setShowPreview] = useState(false);
+  const [isPremiumUnlocked, setIsPremiumUnlocked] = useState(false);
+  const [adCountdown, setAdCountdown] = useState(0);
   const [nameLength, setNameLength] = useState<'全部' | '单字' | '双字'>('全部');
   const [displayCount, setDisplayCount] = useState(50);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -200,7 +202,7 @@ export default function Home() {
       const dataUrl = await toPng(posterRef.current, { quality: 0.95 });
       
       const link = document.createElement('a');
-      link.download = `墨香取名-${selectedName.name}.png`;
+      link.download = `${isPremiumUnlocked ? '至尊' : '普通'}名片-${selectedName.name}.png`;
       link.href = dataUrl;
       document.body.appendChild(link);
       link.click();
@@ -549,26 +551,78 @@ export default function Home() {
                 出自 {selectedName.source}
               </p>
 
-              <button
-                onClick={() => setShowPreview(true)}
-                style={{
-                  marginTop: '25px',
-                  padding: '12px 32px',
-                  backgroundColor: '#B22222',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '25px',
-                  fontSize: '16px',
-                  cursor: 'pointer',
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '8px',
-                  margin: '25px auto 0'
-                }}
-              >
-                <Smartphone size={20} />
-                预览名片
-              </button>
+              <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '25px' }}>
+                <button
+                  onClick={() => {
+                    setIsPremiumUnlocked(false);
+                    setShowPreview(true);
+                  }}
+                  style={{
+                    padding: '10px 20px',
+                    backgroundColor: 'transparent',
+                    color: '#666',
+                    border: '1px solid #ddd',
+                    borderRadius: '25px',
+                    fontSize: '14px',
+                    cursor: 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '6px'
+                  }}
+                >
+                  普通预览
+                </button>
+                
+                <button
+                  onClick={() => {
+                    if (adCountdown > 0) return;
+                    setAdCountdown(5); // 模拟5秒广告，实际可设为30
+                    const timer = setInterval(() => {
+                      setAdCountdown(prev => {
+                        if (prev <= 1) {
+                          clearInterval(timer);
+                          setIsPremiumUnlocked(true);
+                          setShowPreview(true);
+                          return 0;
+                        }
+                        return prev - 1;
+                      });
+                    }, 1000);
+                  }}
+                  style={{
+                    padding: '10px 24px',
+                    backgroundColor: '#B22222',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '25px',
+                    fontSize: '14px',
+                    fontWeight: 'bold',
+                    cursor: adCountdown > 0 ? 'not-allowed' : 'pointer',
+                    display: 'flex',
+                    alignItems: 'center',
+                    gap: '8px',
+                    boxShadow: '0 4px 10px rgba(178,34,34,0.3)',
+                    position: 'relative',
+                    overflow: 'hidden'
+                  }}
+                >
+                  <Smartphone size={18} />
+                  {adCountdown > 0 ? `解锁中 (${adCountdown}s)` : '至尊名片解锁'}
+                  {adCountdown === 0 && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '-5px',
+                      right: '-5px',
+                      backgroundColor: '#FFD700',
+                      color: '#B22222',
+                      fontSize: '9px',
+                      padding: '2px 8px',
+                      transform: 'rotate(15deg)',
+                      fontWeight: 'bold'
+                    }}>PRO</div>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
         </>
@@ -612,11 +666,24 @@ export default function Home() {
           <div ref={posterRef} style={{
             width: '300px',
             height: '533px',
-            backgroundColor: '#F9F4E8',
+            backgroundColor: isPremiumUnlocked ? '#1A1A1A' : '#F9F4E8',
             position: 'relative',
             overflow: 'hidden',
-            fontFamily: '"Noto Serif SC", serif'
+            fontFamily: '"Noto Serif SC", serif',
+            border: isPremiumUnlocked ? '8px solid #C5A367' : 'none',
+            boxSizing: 'border-box'
           }}>
+            {/* 至尊版背景纹理 */}
+            {isPremiumUnlocked && (
+              <div style={{
+                position: 'absolute',
+                inset: 0,
+                backgroundImage: 'url(https://www.transparenttextures.com/patterns/black-linen.png)',
+                opacity: 0.4,
+                pointerEvents: 'none'
+              }} />
+            )}
+
             {/* 顶部装饰线 */}
             <div style={{
               position: 'absolute',
@@ -624,7 +691,9 @@ export default function Home() {
               left: '20px',
               right: '20px',
               height: '1px',
-              background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
+              background: isPremiumUnlocked 
+                ? 'linear-gradient(to right, transparent, rgba(197,163,103,0.8), transparent)'
+                : 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)'
             }} />
 
             {/* 左上角标题 */}
@@ -640,7 +709,7 @@ export default function Home() {
                 writingMode: 'vertical-rl',
                 textOrientation: 'mixed',
                 fontSize: '10px',
-                color: '#B22222',
+                color: isPremiumUnlocked ? '#C5A367' : '#B22222',
                 fontWeight: 'bold',
                 letterSpacing: '0.3em'
               }}>墨香</span>
@@ -648,9 +717,9 @@ export default function Home() {
                 writingMode: 'vertical-rl',
                 textOrientation: 'mixed',
                 fontSize: '9px',
-                color: '#2C2C2C',
+                color: isPremiumUnlocked ? '#EEE' : '#2C2C2C',
                 letterSpacing: '0.2em'
-              }}>取名</span>
+              }}>{isPremiumUnlocked ? '馆藏' : '取名'}</span>
             </div>
 
             {/* 顶部标题 */}
@@ -662,26 +731,12 @@ export default function Home() {
               fontSize: '8px',
               color: '#C5A367',
               letterSpacing: '0.3em'
-            }}>为子寻雅名</div>
-
-            {/* 左侧竖排 */}
-            <div style={{
-              position: 'absolute',
-              left: '15px',
-              top: '70px',
-              writingMode: 'vertical-rl',
-              textOrientation: 'mixed',
-              fontSize: '8px',
-              color: 'rgba(197,163,103,0.6)',
-              letterSpacing: '0.5em'
-            }}>
-              雅名共赏 · 文墨传家
-            </div>
+            }}>{isPremiumUnlocked ? '—— 传世雅名 · 至尊鉴赏 ——' : '为子寻雅名'}</div>
 
             {/* 名字区域 - 上半部分居中 */}
             <div style={{
               position: 'absolute',
-              top: '45%',
+              top: '42%',
               left: '50%',
               transform: 'translate(-50%, -50%)',
               textAlign: 'center',
@@ -692,25 +747,25 @@ export default function Home() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                gap: '8px',
-                marginBottom: '10px'
+                gap: '12px',
+                marginBottom: '15px'
               }}>
                 {surname && (
                   <div style={{
-                    fontSize: '42px',
-                    color: '#B22222',
+                    fontSize: '48px',
+                    color: isPremiumUnlocked ? '#C5A367' : '#B22222',
                     fontWeight: 'bold',
-                    textShadow: '1px 1px 3px rgba(178,34,34,0.2)'
+                    textShadow: isPremiumUnlocked ? '0 2px 10px rgba(197,163,103,0.4)' : '1px 1px 3px rgba(178,34,34,0.2)'
                   }}>
                     {surname}
                   </div>
                 )}
                 <div style={{
-                  fontSize: '42px',
-                  color: '#2C2C2C',
-                  letterSpacing: '0.2em',
+                  fontSize: '48px',
+                  color: isPremiumUnlocked ? '#FFF' : '#2C2C2C',
+                  letterSpacing: '0.1em',
                   fontWeight: 'bold',
-                  textShadow: '1px 1px 3px rgba(0,0,0,0.08)'
+                  textShadow: isPremiumUnlocked ? '0 2px 15px rgba(255,255,255,0.3)' : '1px 1px 3px rgba(0,0,0,0.08)'
                 }}>
                   {selectedName.name}
                 </div>
@@ -718,12 +773,13 @@ export default function Home() {
 
               {/* 拼音 */}
               <div style={{
-                fontSize: '12px',
-                color: 'rgba(197,163,103,0.7)',
-                letterSpacing: '0.5em',
-                fontStyle: 'italic'
+                fontSize: '13px',
+                color: '#C5A367',
+                letterSpacing: '0.6em',
+                fontStyle: 'italic',
+                opacity: 0.9
               }}>
-                {selectedName.pinyin}
+                {selectedName.pinyin.toUpperCase()}
               </div>
             </div>
 
@@ -735,39 +791,65 @@ export default function Home() {
               transform: 'translate(-50%, -50%)',
               textAlign: 'center',
               width: '100%',
-              padding: '0 25px'
+              padding: '0 30px'
             }}>
               {/* 分隔线 */}
               <div style={{
-                width: '40px',
+                width: '60px',
                 height: '1px',
-                backgroundColor: 'rgba(197,163,103,0.4)',
-                margin: '0 auto 15px'
+                backgroundColor: 'rgba(197,163,103,0.5)',
+                margin: '0 auto 20px'
               }} />
 
               {/* 寓意 */}
               <div style={{
-                fontSize: '11px',
-                color: 'rgba(44,44,44,0.8)',
-                lineHeight: 1.6,
-                marginBottom: '10px'
+                fontSize: '12px',
+                color: isPremiumUnlocked ? 'rgba(255,255,255,0.85)' : 'rgba(44,44,44,0.8)',
+                lineHeight: 1.8,
+                marginBottom: '12px',
+                letterSpacing: '1px'
               }}>
                 {selectedName.meaning}
               </div>
 
               {/* 出处 */}
               <div style={{
-                fontSize: '10px',
-                color: 'rgba(197,163,103,0.6)'
+                fontSize: '11px',
+                color: '#C5A367',
+                fontWeight: '500'
               }}>
-                —— {selectedName.source}
+                —— {selectedName.source} ——
               </div>
             </div>
+
+            {/* 至尊版专属印章 */}
+            {isPremiumUnlocked && (
+              <div style={{
+                position: 'absolute',
+                top: '55px',
+                right: '25px',
+                width: '40px',
+                height: '40px',
+                border: '2px solid rgba(197,163,103,0.6)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: '#C5A367',
+                fontSize: '9px',
+                fontWeight: 'bold',
+                writingMode: 'vertical-rl',
+                transform: 'rotate(15deg)',
+                backgroundColor: 'rgba(197,163,103,0.05)'
+              }}>
+                名家亲笔
+              </div>
+            )}
 
             {/* 底部 */}
             <div style={{
               position: 'absolute',
-              bottom: '25px',
+              bottom: '30px',
               left: 0,
               right: 0,
               textAlign: 'center'
@@ -775,35 +857,36 @@ export default function Home() {
               <div style={{
                 width: '40px',
                 height: '1px',
-                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.4), transparent)',
-                margin: '0 auto 8px'
+                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.5), transparent)',
+                margin: '0 auto 10px'
               }} />
               <div style={{
-                fontSize: '8px',
-                color: 'rgba(197,163,103,0.5)',
-                letterSpacing: '0.3em'
-              }}>墨香取名 · 为子寻雅名</div>
+                fontSize: '9px',
+                color: '#C5A367',
+                letterSpacing: '0.4em',
+                opacity: 0.8
+              }}>墨香起名 · 馆藏至尊系列</div>
             </div>
 
             {/* 姓氏印章 */}
             {surname && (
               <div style={{
                 position: 'absolute',
-                bottom: '25px',
-                right: '25px',
-                width: '35px',
-                height: '35px',
-                border: '2px solid #B22222',
+                bottom: '35px',
+                right: '35px',
+                width: '38px',
+                height: '38px',
+                border: isPremiumUnlocked ? '2px solid #C5A367' : '2px solid #B22222',
                 borderRadius: '4px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transform: 'rotate(-3deg)',
-                backgroundColor: 'rgba(178,34,34,0.05)'
+                transform: 'rotate(-5deg)',
+                backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.1)' : 'rgba(178,34,34,0.05)'
               }}>
                 <span style={{
-                  fontSize: '14px',
-                  color: '#B22222',
+                  fontSize: '16px',
+                  color: isPremiumUnlocked ? '#C5A367' : '#B22222',
                   fontWeight: 'bold'
                 }}>{toTraditional(surname)}</span>
               </div>
@@ -866,6 +949,40 @@ export default function Home() {
         >
           <ArrowUp size={24} />
         </button>
+      )}
+
+      {/* 模拟广告加载层 */}
+      {adCountdown > 0 && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          backgroundColor: 'rgba(0,0,0,0.9)',
+          zIndex: 999,
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'white',
+          textAlign: 'center',
+          backdropFilter: 'blur(10px)'
+        }}>
+          <div style={{
+            width: '80px',
+            height: '80px',
+            border: '3px solid rgba(197,163,103,0.3)',
+            borderTop: '3px solid #C5A367',
+            borderRadius: '50%',
+            animation: 'shimmer 2s infinite linear',
+            marginBottom: '30px'
+          }} />
+          <h2 style={{ fontSize: '24px', marginBottom: '10px', color: '#C5A367' }}>正在解锁至尊名片</h2>
+          <p style={{ opacity: 0.7, marginBottom: '20px' }}>正在为您生成名家亲笔至尊馆藏版...</p>
+          <div style={{ 
+            fontSize: '48px', 
+            fontWeight: 'bold',
+            fontFamily: 'serif' 
+          }}>{adCountdown}</div>
+        </div>
       )}
     </div>
   );
