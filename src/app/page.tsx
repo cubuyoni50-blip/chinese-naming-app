@@ -668,8 +668,7 @@ export default function Home() {
                     alignItems: 'center',
                     gap: '8px',
                     boxShadow: '0 4px 10px rgba(178,34,34,0.3)',
-                    position: 'relative',
-                    overflow: 'hidden'
+                    position: 'relative'
                   }}
                 >
                   <Smartphone size={18} />
