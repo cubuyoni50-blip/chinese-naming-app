@@ -807,7 +807,8 @@ export default function Home() {
               <div style={{
                 fontSize: '8px',
                 color: '#C5A367',
-                letterSpacing: '0.3em'
+                letterSpacing: '0.3em',
+                whiteSpace: 'nowrap'
               }}>{isPremiumUnlocked ? '传世雅名 · 至尊鉴赏' : '为子寻雅名'}</div>
               <div style={{
                 width: '25px',
@@ -967,7 +968,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 bottom: '35px',
-                right: '75px',
+                right: '25px',
                 width: '40px',
                 height: '40px',
                 border: isPremiumUnlocked ? '2px solid rgba(197,163,103,0.6)' : '2px solid rgba(178,34,34,0.6)',
