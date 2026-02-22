@@ -794,10 +794,28 @@ export default function Home() {
               top: '25px',
               left: '50%',
               transform: 'translateX(-50%)',
-              fontSize: '8px',
-              color: '#C5A367',
-              letterSpacing: '0.3em'
-            }}>{isPremiumUnlocked ? '传世雅名 · 至尊鉴赏' : '为子寻雅名'}</div>
+              display: 'flex',
+              alignItems: 'center',
+              gap: '10px'
+            }}>
+              <div style={{
+                width: '25px',
+                height: '1px',
+                backgroundColor: '#C5A367',
+                opacity: 0.6
+              }} />
+              <div style={{
+                fontSize: '8px',
+                color: '#C5A367',
+                letterSpacing: '0.3em'
+              }}>{isPremiumUnlocked ? '传世雅名 · 至尊鉴赏' : '为子寻雅名'}</div>
+              <div style={{
+                width: '25px',
+                height: '1px',
+                backgroundColor: '#C5A367',
+                opacity: 0.6
+              }} />
+            </div>
 
             {/* 名字区域 - 上半部分居中 */}
             <div style={{
@@ -888,26 +906,37 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 至尊版专属印章 */}
+            {/* 至尊版专属标识 */}
             {isPremiumUnlocked && (
               <div style={{
                 position: 'absolute',
                 top: '55px',
-                right: '25px',
-                width: '40px',
-                height: '40px',
-                border: '2px solid rgba(197,163,103,0.6)',
+                right: '20px',
                 display: 'flex',
+                flexDirection: 'column',
                 alignItems: 'center',
-                justifyContent: 'center',
-                color: '#C5A367',
-                fontSize: '9px',
-                fontWeight: 'bold',
-                writingMode: 'vertical-rl',
-                transform: 'rotate(15deg)',
-                backgroundColor: 'rgba(197,163,103,0.05)'
+                gap: '2px'
               }}>
-                名家亲笔
+                <span style={{
+                  fontSize: '10px',
+                  color: '#C5A367',
+                  fontWeight: 'bold',
+                  letterSpacing: '2px',
+                  writingMode: 'vertical-rl',
+                  textShadow: '0 0 10px rgba(197,163,103,0.5)'
+                }}>名家</span>
+                <span style={{
+                  fontSize: '8px',
+                  color: 'rgba(197,163,103,0.7)',
+                  letterSpacing: '1px',
+                  writingMode: 'vertical-rl'
+                }}>亲启</span>
+                <div style={{
+                  width: '1px',
+                  height: '15px',
+                  background: 'linear-gradient(to bottom, #C5A367, transparent)',
+                  marginTop: '3px'
+                }} />
               </div>
             )}
 
@@ -938,7 +967,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 bottom: '35px',
-                right: '45px',
+                right: '75px',
                 width: '40px',
                 height: '40px',
                 border: isPremiumUnlocked ? '2px solid rgba(197,163,103,0.6)' : '2px solid rgba(178,34,34,0.6)',
