@@ -979,10 +979,12 @@ export default function Home() {
                 backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.05)' : 'rgba(178,34,34,0.03)'
               }}>
                 <span style={{
-                  fontSize: '18px',
+                  fontSize: '22px',
                   color: isPremiumUnlocked ? '#C5A367' : '#B22222',
-                  fontFamily: '"KaiTi", "楷体", "STKaiti", serif',
-                  fontWeight: 'normal'
+                  fontFamily: '"STXingkai", "Xingkai SC", "华文行楷", "行楷", cursive',
+                  fontWeight: 'normal',
+                  fontStyle: 'italic',
+                  letterSpacing: '2px'
                 }}>{toTraditional(surname)}</span>
               </div>
             )}
