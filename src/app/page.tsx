@@ -968,7 +968,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 bottom: '35px',
-                right: '25px',
+                right: '10px',
                 width: '48px',
                 height: '48px',
                 border: isPremiumUnlocked ? '2px solid rgba(197,163,103,0.6)' : '2px solid rgba(178,34,34,0.6)',
