@@ -797,7 +797,7 @@ export default function Home() {
               fontSize: '8px',
               color: '#C5A367',
               letterSpacing: '0.3em'
-            }}>{isPremiumUnlocked ? '—— 传世雅名 · 至尊鉴赏 ——' : '为子寻雅名'}</div>
+            }}>{isPremiumUnlocked ? '传世雅名 · 至尊鉴赏' : '为子寻雅名'}</div>
 
             {/* 名字区域 - 上半部分居中 */}
             <div style={{
@@ -897,7 +897,6 @@ export default function Home() {
                 width: '40px',
                 height: '40px',
                 border: '2px solid rgba(197,163,103,0.6)',
-                borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -943,7 +942,6 @@ export default function Home() {
                 width: '40px',
                 height: '40px',
                 border: isPremiumUnlocked ? '2px solid rgba(197,163,103,0.6)' : '2px solid rgba(178,34,34,0.6)',
-                borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
