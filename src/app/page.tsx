@@ -364,27 +364,92 @@ export default function Home() {
         gap: '15px',
         padding: '0 20px 100px'
       }}>
-        {filteredNames.slice(0, displayCount).map((item) => {
+        {filteredNames.slice(0, displayCount).map((item, index) => {
           const isGold = (item.harmonyScore || 0) >= 95;
+          const showAd = index > 0 && index % 12 === 0;
+          
           return (
-            <button
-              key={item.name + item.pinyin}
-              onClick={() => handleNameClick(item)}
-              className={isGold ? 'gold-name-card' : ''}
-              style={{
-                backgroundColor: isGold ? '#FFFDF5' : 'white',
-                border: isGold ? '2px solid #C5A367' : '1px solid #ddd',
-                borderRadius: '12px',
-                padding: '24px 20px',
-                textAlign: 'center',
-                cursor: 'pointer',
-                boxShadow: isGold 
-                  ? '0 6px 16px rgba(197,163,103,0.25), inset 0 0 10px rgba(255,255,255,0.5)' 
-                  : '0 2px 4px rgba(0,0,0,0.05)',
-                position: 'relative',
-                overflow: 'hidden',
-              }}
-            >
+            <React.Fragment key={item.name + item.pinyin + index}>
+              {showAd && (
+                <div style={{
+                  gridColumn: 'span 2',
+                  backgroundColor: '#2C2C2C',
+                  borderRadius: '12px',
+                  padding: '20px',
+                  margin: '10px 0',
+                  color: 'white',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'space-between',
+                  backgroundImage: 'url(https://www.transparenttextures.com/patterns/carbon-fibre.png)',
+                  boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
+                  position: 'relative',
+                  overflow: 'hidden'
+                }}>
+                  <div style={{ zIndex: 1 }}>
+                    <div style={{ fontSize: '10px', color: '#C5A367', letterSpacing: '2px', marginBottom: '5px' }}>PREMIUM SERVICE</div>
+                    <div style={{ fontSize: '18px', fontWeight: 'bold', marginBottom: '5px' }}>
+                      {index % 24 === 0 ? '大师人工深度起名' : '至尊名片 · 限量解锁'}
+                    </div>
+                    <div style={{ fontSize: '12px', opacity: 0.7 }}>
+                      {index % 24 === 0 ? '结合生辰八字，由起名大师亲自操刀' : '黑金质感，传承文墨雅韵之美'}
+                    </div>
+                  </div>
+                  <button 
+                    onClick={() => {
+                      if (index % 24 === 0) {
+                        alert('人工起名咨询请关注公众号/添加微信');
+                      } else {
+                        alert('请点击名字卡片并选择[至尊名片解锁]');
+                      }
+                    }}
+                    style={{
+                      backgroundColor: '#C5A367',
+                      color: 'white',
+                      border: 'none',
+                      padding: '8px 16px',
+                      borderRadius: '20px',
+                      fontSize: '12px',
+                      fontWeight: 'bold',
+                      cursor: 'pointer',
+                      zIndex: 1,
+                      whiteSpace: 'nowrap',
+                      marginLeft: '10px'
+                    }}>
+                    立即咨询
+                  </button>
+                  {/* 装饰水印 */}
+                  <div style={{
+                    position: 'absolute',
+                    right: '-20px',
+                    bottom: '-20px',
+                    fontSize: '80px',
+                    opacity: 0.1,
+                    fontWeight: 'bold',
+                    fontFamily: 'serif',
+                    transform: 'rotate(-15deg)'
+                  }}>
+                    {index % 24 === 0 ? '名' : '雅'}
+                  </div>
+                </div>
+              )}
+              <button
+                onClick={() => handleNameClick(item)}
+                className={isGold ? 'gold-name-card' : ''}
+                style={{
+                  backgroundColor: isGold ? '#FFFDF5' : 'white',
+                  border: isGold ? '2px solid #C5A367' : '1px solid #ddd',
+                  borderRadius: '12px',
+                  padding: '24px 20px',
+                  textAlign: 'center',
+                  cursor: 'pointer',
+                  boxShadow: isGold 
+                    ? '0 6px 16px rgba(197,163,103,0.25), inset 0 0 10px rgba(255,255,255,0.5)' 
+                    : '0 2px 4px rgba(0,0,0,0.05)',
+                  position: 'relative',
+                  overflow: 'hidden',
+                }}
+              >
               {isGold && (
                 <>
                   <div className="gold-card-shimmer" />
@@ -436,6 +501,7 @@ export default function Home() {
                 {item.meaning.slice(0, 32)}...
               </div>
             </button>
+            </React.Fragment>
           );
         })}
       </div>
