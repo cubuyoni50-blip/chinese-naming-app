@@ -939,21 +939,22 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 bottom: '35px',
-                right: '35px',
-                width: '38px',
-                height: '38px',
-                border: isPremiumUnlocked ? '2px solid #C5A367' : '2px solid #B22222',
-                borderRadius: '4px',
+                right: '45px',
+                width: '40px',
+                height: '40px',
+                border: isPremiumUnlocked ? '2px solid rgba(197,163,103,0.6)' : '2px solid rgba(178,34,34,0.6)',
+                borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transform: 'rotate(-5deg)',
-                backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.1)' : 'rgba(178,34,34,0.05)'
+                transform: 'rotate(-8deg)',
+                backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.05)' : 'rgba(178,34,34,0.03)'
               }}>
                 <span style={{
-                  fontSize: '16px',
+                  fontSize: '18px',
                   color: isPremiumUnlocked ? '#C5A367' : '#B22222',
-                  fontWeight: 'bold'
+                  fontFamily: '"KaiTi", "楷体", "STKaiti", serif',
+                  fontWeight: 'normal'
                 }}>{toTraditional(surname)}</span>
               </div>
             )}
