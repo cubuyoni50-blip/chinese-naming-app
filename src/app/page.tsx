@@ -888,85 +888,75 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 至尊版专属印章 - 方形篆书风格 */}
+            {/* 至尊版专属印章 */}
             {isPremiumUnlocked && (
               <div style={{
                 position: 'absolute',
                 top: '55px',
                 right: '25px',
-                width: '42px',
-                height: '42px',
-                border: '3px solid #C5A367',
+                width: '40px',
+                height: '40px',
+                border: '2px solid rgba(197,163,103,0.6)',
+                borderRadius: '50%',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
                 color: '#C5A367',
-                fontSize: '10px',
-                fontFamily: '"SimSun", "STSong", "LiSu", serif',
+                fontSize: '9px',
+                fontWeight: 'bold',
                 writingMode: 'vertical-rl',
-                transform: 'rotate(12deg)',
-                backgroundColor: 'rgba(197,163,103,0.08)',
-                boxShadow: 'inset 0 0 8px rgba(197,163,103,0.2)',
-                letterSpacing: '2px'
+                transform: 'rotate(15deg)',
+                backgroundColor: 'rgba(197,163,103,0.05)'
               }}>
-                御<br/>印
+                名家亲笔
               </div>
             )}
 
-            {/* 姓氏印章 - 篆书风格 */}
+            {/* 底部 */}
+            <div style={{
+              position: 'absolute',
+              bottom: '30px',
+              left: 0,
+              right: 0,
+              textAlign: 'center'
+            }}>
+              <div style={{
+                width: '40px',
+                height: '1px',
+                background: 'linear-gradient(to right, transparent, rgba(197,163,103,0.5), transparent)',
+                margin: '0 auto 10px'
+              }} />
+              <div style={{
+                fontSize: '9px',
+                color: '#C5A367',
+                letterSpacing: '0.4em',
+                opacity: 0.8
+              }}>墨香起名 · 馆藏至尊系列</div>
+            </div>
+
+            {/* 姓氏印章 */}
             {surname && (
               <div style={{
                 position: 'absolute',
-                bottom: '30px',
-                right: '30px',
-                width: '40px',
-                height: '40px',
-                border: isPremiumUnlocked ? '3px solid #C5A367' : '2px solid #B22222',
-                borderRadius: '2px',
+                bottom: '35px',
+                right: '35px',
+                width: '38px',
+                height: '38px',
+                border: isPremiumUnlocked ? '2px solid #C5A367' : '2px solid #B22222',
+                borderRadius: '4px',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                transform: 'rotate(-8deg)',
-                backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.08)' : 'rgba(178,34,34,0.05)',
-                boxShadow: isPremiumUnlocked ? 'inset 0 0 6px rgba(197,163,103,0.3)' : 'none'
+                transform: 'rotate(-5deg)',
+                backgroundColor: isPremiumUnlocked ? 'rgba(197,163,103,0.1)' : 'rgba(178,34,34,0.05)'
               }}>
                 <span style={{
-                  fontSize: '20px',
+                  fontSize: '16px',
                   color: isPremiumUnlocked ? '#C5A367' : '#B22222',
-                  fontFamily: '"SimSun", "STSong", "LiSu", serif',
-                  fontWeight: 'normal',
-                  letterSpacing: '1px'
+                  fontWeight: 'bold'
                 }}>{toTraditional(surname)}</span>
               </div>
             )}
-
-            {/* 底部 - 调整位置避免与印章重合 */}
-            <div style={{
-              position: 'absolute',
-              bottom: '35px',
-              left: '30px',
-              textAlign: 'left'
-            }}>
-              <div style={{
-                width: '30px',
-                height: '1px',
-                background: 'linear-gradient(to right, rgba(197,163,103,0.5), transparent)',
-                marginBottom: '8px'
-              }} />
-              <div style={{
-                fontSize: '8px',
-                color: '#C5A367',
-                letterSpacing: '0.3em',
-                opacity: 0.7
-              }}>墨香起名</div>
-              <div style={{
-                fontSize: '7px',
-                color: '#C5A367',
-                letterSpacing: '0.2em',
-                opacity: 0.5,
-                marginTop: '2px'
-              }}>馆藏至尊</div>
-            </div>
 
             {/* 底部装饰线 */}
             <div style={{
