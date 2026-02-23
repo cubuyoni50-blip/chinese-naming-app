@@ -1,0 +1,1 @@
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,72481,c=>{c.v(s=>Promise.all(["static/chunks/16f26b2ece610ff4.js","static/chunks/e49a5a52e0f44a00.js"].map(s=>c.l(s))).then(()=>s(26275)))},6255,c=>{c.v(s=>Promise.all(["static/chunks/f72196abc43337fc.js"].map(s=>c.l(s))).then(()=>s(65628)))}]);
