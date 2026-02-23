@@ -209,69 +209,94 @@ export default function Home() {
     });
   };
 
-  // 生成PDF名帖
+  // 生成PDF名帖 - 使用html2canvas渲染中文
   const generatePDF = async () => {
     if (selectedNames.length === 0) return;
     
     setIsGenerating(true);
     try {
-      const { jsPDF } = await import('jspdf');
-      const doc = new jsPDF();
-      
-      // 设置中文字体（使用系统默认字体）
-      doc.setFont('helvetica');
-      
-      // 标题
-      doc.setFontSize(20);
-      doc.text('墨香取名 - 精选名帖', 105, 20, { align: 'center' });
-      
-      doc.setFontSize(12);
-      doc.text(`共 ${selectedNames.length} 个精选名字`, 105, 30, { align: 'center' });
-      
-      let y = 50;
-      
-      selectedNames.forEach((item, index) => {
-        if (y > 250) {
-          doc.addPage();
-          y = 30;
-        }
-        
-        // 名字
-        doc.setFontSize(16);
-        doc.setTextColor(178, 34, 34);
-        doc.text(`${index + 1}. ${surname || ''}${item.name}`, 20, y);
-        
-        // 拼音
-        doc.setFontSize(10);
-        doc.setTextColor(100, 100, 100);
-        doc.text(item.pinyin, 20, y + 8);
-        
-        // 契合度
-        if (surname && item.harmonyScore) {
-          doc.setTextColor(197, 163, 103);
-          doc.text(`契合度: ${item.harmonyScore}%`, 100, y + 5);
-        }
-        
-        // 寓意
-        doc.setFontSize(9);
-        doc.setTextColor(60, 60, 60);
-        const meaning = item.meaning.replace(/[\u4e00-\u9fa5]/g, (char: string) => char);
-        const splitText = doc.splitTextToSize(meaning, 170);
-        doc.text(splitText, 20, y + 18);
-        
-        // 出处
-        doc.setFontSize(8);
-        doc.setTextColor(150, 150, 150);
-        doc.text(`出自: ${item.source}`, 20, y + 30);
-        
-        y += 45;
+      // 创建临时容器用于渲染PDF内容
+      const container = document.createElement('div');
+      container.style.cssText = `
+        position: fixed;
+        left: -9999px;
+        top: 0;
+        width: 595px;
+        background: white;
+        font-family: "Noto Serif SC", "SimSun", serif;
+        padding: 40px;
+        box-sizing: border-box;
+      `;
+      document.body.appendChild(container);
+
+      // 生成HTML内容
+      container.innerHTML = `
+        <div style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #C5A367; padding-bottom: 20px;">
+          <h1 style="font-size: 24px; color: #B22222; margin: 0 0 10px 0; font-weight: bold;">墨香取名</h1>
+          <p style="font-size: 14px; color: #666; margin: 0;">精选名帖 · 共 ${selectedNames.length} 个名字</p>
+          ${surname ? `<p style="font-size: 16px; color: #C5A367; margin: 10px 0 0 0;">姓氏：${surname}</p>` : ''}
+        </div>
+        <div>
+          ${selectedNames.map((item, index) => `
+            <div style="margin-bottom: 30px; padding: 15px; background: #fafafa; border-radius: 8px; border-left: 3px solid #C5A367;">
+              <div style="display: flex; align-items: baseline; margin-bottom: 8px;">
+                <span style="font-size: 14px; color: #999; margin-right: 10px;">${index + 1}.</span>
+                <span style="font-size: 20px; color: #B22222; font-weight: bold;">${surname || ''}${item.name}</span>
+                <span style="font-size: 12px; color: #999; margin-left: 10px; font-style: italic;">${item.pinyin}</span>
+              </div>
+              ${surname && item.harmonyScore ? `<div style="font-size: 12px; color: #C5A367; margin-bottom: 8px;">契合度：${item.harmonyScore}%</div>` : ''}
+              <div style="font-size: 13px; color: #333; line-height: 1.6; margin-bottom: 8px;">${item.meaning}</div>
+              <div style="font-size: 11px; color: #999;">出自：${item.source}</div>
+            </div>
+          `).join('')}
+        </div>
+        <div style="margin-top: 40px; text-align: center; padding-top: 20px; border-top: 1px solid #eee; font-size: 11px; color: #999;">
+          <p>墨香取名 - 为子寻雅名</p>
+          <p>https://cubuyoni50-blip.github.io/chinese-naming-app/</p>
+          <p style="margin-top: 10px; font-size: 10px;">本PDF由墨香取名自动生成</p>
+        </div>
+      `;
+
+      // 等待字体加载
+      await document.fonts.ready;
+      await new Promise(resolve => setTimeout(resolve, 500));
+
+      // 使用html2canvas截图
+      const html2canvas = (await import('html2canvas')).default;
+      const canvas = await html2canvas(container, {
+        scale: 2,
+        useCORS: true,
+        allowTaint: true,
+        backgroundColor: '#ffffff'
       });
+
+      // 移除临时容器
+      document.body.removeChild(container);
+
+      // 生成PDF
+      const { jsPDF } = await import('jspdf');
+      const imgData = canvas.toDataURL('image/png');
       
-      // 页脚
-      doc.setFontSize(10);
-      doc.setTextColor(150, 150, 150);
-      doc.text('墨香取名 - 为子寻雅名', 105, 280, { align: 'center' });
-      doc.text('https://cubuyoni50-blip.github.io/chinese-naming-app/', 105, 285, { align: 'center' });
+      // 计算PDF尺寸
+      const imgWidth = 595;
+      const pageHeight = 842;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      
+      const doc = new jsPDF('p', 'pt', 'a4');
+      let heightLeft = imgHeight;
+      let position = 0;
+      
+      // 添加第一页
+      doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+      
+      // 如果内容超出一页，添加新页
+      while (heightLeft > 0) {
+        position = heightLeft - imgHeight;
+        doc.addPage();
+        doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
+      }
       
       doc.save(`${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`);
       setShowExportModal(false);
@@ -559,7 +584,7 @@ export default function Home() {
                   style={{
                     position: 'absolute',
                     top: '8px',
-                    right: '8px',
+                    left: '8px',
                     width: '22px',
                     height: '22px',
                     borderRadius: '50%',
