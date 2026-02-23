@@ -257,7 +257,7 @@ export default function Home() {
           <!-- 名字列表 -->
           <div style="margin-bottom: 30px;">
             ${selectedNames.map((item, index) => `
-              <div style="margin-bottom: 25px; padding: 20px; background: linear-gradient(135deg, #ffffff 0%, #fdfcfa 100%); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #C5A367; position: relative; overflow: hidden;">
+              <div style="margin-bottom: 20px; padding: 20px; background: linear-gradient(135deg, #ffffff 0%, #fdfcfa 100%); border-radius: 8px; border-left: 4px solid #C5A367; position: relative; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border: 1px solid #f0e6d2;">
                 <!-- 序号角标 -->
                 <div style="position: absolute; top: -10px; right: -10px; width: 50px; height: 50px; background: linear-gradient(135deg, #C5A367 0%, #d4af37 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">${index + 1}</div>
                 
@@ -300,45 +300,31 @@ export default function Home() {
       await document.fonts.ready;
       await new Promise(resolve => setTimeout(resolve, 800));
 
-      // 使用html2canvas截图
-      const html2canvas = (await import('html2canvas')).default;
-      const canvas = await html2canvas(container, {
-        scale: 3,
-        useCORS: true,
-        allowTaint: true,
-        backgroundColor: null,
-        logging: false
-      });
-
-      // 移除临时容器
-      document.body.removeChild(container);
+      // 使用 html2pdf.js 生成PDF（更好的分页处理）
+      const html2pdf = (await import('html2pdf.js')).default;
+      
+      const opt = {
+        margin: 0,
+        filename: `${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`,
+        image: { type: 'jpeg' as const, quality: 0.98 },
+        html2canvas: { 
+          scale: 2, 
+          useCORS: true,
+          backgroundColor: '#faf8f5',
+          logging: false
+        },
+        jsPDF: { 
+          unit: 'pt' as const, 
+          format: 'a4' as const, 
+          orientation: 'portrait' as const
+        }
+      };
 
       // 生成PDF
-      const { jsPDF } = await import('jspdf');
-      const imgData = canvas.toDataURL('image/png');
+      await html2pdf().set(opt).from(container).save();
       
-      // 计算PDF尺寸
-      const imgWidth = 595;
-      const pageHeight = 842;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      
-      const doc = new jsPDF('p', 'pt', 'a4');
-      let heightLeft = imgHeight;
-      let position = 0;
-      
-      // 添加第一页
-      doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
-      
-      // 如果内容超出一页，添加新页
-      while (heightLeft > 0) {
-        position = heightLeft - imgHeight;
-        doc.addPage();
-        doc.addImage(imgData, 'PNG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
-      }
-      
-      doc.save(`${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`);
+      // 移除临时容器
+      document.body.removeChild(container);
       setShowExportModal(false);
       setSelectedNames([]);
       setIsPaid(false);
