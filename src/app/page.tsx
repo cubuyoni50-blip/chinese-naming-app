@@ -209,7 +209,7 @@ export default function Home() {
     });
   };
 
-  // 生成PDF名帖 - 使用html2canvas渲染中文
+  // 生成PDF名帖 - 精美设计版
   const generatePDF = async () => {
     if (selectedNames.length === 0) return;
     
@@ -222,52 +222,92 @@ export default function Home() {
         left: -9999px;
         top: 0;
         width: 595px;
-        background: white;
-        font-family: "Noto Serif SC", "SimSun", serif;
-        padding: 40px;
+        background: linear-gradient(135deg, #faf8f5 0%, #f5f0e8 100%);
+        font-family: "Noto Serif SC", "SimSun", "STSong", serif;
+        padding: 0;
         box-sizing: border-box;
+        min-height: 842px;
       `;
       document.body.appendChild(container);
 
-      // 生成HTML内容
+      // 生成精美HTML内容
       container.innerHTML = `
-        <div style="text-align: center; margin-bottom: 30px; border-bottom: 2px solid #C5A367; padding-bottom: 20px;">
-          <h1 style="font-size: 24px; color: #B22222; margin: 0 0 10px 0; font-weight: bold;">墨香取名</h1>
-          <p style="font-size: 14px; color: #666; margin: 0;">精选名帖 · 共 ${selectedNames.length} 个名字</p>
-          ${surname ? `<p style="font-size: 16px; color: #C5A367; margin: 10px 0 0 0;">姓氏：${surname}</p>` : ''}
-        </div>
-        <div>
-          ${selectedNames.map((item, index) => `
-            <div style="margin-bottom: 30px; padding: 15px; background: #fafafa; border-radius: 8px; border-left: 3px solid #C5A367;">
-              <div style="display: flex; align-items: baseline; margin-bottom: 8px;">
-                <span style="font-size: 14px; color: #999; margin-right: 10px;">${index + 1}.</span>
-                <span style="font-size: 20px; color: #B22222; font-weight: bold;">${surname || ''}${item.name}</span>
-                <span style="font-size: 12px; color: #999; margin-left: 10px; font-style: italic;">${item.pinyin}</span>
-              </div>
-              ${surname && item.harmonyScore ? `<div style="font-size: 12px; color: #C5A367; margin-bottom: 8px;">契合度：${item.harmonyScore}%</div>` : ''}
-              <div style="font-size: 13px; color: #333; line-height: 1.6; margin-bottom: 8px;">${item.meaning}</div>
-              <div style="font-size: 11px; color: #999;">出自：${item.source}</div>
+        <div style="padding: 50px 40px; position: relative; min-height: 842px;">
+          <!-- 装饰边框 -->
+          <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 2px solid #C5A367; border-radius: 4px; pointer-events: none;"></div>
+          <div style="position: absolute; top: 25px; left: 25px; right: 25px; bottom: 25px; border: 1px solid #d4af37; border-radius: 2px; pointer-events: none;"></div>
+          
+          <!-- 四角装饰 -->
+          <div style="position: absolute; top: 15px; left: 15px; width: 30px; height: 30px; border-top: 3px solid #B22222; border-left: 3px solid #B22222;"></div>
+          <div style="position: absolute; top: 15px; right: 15px; width: 30px; height: 30px; border-top: 3px solid #B22222; border-right: 3px solid #B22222;"></div>
+          <div style="position: absolute; bottom: 15px; left: 15px; width: 30px; height: 30px; border-bottom: 3px solid #B22222; border-left: 3px solid #B22222;"></div>
+          <div style="position: absolute; bottom: 15px; right: 15px; width: 30px; height: 30px; border-bottom: 3px solid #B22222; border-right: 3px solid #B22222;"></div>
+
+          <!-- 顶部标题区 -->
+          <div style="text-align: center; margin-bottom: 40px; padding: 30px 0; border-bottom: 3px double #C5A367;">
+            <div style="font-size: 36px; color: #B22222; font-weight: bold; margin-bottom: 10px; letter-spacing: 8px;">墨香取名</div>
+            <div style="font-size: 18px; color: #C5A367; letter-spacing: 6px; margin-bottom: 15px;">精选雅名名帖</div>
+            <div style="width: 80px; height: 2px; background: linear-gradient(90deg, transparent, #C5A367, transparent); margin: 15px auto;"></div>
+            <div style="font-size: 14px; color: #666; margin-top: 15px;">
+              共收录 <span style="color: #B22222; font-weight: bold; font-size: 18px;">${selectedNames.length}</span> 个精选名字
+              ${surname ? `<span style="margin: 0 10px;">|</span>姓氏：<span style="color: #B22222; font-weight: bold;">${surname}</span>` : ''}
             </div>
-          `).join('')}
-        </div>
-        <div style="margin-top: 40px; text-align: center; padding-top: 20px; border-top: 1px solid #eee; font-size: 11px; color: #999;">
-          <p>墨香取名 - 为子寻雅名</p>
-          <p>https://cubuyoni50-blip.github.io/chinese-naming-app/</p>
-          <p style="margin-top: 10px; font-size: 10px;">本PDF由墨香取名自动生成</p>
+          </div>
+          
+          <!-- 名字列表 -->
+          <div style="margin-bottom: 30px;">
+            ${selectedNames.map((item, index) => `
+              <div style="margin-bottom: 25px; padding: 20px; background: linear-gradient(135deg, #ffffff 0%, #fdfcfa 100%); border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); border-left: 4px solid #C5A367; position: relative; overflow: hidden;">
+                <!-- 序号角标 -->
+                <div style="position: absolute; top: -10px; right: -10px; width: 50px; height: 50px; background: linear-gradient(135deg, #C5A367 0%, #d4af37 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 16px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.2);">${index + 1}</div>
+                
+                <!-- 名字区 -->
+                <div style="display: flex; align-items: baseline; margin-bottom: 12px;">
+                  <span style="font-size: 32px; color: #B22222; font-weight: bold; letter-spacing: 4px;">${surname || ''}${item.name}</span>
+                  <span style="font-size: 14px; color: #999; margin-left: 15px; font-style: italic; letter-spacing: 2px;">${item.pinyin}</span>
+                </div>
+                
+                <!-- 契合度 -->
+                ${surname && item.harmonyScore ? `
+                <div style="display: inline-block; background: linear-gradient(135deg, #C5A367 0%, #d4af37 100%); color: white; padding: 4px 12px; border-radius: 15px; font-size: 12px; margin-bottom: 12px; font-weight: bold;">
+                  契合度 ${item.harmonyScore}%
+                </div>` : ''}
+                
+                <!-- 寓意 -->
+                <div style="font-size: 14px; color: #333; line-height: 1.8; margin-bottom: 12px; text-align: justify;">${item.meaning}</div>
+                
+                <!-- 出处 -->
+                <div style="display: flex; align-items: center; gap: 8px;">
+                  <span style="font-size: 12px; color: #999;">—</span>
+                  <span style="font-size: 12px; color: #C5A367; font-style: italic;">${item.source}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+          
+          <!-- 底部装饰区 -->
+          <div style="text-align: center; padding-top: 30px; border-top: 1px solid #C5A367; margin-top: 40px;">
+            <div style="width: 60px; height: 1px; background: linear-gradient(90deg, transparent, #C5A367, transparent); margin: 0 auto 20px;"></div>
+            <div style="font-size: 16px; color: #B22222; font-weight: bold; letter-spacing: 4px; margin-bottom: 10px;">墨香取名</div>
+            <div style="font-size: 12px; color: #999; margin-bottom: 8px;">为子寻雅名 · 文墨传家</div>
+            <div style="font-size: 10px; color: #bbb;">https://cubuyoni50-blip.github.io/chinese-naming-app/</div>
+            <div style="margin-top: 15px; font-size: 10px; color: #ccc;">本PDF由墨香取名系统于 ${new Date().toLocaleDateString()} 生成</div>
+          </div>
         </div>
       `;
 
       // 等待字体加载
       await document.fonts.ready;
-      await new Promise(resolve => setTimeout(resolve, 500));
+      await new Promise(resolve => setTimeout(resolve, 800));
 
       // 使用html2canvas截图
       const html2canvas = (await import('html2canvas')).default;
       const canvas = await html2canvas(container, {
-        scale: 2,
+        scale: 3,
         useCORS: true,
         allowTaint: true,
-        backgroundColor: '#ffffff'
+        backgroundColor: null,
+        logging: false
       });
 
       // 移除临时容器
