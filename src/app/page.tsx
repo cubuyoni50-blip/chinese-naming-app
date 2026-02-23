@@ -217,9 +217,10 @@ export default function Home() {
     try {
       // 创建临时容器用于渲染PDF内容
       const container = document.createElement('div');
+      container.id = 'pdf-container';
       container.style.cssText = `
-        position: fixed;
-        left: -9999px;
+        position: absolute;
+        left: 0;
         top: 0;
         width: 595px;
         background: linear-gradient(135deg, #faf8f5 0%, #f5f0e8 100%);
@@ -227,6 +228,9 @@ export default function Home() {
         padding: 0;
         box-sizing: border-box;
         min-height: 842px;
+        z-index: -1000;
+        opacity: 0;
+        pointer-events: none;
       `;
       document.body.appendChild(container);
 
@@ -296,35 +300,47 @@ export default function Home() {
         </div>
       `;
 
-      // 等待字体加载
+      // 等待字体加载和渲染
       await document.fonts.ready;
-      await new Promise(resolve => setTimeout(resolve, 800));
+      await new Promise(resolve => setTimeout(resolve, 1500));
 
-      // 使用 html2pdf.js 生成PDF（更好的分页处理）
+      // 使用 html2pdf.js 生成PDF
       const html2pdf = (await import('html2pdf.js')).default;
       
       const opt = {
-        margin: 0,
+        margin: [0, 0, 0, 0] as [number, number, number, number],
         filename: `${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`,
-        image: { type: 'jpeg' as const, quality: 0.98 },
+        image: { type: 'jpeg' as const, quality: 0.95 },
         html2canvas: { 
-          scale: 2, 
+          scale: 2,
           useCORS: true,
+          allowTaint: true,
           backgroundColor: '#faf8f5',
-          logging: false
+          logging: false,
+          width: 595,
+          windowWidth: 595
         },
         jsPDF: { 
           unit: 'pt' as const, 
           format: 'a4' as const, 
-          orientation: 'portrait' as const
-        }
+          orientation: 'portrait' as const,
+          compress: true
+        },
+        pagebreak: { mode: 'avoid-all' }
       };
 
-      // 生成PDF
-      await html2pdf().set(opt).from(container).save();
+      try {
+        // 生成PDF
+        await html2pdf().set(opt).from(container).save();
+      } catch (pdfErr) {
+        console.error('PDF生成错误:', pdfErr);
+        throw pdfErr;
+      }
       
       // 移除临时容器
-      document.body.removeChild(container);
+      if (document.body.contains(container)) {
+        document.body.removeChild(container);
+      }
       setShowExportModal(false);
       setSelectedNames([]);
       setIsPaid(false);
