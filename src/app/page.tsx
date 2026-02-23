@@ -209,197 +209,123 @@ export default function Home() {
     });
   };
 
-  // 生成PDF名帖
+  // 生成PDF名帖 - 最终稳定版（解决乱码与白屏）
   const generatePDF = async () => {
     if (selectedNames.length === 0) return;
     
     setIsGenerating(true);
     try {
+      const html2canvas = (await import('html2canvas')).default;
       const { jsPDF } = await import('jspdf');
-      const doc = new jsPDF('p', 'pt', 'a4');
-      
-      // 页面尺寸
-      const pageWidth = 595;
-      const pageHeight = 842;
-      const margin = 40;
-      const contentWidth = pageWidth - (margin * 2);
-      
-      let currentY = margin;
-      
-      // 第一页 - 封面
-      // 背景色
-      doc.setFillColor(250, 248, 245);
-      doc.rect(0, 0, pageWidth, pageHeight, 'F');
-      
-      // 外边框
-      doc.setDrawColor(197, 163, 103);
-      doc.setLineWidth(2);
-      doc.rect(margin - 10, margin - 10, pageWidth - (margin - 10) * 2, pageHeight - (margin - 10) * 2);
-      
-      // 内边框
-      doc.setLineWidth(1);
-      doc.rect(margin - 5, margin - 5, pageWidth - (margin - 5) * 2, pageHeight - (margin - 5) * 2);
-      
-      // 四角装饰
-      doc.setDrawColor(178, 34, 34);
-      doc.setLineWidth(3);
-      // 左上
-      doc.line(margin - 15, margin - 5, margin - 15, margin + 20);
-      doc.line(margin - 15, margin - 5, margin + 20, margin - 5);
-      // 右上
-      doc.line(pageWidth - margin + 15, margin - 5, pageWidth - margin + 15, margin + 20);
-      doc.line(pageWidth - margin + 15, margin - 5, pageWidth - margin - 20, margin - 5);
-      
-      // 标题
-      currentY = margin + 60;
-      doc.setTextColor(178, 34, 34);
-      doc.setFontSize(28);
-      doc.setFont('helvetica', 'bold');
-      doc.text('MO XIANG QU MING', pageWidth / 2, currentY, { align: 'center' });
-      
-      currentY += 35;
-      doc.setFontSize(36);
-      doc.text('Mo Xiang Qu Ming', pageWidth / 2, currentY, { align: 'center' });
-      
-      currentY += 30;
-      doc.setTextColor(197, 163, 103);
-      doc.setFontSize(16);
-      doc.text('Selected Elegant Names Collection', pageWidth / 2, currentY, { align: 'center' });
-      
-      // 分隔线
-      currentY += 40;
-      doc.setDrawColor(197, 163, 103);
-      doc.setLineWidth(1);
-      const lineWidth = 120;
-      doc.line(pageWidth / 2 - lineWidth / 2, currentY, pageWidth / 2 + lineWidth / 2, currentY);
-      
-      // 统计信息
-      currentY += 50;
-      doc.setTextColor(102, 102, 102);
-      doc.setFontSize(12);
-      doc.setFont('helvetica', 'normal');
-      doc.text(`Total ${selectedNames.length} selected names`, pageWidth / 2, currentY, { align: 'center' });
-      
-      if (surname) {
-        currentY += 25;
-        doc.setTextColor(178, 34, 34);
-        doc.setFontSize(14);
-        doc.setFont('helvetica', 'bold');
-        doc.text(`Family Name: ${surname}`, pageWidth / 2, currentY, { align: 'center' });
-      }
-      
-      // 日期
-      currentY = pageHeight - margin - 30;
-      doc.setTextColor(204, 204, 204);
-      doc.setFontSize(10);
-      doc.setFont('helvetica', 'normal');
-      doc.text(`Generated on ${new Date().toLocaleDateString()}`, pageWidth / 2, currentY, { align: 'center' });
-      
-      // 页脚
-      currentY += 20;
-      doc.text('https://cubuyoni50-blip.github.io/chinese-naming-app/', pageWidth / 2, currentY, { align: 'center' });
-      
-      // 为每个名字添加一页
-      for (let i = 0; i < selectedNames.length; i++) {
-        const item = selectedNames[i];
-        doc.addPage();
-        
-        // 背景
-        doc.setFillColor(250, 248, 245);
-        doc.rect(0, 0, pageWidth, pageHeight, 'F');
-        
-        // 序号大背景
-        doc.setFillColor(197, 163, 103);
-        doc.circle(pageWidth - margin - 30, margin + 30, 25, 'F');
-        doc.setTextColor(255, 255, 255);
-        doc.setFontSize(20);
-        doc.setFont('helvetica', 'bold');
-        doc.text(String(i + 1), pageWidth - margin - 30, margin + 37, { align: 'center' });
-        
-        // 名字卡片背景
-        doc.setFillColor(255, 255, 255);
-        doc.roundedRect(margin, margin + 80, contentWidth, 200, 8, 8, 'F');
-        
-        // 左侧装饰条
-        doc.setFillColor(197, 163, 103);
-        doc.rect(margin, margin + 80, 4, 200, 'F');
-        
-        let cardY = margin + 120;
-        
-        // 名字（拼音）
-        doc.setTextColor(178, 34, 34);
-        doc.setFontSize(32);
-        doc.setFont('helvetica', 'bold');
-        doc.text(`${surname || ''}${item.name} (${item.pinyin})`, margin + 20, cardY);
-        
-        // 契合度
-        if (surname && item.harmonyScore) {
-          cardY += 40;
-          doc.setFillColor(197, 163, 103);
-          doc.roundedRect(margin + 20, cardY - 15, 80, 25, 12, 12, 'F');
-          doc.setTextColor(255, 255, 255);
-          doc.setFontSize(11);
-          doc.setFont('helvetica', 'bold');
-          doc.text(`Match: ${item.harmonyScore}%`, margin + 60, cardY, { align: 'center' });
-        }
-        
-        // 寓意标题
-        cardY += 50;
-        doc.setTextColor(51, 51, 51);
-        doc.setFontSize(12);
-        doc.setFont('helvetica', 'bold');
-        doc.text('Meaning:', margin + 20, cardY);
-        
-        // 寓意内容
-        cardY += 20;
-        doc.setTextColor(51, 51, 51);
-        doc.setFontSize(11);
-        doc.setFont('helvetica', 'normal');
-        
-        // 简单的文本换行处理
-        const meaning = item.meaning;
-        const maxWidth = contentWidth - 40;
-        const words = meaning.split('');
-        let line = '';
-        let lineY = cardY;
-        
-        for (let j = 0; j < words.length; j++) {
-          const testLine = line + words[j];
-          const testWidth = doc.getTextWidth(testLine);
+
+      // 创建一个临时容器，放在屏幕外但保持可见，确保 html2canvas 能抓取
+      const container = document.createElement('div');
+      container.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 794px; /* A4 宽度 (96 DPI) */
+        background: #faf8f5;
+        z-index: -1000;
+        font-family: "Noto Serif SC", serif;
+      `;
+      document.body.appendChild(container);
+
+      // 渲染精美的 PDF 页面内容
+      container.innerHTML = `
+        <div style="padding: 60px; background: #faf8f5; position: relative;">
+          <!-- 边框 -->
+          <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 2px solid #C5A367; pointer-events: none;"></div>
           
-          if (testWidth > maxWidth && line !== '') {
-            doc.text(line, margin + 20, lineY);
-            line = words[j];
-            lineY += 18;
-          } else {
-            line = testLine;
-          }
-        }
-        if (line) {
-          doc.text(line, margin + 20, lineY);
-        }
-        
-        // 出处
-        const sourceY = Math.max(lineY + 30, margin + 240);
-        doc.setTextColor(153, 153, 153);
-        doc.setFontSize(10);
-        doc.text('Source:', margin + 20, sourceY);
-        doc.setTextColor(197, 163, 103);
-        doc.setFont('helvetica', 'italic');
-        doc.text(item.source, margin + 60, sourceY);
+          <!-- 标题 -->
+          <div style="text-align: center; margin-bottom: 50px;">
+            <h1 style="font-size: 48px; color: #B22222; margin: 0; letter-spacing: 15px;">墨香取名</h1>
+            <div style="width: 100px; height: 1px; background: #C5A367; margin: 20px auto;"></div>
+            <p style="font-size: 18px; color: #666; letter-spacing: 5px;">精选名帖 · 文墨传家</p>
+          </div>
+
+          <!-- 统计信息 -->
+          <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 40px; border: 1px solid #eee; text-align: center;">
+            ${surname ? `<div style="font-size: 24px; margin-bottom: 15px;">姓氏：<span style="color: #B22222; font-weight: bold;">${surname}</span></div>` : ''}
+            <div style="font-size: 16px; color: #666;">本次共为您精选 <span style="color: #C5A367; font-weight: bold;">${selectedNames.length}</span> 个雅名</div>
+          </div>
+
+          <!-- 名字详情列表 -->
+          ${selectedNames.map((item, index) => `
+            <div style="background: white; padding: 40px; border-radius: 12px; margin-bottom: 30px; border: 1px solid #f0e6d2; border-left: 8px solid #C5A367; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative;">
+              <div style="position: absolute; top: 20px; right: 30px; font-size: 48px; color: #f5f5f5; font-weight: bold; font-family: serif;">0${index + 1}</div>
+              <div style="display: flex; align-items: baseline; margin-bottom: 15px;">
+                <span style="font-size: 42px; color: #B22222; font-weight: bold; letter-spacing: 5px;">${surname || ''}${item.name}</span>
+                <span style="font-size: 18px; color: #999; margin-left: 20px; font-style: italic;">${item.pinyin}</span>
+              </div>
+              ${surname && item.harmonyScore ? `
+                <div style="display: inline-block; background: #C5A367; color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 20px;">
+                  契合度 ${item.harmonyScore}%
+                </div>
+              ` : ''}
+              <div style="font-size: 16px; color: #333; line-height: 1.8; margin-bottom: 15px; border-top: 1px dashed #eee; padding-top: 15px;">
+                ${item.meaning}
+              </div>
+              <div style="font-size: 14px; color: #999; font-style: italic;">
+                —— 出自 ${item.source}
+              </div>
+            </div>
+          `).join('')}
+
+          <!-- 页脚 -->
+          <div style="text-align: center; margin-top: 60px; color: #ccc; font-size: 12px; border-top: 1px solid #eee; padding-top: 30px;">
+            <p>墨香取名 · 为子寻雅名</p>
+            <p>生成日期：${new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+          </div>
+        </div>
+      `;
+
+      // 给一点时间确保 DOM 渲染和字体应用
+      await document.fonts.ready;
+      await new Promise(resolve => setTimeout(resolve, 1000));
+
+      // 截取容器图片
+      const canvas = await html2canvas(container, {
+        scale: 2,
+        useCORS: true,
+        backgroundColor: '#faf8f5',
+        logging: false
+      });
+
+      // 移除临时容器
+      document.body.removeChild(container);
+
+      // 将 canvas 转换为图片并放入 PDF
+      const imgData = canvas.toDataURL('image/jpeg', 0.95);
+      const doc = new jsPDF('p', 'mm', 'a4');
+      const pageWidth = doc.internal.pageSize.getWidth();
+      const pageHeight = doc.internal.pageSize.getHeight();
+      
+      // 计算图片在 PDF 中的尺寸（保持比例）
+      const imgWidth = pageWidth;
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+      
+      let heightLeft = imgHeight;
+      let position = 0;
+
+      // 分页添加图片
+      doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+      heightLeft -= pageHeight;
+
+      while (heightLeft >= 0) {
+        position = heightLeft - imgHeight;
+        doc.addPage();
+        doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
+        heightLeft -= pageHeight;
       }
+
+      doc.save(`${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`);
       
-      // 保存PDF
-      doc.save(`${surname || 'Selected'}_Names_${selectedNames.length}.pdf`);
-      
-      setShowExportModal(false);
-      setSelectedNames([]);
-      setIsPaid(false);
       setShowExportModal(false);
       setSelectedNames([]);
       setIsPaid(false);
     } catch (err) {
-      console.error('生成PDF失败:', err);
+      console.error('PDF生成失败:', err);
       alert('生成PDF失败，请重试');
     } finally {
       setIsGenerating(false);
