@@ -23,6 +23,8 @@ export default function Home() {
   const [showPreview, setShowPreview] = useState(false);
   const [isPremiumUnlocked, setIsPremiumUnlocked] = useState(false);
   const [adCountdown, setAdCountdown] = useState(0);
+  const [adProgress, setAdProgress] = useState(0);
+  const TOTAL_AD_SECONDS = 30; // 30秒广告
   const [nameLength, setNameLength] = useState<'全部' | '单字' | '双字'>('全部');
   const [displayCount, setDisplayCount] = useState(50);
   const [showBackToTop, setShowBackToTop] = useState(false);
@@ -642,16 +644,19 @@ export default function Home() {
                 <button
                   onClick={() => {
                     if (adCountdown > 0) return;
-                    setAdCountdown(5); // 模拟5秒广告，实际可设为30
+                    setAdCountdown(TOTAL_AD_SECONDS);
+                    setAdProgress(0);
                     const timer = setInterval(() => {
                       setAdCountdown(prev => {
-                        if (prev <= 1) {
+                        const newVal = prev - 1;
+                        setAdProgress(((TOTAL_AD_SECONDS - newVal) / TOTAL_AD_SECONDS) * 100);
+                        if (newVal <= 0) {
                           clearInterval(timer);
                           setIsPremiumUnlocked(true);
                           setShowPreview(true);
                           return 0;
                         }
-                        return prev - 1;
+                        return newVal;
                       });
                     }, 1000);
                   }}
@@ -672,7 +677,7 @@ export default function Home() {
                   }}
                 >
                   <Smartphone size={18} />
-                  {adCountdown > 0 ? `解锁中 (${adCountdown}s)` : '至尊名片解锁'}
+                  {adCountdown > 0 ? `广告播放中 ${adCountdown}秒` : '至尊名片解锁'}
                   {adCountdown === 0 && (
                     <div style={{
                       position: 'absolute',
@@ -1047,37 +1052,147 @@ export default function Home() {
         </button>
       )}
 
-      {/* 模拟广告加载层 */}
+      {/* 30秒广告播放层 */}
       {adCountdown > 0 && (
         <div style={{
           position: 'fixed',
           inset: 0,
-          backgroundColor: 'rgba(0,0,0,0.9)',
+          background: 'linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%)',
           zIndex: 999,
           display: 'flex',
           flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
           color: 'white',
-          textAlign: 'center',
-          backdropFilter: 'blur(10px)'
+          overflow: 'hidden'
         }}>
+          {/* 顶部状态栏 */}
           <div style={{
-            width: '80px',
-            height: '80px',
-            border: '3px solid rgba(197,163,103,0.3)',
-            borderTop: '3px solid #C5A367',
-            borderRadius: '50%',
-            animation: 'shimmer 2s infinite linear',
-            marginBottom: '30px'
-          }} />
-          <h2 style={{ fontSize: '24px', marginBottom: '10px', color: '#C5A367' }}>正在解锁至尊名片</h2>
-          <p style={{ opacity: 0.7, marginBottom: '20px' }}>正在为您生成名家亲笔至尊馆藏版...</p>
-          <div style={{ 
-            fontSize: '48px', 
-            fontWeight: 'bold',
-            fontFamily: 'serif' 
-          }}>{adCountdown}</div>
+            padding: '20px',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            borderBottom: '1px solid rgba(197,163,103,0.2)'
+          }}>
+            <span style={{ color: '#C5A367', fontSize: '14px' }}>墨香起名 · 至尊版</span>
+            <span style={{ color: '#999', fontSize: '12px' }}>广告 {adCountdown}秒后结束</span>
+          </div>
+
+          {/* 广告内容区 */}
+          <div style={{
+            flex: 1,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '40px 20px'
+          }}>
+            {/* 游戏推广卡片 */}
+            <div style={{
+              width: '100%',
+              maxWidth: '320px',
+              background: 'rgba(255,255,255,0.05)',
+              borderRadius: '16px',
+              padding: '30px',
+              border: '1px solid rgba(197,163,103,0.3)',
+              textAlign: 'center',
+              marginBottom: '30px'
+            }}>
+              <div style={{
+                width: '80px',
+                height: '80px',
+                background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                borderRadius: '20px',
+                margin: '0 auto 20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '40px'
+              }}>🎮</div>
+              <h3 style={{ fontSize: '20px', marginBottom: '10px', color: '#fff' }}>休闲益智小游戏</h3>
+              <p style={{ fontSize: '14px', color: '#aaa', marginBottom: '20px', lineHeight: 1.6 }}>
+                试玩30秒，免费解锁至尊名片<br/>
+                <span style={{ color: '#C5A367', fontSize: '12px' }}>已帮助 12,847 位用户解锁</span>
+              </p>
+              <button 
+                onClick={() => {
+                  // 跳转微信小程序游戏（使用URL Scheme）
+                  window.location.href = 'weixin://dl/business/?t= */YOUR_MINI_APP_ID';
+                }}
+                style={{
+                  background: 'linear-gradient(135deg, #C5A367 0%, #D4AF37 100%)',
+                  color: '#000',
+                  border: 'none',
+                  padding: '12px 30px',
+                  borderRadius: '25px',
+                  fontSize: '14px',
+                  fontWeight: 'bold',
+                  cursor: 'pointer',
+                  width: '100%'
+                }}
+              >
+                点击试玩，支持创作者
+              </button>
+              <p style={{ 
+                marginTop: '15px', 
+                fontSize: '11px', 
+                color: '#666',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                gap: '5px'
+              }}>
+                <span>💡</span> 试玩后返回即可自动解锁
+              </p>
+            </div>
+            
+            {/* 进度条 */}
+            <div style={{ width: '100%', maxWidth: '320px' }}>
+              <div style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                marginBottom: '8px',
+                fontSize: '12px',
+                color: '#888'
+              }}>
+                <span>解锁进度</span>
+                <span style={{ color: '#C5A367' }}>{Math.round(adProgress)}%</span>
+              </div>
+              <div style={{
+                width: '100%',
+                height: '6px',
+                backgroundColor: 'rgba(255,255,255,0.1)',
+                borderRadius: '3px',
+                overflow: 'hidden'
+              }}>
+                <div style={{
+                  width: `${adProgress}%`,
+                  height: '100%',
+                  background: 'linear-gradient(90deg, #C5A367 0%, #FFD700 100%)',
+                  borderRadius: '3px',
+                  transition: 'width 1s linear'
+                }} />
+              </div>
+              <p style={{ 
+                textAlign: 'center', 
+                marginTop: '15px', 
+                fontSize: '13px', 
+                color: '#666' 
+              }}>
+                正在生成您的专属至尊名片...
+              </p>
+            </div>
+          </div>
+
+          {/* 底部提示 */}
+          <div style={{
+            padding: '20px',
+            borderTop: '1px solid rgba(197,163,103,0.2)',
+            textAlign: 'center'
+          }}>
+            <p style={{ fontSize: '12px', color: '#666' }}>
+              💎 至尊版包含：黑金配色 · 名家篆刻 · 高清导出
+            </p>
+          </div>
         </div>
       )}
     </div>
