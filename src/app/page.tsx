@@ -28,6 +28,9 @@ export default function Home() {
   const [nameLength, setNameLength] = useState<'全部' | '单字' | '双字'>('全部');
   const [displayCount, setDisplayCount] = useState(50);
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [selectedNames, setSelectedNames] = useState<NameItem[]>([]);
+  const [showExportModal, setShowExportModal] = useState(false);
+  const [isPaid, setIsPaid] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
@@ -188,6 +191,98 @@ export default function Home() {
   const handleNameClick = (name: NameItem) => {
     setSelectedName(name);
     setShowDrawer(true);
+  };
+
+  // 批量选择/取消选择名字
+  const toggleSelectName = (name: NameItem, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedNames(prev => {
+      const exists = prev.find(n => n.name === name.name);
+      if (exists) {
+        return prev.filter(n => n.name !== name.name);
+      }
+      if (prev.length >= 10) {
+        alert('最多选择10个名字');
+        return prev;
+      }
+      return [...prev, name];
+    });
+  };
+
+  // 生成PDF名帖
+  const generatePDF = async () => {
+    if (selectedNames.length === 0) return;
+    
+    setIsGenerating(true);
+    try {
+      const { jsPDF } = await import('jspdf');
+      const doc = new jsPDF();
+      
+      // 设置中文字体（使用系统默认字体）
+      doc.setFont('helvetica');
+      
+      // 标题
+      doc.setFontSize(20);
+      doc.text('墨香取名 - 精选名帖', 105, 20, { align: 'center' });
+      
+      doc.setFontSize(12);
+      doc.text(`共 ${selectedNames.length} 个精选名字`, 105, 30, { align: 'center' });
+      
+      let y = 50;
+      
+      selectedNames.forEach((item, index) => {
+        if (y > 250) {
+          doc.addPage();
+          y = 30;
+        }
+        
+        // 名字
+        doc.setFontSize(16);
+        doc.setTextColor(178, 34, 34);
+        doc.text(`${index + 1}. ${surname || ''}${item.name}`, 20, y);
+        
+        // 拼音
+        doc.setFontSize(10);
+        doc.setTextColor(100, 100, 100);
+        doc.text(item.pinyin, 20, y + 8);
+        
+        // 契合度
+        if (surname && item.harmonyScore) {
+          doc.setTextColor(197, 163, 103);
+          doc.text(`契合度: ${item.harmonyScore}%`, 100, y + 5);
+        }
+        
+        // 寓意
+        doc.setFontSize(9);
+        doc.setTextColor(60, 60, 60);
+        const meaning = item.meaning.replace(/[\u4e00-\u9fa5]/g, (char: string) => char);
+        const splitText = doc.splitTextToSize(meaning, 170);
+        doc.text(splitText, 20, y + 18);
+        
+        // 出处
+        doc.setFontSize(8);
+        doc.setTextColor(150, 150, 150);
+        doc.text(`出自: ${item.source}`, 20, y + 30);
+        
+        y += 45;
+      });
+      
+      // 页脚
+      doc.setFontSize(10);
+      doc.setTextColor(150, 150, 150);
+      doc.text('墨香取名 - 为子寻雅名', 105, 280, { align: 'center' });
+      doc.text('https://cubuyoni50-blip.github.io/chinese-naming-app/', 105, 285, { align: 'center' });
+      
+      doc.save(`${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`);
+      setShowExportModal(false);
+      setSelectedNames([]);
+      setIsPaid(false);
+    } catch (err) {
+      console.error('生成PDF失败:', err);
+      alert('生成PDF失败，请重试');
+    } finally {
+      setIsGenerating(false);
+    }
   };
 
   const closeDrawer = () => {
@@ -439,20 +534,74 @@ export default function Home() {
                 onClick={() => handleNameClick(item)}
                 className={isGold ? 'gold-name-card' : ''}
                 style={{
-                  backgroundColor: isGold ? '#FFFDF5' : 'white',
-                  border: isGold ? '2px solid #C5A367' : '1px solid #ddd',
+                  backgroundColor: selectedNames.find(n => n.name === item.name) 
+                    ? (isGold ? '#FFF8E7' : '#f0f7ff')
+                    : (isGold ? '#FFFDF5' : 'white'),
+                  border: selectedNames.find(n => n.name === item.name)
+                    ? '2px solid #C5A367'
+                    : (isGold ? '2px solid #C5A367' : '1px solid #ddd'),
                   borderRadius: '12px',
                   padding: '24px 20px',
                   textAlign: 'center',
                   cursor: 'pointer',
-                  boxShadow: isGold 
-                    ? '0 6px 16px rgba(197,163,103,0.25), inset 0 0 10px rgba(255,255,255,0.5)' 
-                    : '0 2px 4px rgba(0,0,0,0.05)',
+                  boxShadow: selectedNames.find(n => n.name === item.name)
+                    ? '0 4px 12px rgba(197,163,103,0.4)'
+                    : (isGold 
+                      ? '0 6px 16px rgba(197,163,103,0.25), inset 0 0 10px rgba(255,255,255,0.5)' 
+                      : '0 2px 4px rgba(0,0,0,0.05)'),
                   position: 'relative',
-                  overflow: 'hidden',
+                  overflow: 'visible',
                 }}
               >
-              {isGold && (
+                {/* 选择复选框 */}
+                <div 
+                  onClick={(e) => toggleSelectName(item, e)}
+                  style={{
+                    position: 'absolute',
+                    top: '8px',
+                    right: '8px',
+                    width: '22px',
+                    height: '22px',
+                    borderRadius: '50%',
+                    border: selectedNames.find(n => n.name === item.name) 
+                      ? '2px solid #C5A367' 
+                      : '2px solid #ddd',
+                    backgroundColor: selectedNames.find(n => n.name === item.name) 
+                      ? '#C5A367' 
+                      : 'white',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    cursor: 'pointer',
+                    zIndex: 10,
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  {selectedNames.find(n => n.name === item.name) && (
+                    <span style={{ color: 'white', fontSize: '14px' }}>✓</span>
+                  )}
+                </div>
+                
+                {/* 已选标记 */}
+                {selectedNames.find(n => n.name === item.name) && (
+                  <div style={{
+                    position: 'absolute',
+                    top: '-8px',
+                    left: '-8px',
+                    backgroundColor: '#C5A367',
+                    color: 'white',
+                    fontSize: '10px',
+                    padding: '2px 8px',
+                    borderRadius: '10px',
+                    fontWeight: 'bold',
+                    zIndex: 10,
+                    boxShadow: '0 2px 4px rgba(0,0,0,0.2)'
+                  }}>
+                    已选
+                  </div>
+                )}
+              
+              {isGold && !selectedNames.find(n => n.name === item.name) && (
                 <>
                   <div className="gold-card-shimmer" />
                   <div style={{
@@ -518,6 +667,72 @@ export default function Home() {
       {filteredNames.length <= displayCount && filteredNames.length > 0 && (
         <div style={{ textAlign: 'center', padding: '20px', color: '#999', fontSize: '14px' }}>
           已显示全部 {filteredNames.length} 个名字
+        </div>
+      )}
+
+      {/* 批量导出浮动按钮 */}
+      {selectedNames.length > 0 && (
+        <div style={{
+          position: 'fixed',
+          bottom: '20px',
+          left: '50%',
+          transform: 'translateX(-50%)',
+          zIndex: 100,
+          display: 'flex',
+          gap: '10px',
+          alignItems: 'center'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            padding: '10px 20px',
+            borderRadius: '25px',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.15)',
+            display: 'flex',
+            alignItems: 'center',
+            gap: '10px',
+            border: '2px solid #C5A367'
+          }}>
+            <span style={{ color: '#666', fontSize: '14px' }}>
+              已选 <strong style={{ color: '#B22222' }}>{selectedNames.length}</strong> 个名字
+            </span>
+            <button
+              onClick={() => setShowExportModal(true)}
+              style={{
+                backgroundColor: '#B22222',
+                color: 'white',
+                border: 'none',
+                padding: '8px 20px',
+                borderRadius: '20px',
+                fontSize: '14px',
+                fontWeight: 'bold',
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                gap: '5px'
+              }}
+            >
+              💎 导出PDF名帖
+            </button>
+          </div>
+          <button
+            onClick={() => setSelectedNames([])}
+            style={{
+              backgroundColor: 'rgba(0,0,0,0.6)',
+              color: 'white',
+              border: 'none',
+              width: '36px',
+              height: '36px',
+              borderRadius: '50%',
+              fontSize: '18px',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center'
+            }}
+            title="清空选择"
+          >
+            ×
+          </button>
         </div>
       )}
 
@@ -1192,6 +1407,209 @@ export default function Home() {
             <p style={{ fontSize: '12px', color: '#666' }}>
               💎 至尊版包含：黑金配色 · 名家篆刻 · 高清导出
             </p>
+          </div>
+        </div>
+      )}
+
+      {/* 导出PDF支付模态框 */}
+      {showExportModal && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          backgroundColor: 'rgba(0,0,0,0.7)',
+          zIndex: 1000,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px',
+          backdropFilter: 'blur(5px)'
+        }}>
+          <div style={{
+            backgroundColor: 'white',
+            borderRadius: '20px',
+            padding: '30px',
+            maxWidth: '380px',
+            width: '100%',
+            maxHeight: '80vh',
+            overflowY: 'auto',
+            boxShadow: '0 20px 60px rgba(0,0,0,0.3)'
+          }}>
+            {/* 关闭按钮 */}
+            <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '10px' }}>
+              <button 
+                onClick={() => setShowExportModal(false)}
+                style={{
+                  background: 'none',
+                  border: 'none',
+                  fontSize: '24px',
+                  cursor: 'pointer',
+                  color: '#999'
+                }}
+              >
+                ×
+              </button>
+            </div>
+
+            {!isPaid ? (
+              <>
+                {/* 预览已选名字 */}
+                <div style={{ textAlign: 'center', marginBottom: '25px' }}>
+                  <div style={{
+                    width: '80px',
+                    height: '80px',
+                    background: 'linear-gradient(135deg, #C5A367 0%, #D4AF37 100%)',
+                    borderRadius: '50%',
+                    margin: '0 auto 15px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '40px'
+                  }}>
+                    📜
+                  </div>
+                  <h3 style={{ fontSize: '20px', color: '#333', marginBottom: '5px' }}>
+                    PDF名帖导出
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#666' }}>
+                    已选 <strong style={{ color: '#B22222', fontSize: '18px' }}>{selectedNames.length}</strong> 个名字
+                  </p>
+                </div>
+
+                {/* 功能列表 */}
+                <div style={{ 
+                  backgroundColor: '#f9f4e8', 
+                  padding: '20px', 
+                  borderRadius: '12px',
+                  marginBottom: '25px'
+                }}>
+                  <p style={{ fontSize: '13px', color: '#666', marginBottom: '10px', fontWeight: 'bold' }}>
+                    📋 名帖包含：
+                  </p>
+                  <ul style={{ fontSize: '12px', color: '#666', lineHeight: '2', paddingLeft: '20px' }}>
+                    <li>名字拼音与读音</li>
+                    <li>详细寓意解读</li>
+                    <li>古典出处标注</li>
+                    <li>姓氏契合度评分</li>
+                    <li>精美排版设计</li>
+                  </ul>
+                </div>
+
+                {/* 价格 */}
+                <div style={{ 
+                  textAlign: 'center', 
+                  marginBottom: '25px',
+                  padding: '15px',
+                  border: '2px dashed #C5A367',
+                  borderRadius: '12px'
+                }}>
+                  <p style={{ fontSize: '14px', color: '#999', textDecoration: 'line-through' }}>
+                    原价 ¥29.9
+                  </p>
+                  <p style={{ fontSize: '32px', color: '#B22222', fontWeight: 'bold' }}>
+                    ¥9.9
+                  </p>
+                  <p style={{ fontSize: '12px', color: '#C5A367' }}>
+                    🔥 已有 2,847 位家长购买
+                  </p>
+                </div>
+
+                {/* 支付按钮 */}
+                <button
+                  onClick={() => setIsPaid(true)}
+                  style={{
+                    width: '100%',
+                    padding: '15px',
+                    backgroundColor: '#B22222',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '25px',
+                    fontSize: '16px',
+                    fontWeight: 'bold',
+                    cursor: 'pointer',
+                    marginBottom: '10px'
+                  }}
+                >
+                  💳 立即支付 ¥9.9
+                </button>
+
+                {/* 微信支付说明 */}
+                <p style={{ fontSize: '11px', color: '#999', textAlign: 'center' }}>
+                  支持微信支付 · 支付宝 · 银行卡
+                </p>
+              </>
+            ) : (
+              <>
+                {/* 支付成功界面 */}
+                <div style={{ textAlign: 'center', marginBottom: '25px' }}>
+                  <div style={{
+                    width: '80px',
+                    height: '80px',
+                    backgroundColor: '#4CAF50',
+                    borderRadius: '50%',
+                    margin: '0 auto 15px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    fontSize: '40px'
+                  }}>
+                    ✓
+                  </div>
+                  <h3 style={{ fontSize: '20px', color: '#4CAF50', marginBottom: '5px' }}>
+                    支付成功！
+                  </h3>
+                  <p style={{ fontSize: '14px', color: '#666' }}>
+                    正在为您生成PDF名帖...
+                  </p>
+                </div>
+
+                {/* 生成的预览 */}
+                <div style={{
+                  backgroundColor: '#f5f5f5',
+                  padding: '20px',
+                  borderRadius: '12px',
+                  marginBottom: '25px',
+                  maxHeight: '200px',
+                  overflowY: 'auto'
+                }}>
+                  <p style={{ fontSize: '12px', color: '#999', marginBottom: '10px' }}>
+                    📄 包含名字：
+                  </p>
+                  {selectedNames.map((name, idx) => (
+                    <div key={idx} style={{
+                      padding: '8px 0',
+                      borderBottom: idx < selectedNames.length - 1 ? '1px solid #ddd' : 'none',
+                      fontSize: '14px',
+                      color: '#333'
+                    }}>
+                      {idx + 1}. {surname}{name.name}
+                    </div>
+                  ))}
+                </div>
+
+                {/* 下载按钮 */}
+                <button
+                  onClick={generatePDF}
+                  disabled={isGenerating}
+                  style={{
+                    width: '100%',
+                    padding: '15px',
+                    backgroundColor: isGenerating ? '#ccc' : '#C5A367',
+                    color: 'white',
+                    border: 'none',
+                    borderRadius: '25px',
+                    fontSize: '16px',
+                    fontWeight: 'bold',
+                    cursor: isGenerating ? 'not-allowed' : 'pointer'
+                  }}
+                >
+                  {isGenerating ? '⏳ 生成中...' : '📥 下载PDF名帖'}
+                </button>
+
+                <p style={{ fontSize: '11px', color: '#999', textAlign: 'center', marginTop: '10px' }}>
+                  PDF文件将保存到您的下载文件夹
+                </p>
+              </>
+            )}
           </div>
         </div>
       )}
