@@ -209,7 +209,7 @@ export default function Home() {
     });
   };
 
-  // 生成PDF名帖 - 最终稳定版（解决乱码与白屏）
+  // 生成PDF名帖 - 终极分页完美版
   const generatePDF = async () => {
     if (selectedNames.length === 0) return;
     
@@ -217,109 +217,92 @@ export default function Home() {
     try {
       const html2canvas = (await import('html2canvas')).default;
       const { jsPDF } = await import('jspdf');
-
-      // 创建一个临时容器，放在屏幕外但保持可见，确保 html2canvas 能抓取
-      const container = document.createElement('div');
-      container.style.cssText = `
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 794px; /* A4 宽度 (96 DPI) */
-        background: #faf8f5;
-        z-index: -1000;
-        font-family: "Noto Serif SC", serif;
-      `;
-      document.body.appendChild(container);
-
-      // 渲染精美的 PDF 页面内容
-      container.innerHTML = `
-        <div style="padding: 60px; background: #faf8f5; position: relative;">
-          <!-- 边框 -->
-          <div style="position: absolute; top: 20px; left: 20px; right: 20px; bottom: 20px; border: 2px solid #C5A367; pointer-events: none;"></div>
-          
-          <!-- 标题 -->
-          <div style="text-align: center; margin-bottom: 50px;">
-            <h1 style="font-size: 48px; color: #B22222; margin: 0; letter-spacing: 15px;">墨香取名</h1>
-            <div style="width: 100px; height: 1px; background: #C5A367; margin: 20px auto;"></div>
-            <p style="font-size: 18px; color: #666; letter-spacing: 5px;">精选名帖 · 文墨传家</p>
-          </div>
-
-          <!-- 统计信息 -->
-          <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 40px; border: 1px solid #eee; text-align: center;">
-            ${surname ? `<div style="font-size: 24px; margin-bottom: 15px;">姓氏：<span style="color: #B22222; font-weight: bold;">${surname}</span></div>` : ''}
-            <div style="font-size: 16px; color: #666;">本次共为您精选 <span style="color: #C5A367; font-weight: bold;">${selectedNames.length}</span> 个雅名</div>
-          </div>
-
-          <!-- 名字详情列表 -->
-          ${selectedNames.map((item, index) => `
-            <div style="background: white; padding: 40px; border-radius: 12px; margin-bottom: 30px; border: 1px solid #f0e6d2; border-left: 8px solid #C5A367; box-shadow: 0 4px 12px rgba(0,0,0,0.05); position: relative;">
-              <div style="position: absolute; top: 20px; right: 30px; font-size: 48px; color: #f5f5f5; font-weight: bold; font-family: serif;">0${index + 1}</div>
-              <div style="display: flex; align-items: baseline; margin-bottom: 15px;">
-                <span style="font-size: 42px; color: #B22222; font-weight: bold; letter-spacing: 5px;">${surname || ''}${item.name}</span>
-                <span style="font-size: 18px; color: #999; margin-left: 20px; font-style: italic;">${item.pinyin}</span>
-              </div>
-              ${surname && item.harmonyScore ? `
-                <div style="display: inline-block; background: #C5A367; color: white; padding: 5px 15px; border-radius: 20px; font-size: 14px; margin-bottom: 20px;">
-                  契合度 ${item.harmonyScore}%
-                </div>
-              ` : ''}
-              <div style="font-size: 16px; color: #333; line-height: 1.8; margin-bottom: 15px; border-top: 1px dashed #eee; padding-top: 15px;">
-                ${item.meaning}
-              </div>
-              <div style="font-size: 14px; color: #999; font-style: italic;">
-                —— 出自 ${item.source}
-              </div>
-            </div>
-          `).join('')}
-
-          <!-- 页脚 -->
-          <div style="text-align: center; margin-top: 60px; color: #ccc; font-size: 12px; border-top: 1px solid #eee; padding-top: 30px;">
-            <p>墨香取名 · 为子寻雅名</p>
-            <p>生成日期：${new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-          </div>
-        </div>
-      `;
-
-      // 给一点时间确保 DOM 渲染和字体应用
-      await document.fonts.ready;
-      await new Promise(resolve => setTimeout(resolve, 1000));
-
-      // 截取容器图片
-      const canvas = await html2canvas(container, {
-        scale: 2,
-        useCORS: true,
-        backgroundColor: '#faf8f5',
-        logging: false
-      });
-
-      // 移除临时容器
-      document.body.removeChild(container);
-
-      // 将 canvas 转换为图片并放入 PDF
-      const imgData = canvas.toDataURL('image/jpeg', 0.95);
       const doc = new jsPDF('p', 'mm', 'a4');
       const pageWidth = doc.internal.pageSize.getWidth();
       const pageHeight = doc.internal.pageSize.getHeight();
-      
-      // 计算图片在 PDF 中的尺寸（保持比例）
-      const imgWidth = pageWidth;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      
-      let heightLeft = imgHeight;
-      let position = 0;
 
-      // 分页添加图片
-      doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-      heightLeft -= pageHeight;
+      // 1. 添加封面
+      const coverContainer = document.createElement('div');
+      coverContainer.style.cssText = `position: absolute; left: 0; top: 0; width: 794px; height: 1123px; background: #faf8f5; z-index: -1000; font-family: "Noto Serif SC", serif; padding: 80px; box-sizing: border-box;`;
+      coverContainer.innerHTML = `
+        <div style="width: 100%; height: 100%; border: 2px solid #C5A367; position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; background: white;">
+          <div style="font-size: 64px; color: #B22222; font-weight: bold; letter-spacing: 20px; margin-bottom: 20px;">墨香取名</div>
+          <div style="width: 150px; height: 1px; background: #C5A367; margin-bottom: 30px;"></div>
+          <div style="font-size: 24px; color: #666; letter-spacing: 8px;">精选名帖 · 文墨传家</div>
+          <div style="margin-top: 100px; text-align: center;">
+            ${surname ? `<div style="font-size: 32px; margin-bottom: 20px;">姓氏：<span style="color: #B22222; font-weight: bold;">${surname}</span></div>` : ''}
+            <div style="font-size: 18px; color: #999;">收录雅名：${selectedNames.length} 例</div>
+          </div>
+          <div style="position: absolute; bottom: 40px; color: #ccc; font-size: 14px;">${new Date().toLocaleDateString('zh-CN', { year: 'numeric', month: 'long', day: 'numeric' })}</div>
+        </div>
+      `;
+      document.body.appendChild(coverContainer);
+      const coverCanvas = await html2canvas(coverContainer, { scale: 2, useCORS: true });
+      doc.addImage(coverCanvas.toDataURL('image/jpeg', 0.95), 'JPEG', 0, 0, pageWidth, pageHeight);
+      document.body.removeChild(coverContainer);
 
-      while (heightLeft >= 0) {
-        position = heightLeft - imgHeight;
-        doc.addPage();
-        doc.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight);
-        heightLeft -= pageHeight;
+      // 2. 逐个渲染名字卡片，确保不被切割
+      // 每页放 2 个名字，保证字大且排版精美
+      for (let i = 0; i < selectedNames.length; i++) {
+        // 每 2 个名字换一页，或者第一个名字换页
+        if (i % 2 === 0) {
+          doc.addPage();
+          // 每一页的装饰边框
+          doc.setDrawColor(197, 163, 103);
+          doc.setLineWidth(0.5);
+          doc.rect(10, 10, pageWidth - 20, pageHeight - 20);
+        }
+
+        const item = selectedNames[i];
+        const cardContainer = document.createElement('div');
+        cardContainer.style.cssText = `position: absolute; left: 0; top: 0; width: 700px; background: white; z-index: -1000; font-family: "Noto Serif SC", serif; padding: 40px; box-sizing: border-box; border: 1px solid #f0e6d2; border-left: 10px solid #C5A367; border-radius: 12px;`;
+        cardContainer.innerHTML = `
+          <div style="position: relative;">
+            <div style="position: absolute; top: 0; right: 0; font-size: 60px; color: #f8f8f8; font-weight: bold;">${String(i + 1).padStart(2, '0')}</div>
+            <div style="display: flex; align-items: baseline; margin-bottom: 20px;">
+              <span style="font-size: 48px; color: #B22222; font-weight: bold; letter-spacing: 5px;">${surname || ''}${item.name}</span>
+              <span style="font-size: 20px; color: #999; margin-left: 25px; font-style: italic;">${item.pinyin}</span>
+            </div>
+            ${surname && item.harmonyScore ? `
+              <div style="display: inline-block; background: #C5A367; color: white; padding: 6px 18px; border-radius: 20px; font-size: 16px; margin-bottom: 25px; font-weight: bold;">
+                姓氏契合度 ${item.harmonyScore}%
+              </div>
+            ` : ''}
+            <div style="font-size: 18px; color: #333; line-height: 2; margin-bottom: 20px; padding-top: 20px; border-top: 1px dashed #eee; text-align: justify;">
+              ${item.meaning}
+            </div>
+            <div style="font-size: 16px; color: #C5A367; font-style: italic;">
+              —— 出自 ${item.source}
+            </div>
+          </div>
+        `;
+        document.body.appendChild(cardContainer);
+        const cardCanvas = await html2canvas(cardContainer, { scale: 2, useCORS: true, backgroundColor: '#ffffff' });
+        
+        const imgData = cardCanvas.toDataURL('image/jpeg', 0.95);
+        const imgW = pageWidth - 40; // 左右留白
+        const imgH = (cardCanvas.height * imgW) / cardCanvas.width;
+        
+        // 计算在页面中的 Y 坐标
+        // 第一张卡片靠上，第二张卡片靠下
+        const yPos = (i % 2 === 0) ? 30 : 140; 
+        doc.addImage(imgData, 'JPEG', 20, yPos, imgW, imgH);
+        
+        document.body.removeChild(cardContainer);
       }
 
-      doc.save(`${surname || '精选'}名帖-${selectedNames.length}个名字.pdf`);
+      // 3. 添加结语页
+      doc.addPage();
+      doc.setFillColor(250, 248, 245);
+      doc.rect(0, 0, pageWidth, pageHeight, 'F');
+      doc.setTextColor(197, 163, 103);
+      doc.setFontSize(14);
+      doc.text('传世雅名 · 文墨留香', pageWidth / 2, pageHeight / 2 - 10, { align: 'center' });
+      doc.setFontSize(10);
+      doc.setTextColor(204, 204, 204);
+      doc.text('感谢您使用墨香取名系统', pageWidth / 2, pageHeight / 2 + 10, { align: 'center' });
+
+      doc.save(`${surname || '精选'}名帖-${selectedNames.length}例.pdf`);
       
       setShowExportModal(false);
       setSelectedNames([]);
