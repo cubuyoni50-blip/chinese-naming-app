@@ -19,13 +19,13 @@
 
             <!-- 底部印章感设计 -->
             <div style="position: absolute; bottom: 80px; text-align: center; z-index: 1;">
-              <div style="width: 64px; height: 64px; border: 3px solid #B22222; display: flex; align-items: center; justify-content: center; color: #B22222; font-weight: bold; padding: 4px; box-sizing: border-box; background: rgba(178, 34, 34, 0.02); transform: rotate(-5deg); box-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; width: 100%; height: 100%; font-family: 'STKaiti', 'KaiTi', serif;">
-                  <div style="writing-mode: vertical-rl; text-align: center; line-height: 1; letter-spacing: 2px; font-size: 18px;">起名</div>
-                  <div style="writing-mode: vertical-rl; text-align: center; line-height: 1; letter-spacing: 2px; font-size: 18px;">墨香</div>
+              <div style="width: 72px; height: 72px; border: 4px solid #B22222; display: flex; align-items: center; justify-content: center; color: #B22222; padding: 2px; box-sizing: border-box; background: rgba(178, 34, 34, 0.03); transform: rotate(-3deg); box-shadow: 1px 1px 1px rgba(0,0,0,0.05); position: relative; margin: 0 auto 20px;">
+                <div style="width: 100%; height: 100%; border: 1px solid #B22222; display: grid; grid-template-columns: 1fr 1fr; align-items: center; justify-items: center; font-family: 'STKaiti', 'KaiTi', 'SimSun', serif; font-weight: 900;">
+                  <div style="writing-mode: vertical-rl; text-align: center; line-height: 1; letter-spacing: 2px; font-size: 20px;">取名</div>
+                  <div style="writing-mode: vertical-rl; text-align: center; line-height: 1; letter-spacing: 2px; font-size: 20px;">墨香</div>
                 </div>
               </div>
-              <div style="color: #999; font-size: 14px; letter-spacing: 4px; margin-top: 20px;">${new Date().toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric"})}</div>
+              <div style="color: #999; font-size: 14px; letter-spacing: 4px;">${new Date().toLocaleDateString("zh-CN",{year:"numeric",month:"long",day:"numeric"})}</div>
             </div>
           </div>
         </div>
