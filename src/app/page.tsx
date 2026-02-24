@@ -31,6 +31,7 @@ export default function Home() {
   const [selectedNames, setSelectedNames] = useState<NameItem[]>([]);
   const [showExportModal, setShowExportModal] = useState(false);
   const [isPaid, setIsPaid] = useState(false);
+  const [showConsultModal, setShowConsultModal] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
@@ -433,6 +434,10 @@ export default function Home() {
         .gold-name-card:hover {
           transform: translateY(-8px) scale(1.02);
           box-shadow: 0 15px 30px rgba(197,163,103,0.4) !important;
+        }
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-10px); }
         }
       `}</style>
 
@@ -1689,6 +1694,160 @@ export default function Home() {
                 </p>
               </>
             )}
+          </div>
+        </div>
+      )}
+      {/* 大师咨询悬浮球 */}
+      <div 
+        onClick={() => setShowConsultModal(true)}
+        style={{
+          position: 'fixed',
+          right: '20px',
+          top: '40%',
+          width: '60px',
+          height: '60px',
+          borderRadius: '50%',
+          backgroundColor: '#B22222',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'white',
+          cursor: 'pointer',
+          boxShadow: '0 4px 15px rgba(178,34,34,0.4)',
+          zIndex: 90,
+          border: '2px solid #C5A367',
+          animation: 'float 3s infinite ease-in-out'
+        }}
+      >
+        <span style={{ fontSize: '12px', fontWeight: 'bold' }}>大师</span>
+        <span style={{ fontSize: '12px', fontWeight: 'bold' }}>咨询</span>
+      </div>
+
+      {/* 大师咨询模态框 */}
+      {showConsultModal && (
+        <div style={{
+          position: 'fixed',
+          inset: 0,
+          backgroundColor: 'rgba(0,0,0,0.7)',
+          zIndex: 1100,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          padding: '20px',
+          backdropFilter: 'blur(8px)'
+        }}>
+          <div style={{
+            width: '100%',
+            maxWidth: '400px',
+            background: '#F9F4E8',
+            borderRadius: '20px',
+            position: 'relative',
+            overflow: 'hidden',
+            border: '2px solid #C5A367',
+            boxShadow: '0 30px 60px rgba(0,0,0,0.5)'
+          }}>
+            {/* 背景修饰 */}
+            <div style={{
+              position: 'absolute',
+              top: '-50px',
+              right: '-50px',
+              width: '150px',
+              height: '150px',
+              backgroundColor: 'rgba(197,163,103,0.1)',
+              borderRadius: '50%'
+            }} />
+
+            <button 
+              onClick={() => setShowConsultModal(false)}
+              style={{
+                position: 'absolute',
+                top: '15px',
+                right: '15px',
+                background: 'none',
+                border: 'none',
+                fontSize: '24px',
+                cursor: 'pointer',
+                color: '#999',
+                zIndex: 2
+              }}
+            >
+              ×
+            </button>
+
+            <div style={{ padding: '40px 30px', textAlign: 'center', position: 'relative', zIndex: 1 }}>
+              <div style={{ 
+                width: '60px', 
+                height: '2px', 
+                backgroundColor: '#B22222', 
+                margin: '0 auto 20px' 
+              }} />
+              <h2 style={{ 
+                fontSize: '24px', 
+                color: '#B22222', 
+                letterSpacing: '4px',
+                marginBottom: '10px',
+                fontWeight: 'bold'
+              }}>大师人工起名</h2>
+              <p style={{ color: '#C5A367', fontSize: '14px', letterSpacing: '2px', marginBottom: '30px' }}>—— 文墨传家 · 雅名伴一生 ——</p>
+              
+              <div style={{ 
+                backgroundColor: 'white', 
+                padding: '20px', 
+                borderRadius: '12px',
+                border: '1px solid #eee',
+                marginBottom: '30px',
+                textAlign: 'left'
+              }}>
+                <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
+                  <div style={{ color: '#B22222' }}>●</div>
+                  <div style={{ fontSize: '14px', color: '#666' }}>结合生辰八字、五行缺失深度定制</div>
+                </div>
+                <div style={{ display: 'flex', gap: '10px', marginBottom: '15px' }}>
+                  <div style={{ color: '#B22222' }}>●</div>
+                  <div style={{ fontSize: '14px', color: '#666' }}>避开重名风险，确保名字独一无二</div>
+                </div>
+                <div style={{ display: 'flex', gap: '10px' }}>
+                  <div style={{ color: '#B22222' }}>●</div>
+                  <div style={{ fontSize: '14px', color: '#666' }}>由资深民俗文化学者一对一服务</div>
+                </div>
+              </div>
+
+              {/* 二维码占位 */}
+              <div style={{
+                width: '180px',
+                height: '180px',
+                backgroundColor: 'white',
+                border: '4px solid #C5A367',
+                margin: '0 auto 20px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                position: 'relative'
+              }}>
+                <div style={{ textAlign: 'center' }}>
+                  <div style={{ fontSize: '40px', marginBottom: '10px' }}>📱</div>
+                  <div style={{ fontSize: '12px', color: '#999' }}>[ 微信扫码添加 ]</div>
+                  <div style={{ fontSize: '10px', color: '#ccc', marginTop: '5px' }}>此处替换为你的二维码</div>
+                </div>
+              </div>
+
+              <p style={{ fontSize: '13px', color: '#999', lineHeight: '1.6' }}>
+                已有超过 1,500 位家长<br/>
+                通过人工咨询获得满意佳名
+              </p>
+            </div>
+
+            <div style={{ 
+              backgroundColor: '#B22222', 
+              color: 'white', 
+              padding: '12px', 
+              fontSize: '12px', 
+              letterSpacing: '2px',
+              textAlign: 'center'
+            }}>
+              墨 香 取 名 · 承 载 厚 望
+            </div>
           </div>
         </div>
       )}
