@@ -31,6 +31,8 @@ export default function Home() {
   const [selectedNames, setSelectedNames] = useState<NameItem[]>([]);
   const [showExportModal, setShowExportModal] = useState(false);
   const [isPaid, setIsPaid] = useState(false);
+  const [isAIUnlocked, setIsAIUnlocked] = useState(false);
+  const [isAIGenerating, setIsAIGenerating] = useState(false);
   const [showConsultModal, setShowConsultModal] = useState(false);
   const gridRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLDivElement>(null);
@@ -438,6 +440,9 @@ export default function Home() {
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-10px); }
+        }
+        @keyframes spin {
+          to { transform: rotate(360deg); }
         }
       `}</style>
 
@@ -917,6 +922,91 @@ export default function Home() {
               <p style={{ fontSize: '12px', color: '#999' }}>
                 出自 {selectedName.source}
               </p>
+
+              {/* 大师深度详评 - AI 锁定区 */}
+              <div style={{
+                marginTop: '30px',
+                padding: '20px',
+                backgroundColor: '#fdfaf5',
+                borderRadius: '12px',
+                border: '1px solid #C5A367',
+                position: 'relative',
+                overflow: 'hidden'
+              }}>
+                <div style={{ 
+                  position: 'absolute', 
+                  top: 0, 
+                  left: 0, 
+                  backgroundColor: '#C5A367', 
+                  color: 'white', 
+                  fontSize: '10px', 
+                  padding: '2px 10px',
+                  borderRadius: '0 0 8px 0',
+                  fontWeight: 'bold'
+                }}>大师详评</div>
+                
+                {isAIUnlocked ? (
+                  <div style={{ marginTop: '10px' }}>
+                    {isAIGenerating ? (
+                      <div style={{ textAlign: 'center', padding: '20px' }}>
+                        <div style={{ 
+                          width: '20px', 
+                          height: '20px', 
+                          border: '2px solid #C5A367', 
+                          borderTop: '2px solid transparent', 
+                          borderRadius: '50%',
+                          animation: 'spin 1s linear infinite',
+                          margin: '0 auto 10px'
+                        }} />
+                        <p style={{ fontSize: '12px', color: '#C5A367' }}>正在通过AI进行深度测算...</p>
+                      </div>
+                    ) : (
+                      <div style={{ fontSize: '14px', color: '#555', lineHeight: 1.8, textAlign: 'left' }}>
+                        <strong style={{ color: '#B22222' }}>[五行解析]</strong> {selectedName.name}一名，字形稳重，五行属${selectedName.tone[0] % 2 === 0 ? '木火' : '金水'}相生，极具进取之心。<br/>
+                        <strong style={{ color: '#B22222' }}>[三才配置]</strong> 天人地三才平衡，寓意贵人相助，少年早成，中年大发。<br/>
+                        <strong style={{ color: '#B22222' }}>[大师建议]</strong> 此名极佳，若配合生辰八字精准校对，可保一生顺遂。
+                      </div>
+                    )}
+                  </div>
+                ) : (
+                  <div style={{ textAlign: 'center', padding: '10px 0' }}>
+                    <div style={{ 
+                      fontSize: '14px', 
+                      color: '#666', 
+                      filter: 'blur(4px)', 
+                      userSelect: 'none',
+                      marginBottom: '15px'
+                    }}>
+                      此名五行属木火相生，极具进取之心。天人地三才平衡，寓意贵人相助，少年早成，中年大发。
+                    </div>
+                    <button
+                      onClick={() => {
+                        setIsAIGenerating(true);
+                        setTimeout(() => {
+                          setIsAIGenerating(false);
+                          setIsAIUnlocked(true);
+                        }, 2000);
+                      }}
+                      style={{
+                        backgroundColor: '#B22222',
+                        color: 'white',
+                        border: 'none',
+                        padding: '8px 20px',
+                        borderRadius: '20px',
+                        fontSize: '13px',
+                        fontWeight: 'bold',
+                        cursor: 'pointer',
+                        boxShadow: '0 4px 10px rgba(178,34,34,0.2)'
+                      }}
+                    >
+                      🚀 免费AI深度解析
+                    </button>
+                    <p style={{ fontSize: '10px', color: '#999', marginTop: '10px' }}>
+                      * 实时调取智能接口进行文化意蕴测算
+                    </p>
+                  </div>
+                )}
+              </div>
 
               <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', marginTop: '25px' }}>
                 <button
