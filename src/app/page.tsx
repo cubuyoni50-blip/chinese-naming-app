@@ -283,8 +283,15 @@ export default function Home() {
 
             <!-- 主内容区 -->
             <div style="margin-top: 60px;">
-              <div style="display: flex; align-items: center; margin-bottom: 50px;">
-                <h2 style="font-size: 88px; color: #B22222; font-weight: bold; margin: 0; letter-spacing: 15px;">${surname || ''}${item.name}</h2>
+              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '50px', flexWrap: 'nowrap' }}>
+                <h2 style={{ 
+                  fontSize: (surname?.length + item.name.length) > 3 ? '64px' : '88px', 
+                  color: '#B22222', 
+                  fontWeight: 'bold', 
+                  margin: 0, 
+                  letterSpacing: (surname?.length + item.name.length) > 3 ? '8px' : '15px',
+                  whiteSpace: 'nowrap'
+                }}>{surname || ''}{item.name}</h2>
                 <div style="margin-left: 40px;">
                   <div style="font-size: 24px; color: #999; font-style: italic; letter-spacing: 4px; margin-bottom: 10px;">${item.pinyin.toUpperCase()}</div>
                   <div style="display: inline-block; background: #B22222; color: white; padding: 4px 15px; border-radius: 4px; font-size: 14px; font-weight: bold;">契合度 ${item.harmonyScore}%</div>
