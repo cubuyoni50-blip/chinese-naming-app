@@ -309,9 +309,11 @@ export default function Home() {
 
                 <!-- 增加专家点评位 -->
                 <div style="margin-top: 100px; padding: 30px; background: #fdfaf5; border: 1px dashed #C5A367; border-radius: 8px; position: relative;">
-                  <div style="position: absolute; top: -15px; left: 20px; background: #fdfaf5; padding: 0 10px; color: #C5A367; font-weight: bold;">声律点评</div>
-                  <div style="font-size: 16px; color: #7c6d55; line-height: 1.6;">
-                    此名声调为“${item.tone[0]}声·${item.tone[1] || '轻'}声”，平仄相间，读之朗朗上口，韵律优美。字形结构严谨，笔画疏密有致，视觉观感平衡和谐。
+                  <div style="position: absolute; top: -15px; left: 20px; background: #fdfaf5; padding: 0 10px; color: #C5A367; font-weight: bold;">AI 智能详评</div>
+                  <div style="font-size: 16px; color: #7c6d55; line-height: 1.8;">
+                    <div style="margin-bottom: 15px;"><strong style="color: #B22222;">[五行解析]</strong> ${surname || ''}${item.name}一名，字形稳重，五行属${item.tone[0] % 2 === 0 ? '木火' : '金水'}相生，极具进取之心。</div>
+                    <div style="margin-bottom: 15px;"><strong style="color: #B22222;">[三才配置]</strong> 天人地三才平衡，寓意贵人相助，少年早成，中年大发。</div>
+                    <div><strong style="color: #B22222;">[声律点评]</strong> 此名声调为“${item.tone[0]}声·${item.tone[1] || '轻'}声”，平仄相间，读之朗朗上口，韵律优美。</div>
                   </div>
                   <!-- 红色装饰印章 -->
                   <div style="position: absolute; bottom: 15px; right: 20px; width: 45px; height: 45px; border: 2px solid #B22222; color: #B22222; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 10px; font-weight: bold; transform: rotate(15deg); opacity: 0.6;">墨香精选</div>
@@ -1194,19 +1196,19 @@ export default function Home() {
               <div style={{
                 width: '25px',
                 height: '1px',
-                backgroundColor: '#C5A367',
+                backgroundColor: isPremiumUnlocked ? '#C5A367' : '#B22222',
                 opacity: 0.6
               }} />
               <div style={{
                 fontSize: '8px',
-                color: '#C5A367',
+                color: isPremiumUnlocked ? '#C5A367' : '#B22222',
                 letterSpacing: '0.3em',
                 whiteSpace: 'nowrap'
               }}>{isPremiumUnlocked ? '传世雅名 · 至尊鉴赏' : '为子寻雅名'}</div>
               <div style={{
                 width: '25px',
                 height: '1px',
-                backgroundColor: '#C5A367',
+                backgroundColor: isPremiumUnlocked ? '#C5A367' : '#B22222',
                 opacity: 0.6
               }} />
             </div>
