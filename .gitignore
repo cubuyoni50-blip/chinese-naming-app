@@ -39,3 +39,7 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+# 专门屏蔽之前困扰你的 AI 临时文件和打包残余
+*.txt
+__next_*
+_next/

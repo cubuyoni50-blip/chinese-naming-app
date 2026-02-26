@@ -1,9 +1,0 @@
-1:"$Sreact.fragment"
-2:I[47913,["/chinese-naming-app/_next/static/chunks/454b7d9bc1649043.js"],"ClientPageRoot"]
-3:I[6558,["/chinese-naming-app/_next/static/chunks/55ac618cf2900038.js","/chinese-naming-app/_next/static/chunks/572e6d65a9e8f2b4.js"],"default"]
-6:I[83481,["/chinese-naming-app/_next/static/chunks/454b7d9bc1649043.js"],"OutletBoundary"]
-7:"$Sreact.suspense"
-0:{"buildId":"14fj3dc7n5AQ5z9uA8Wld","rsc":["$","$1","c",{"children":[["$","$L2",null,{"Component":"$3","serverProvidedParams":{"searchParams":{},"params":{},"promises":["$@4","$@5"]}}],[["$","script","script-0",{"src":"/chinese-naming-app/_next/static/chunks/55ac618cf2900038.js","async":true}],["$","script","script-1",{"src":"/chinese-naming-app/_next/static/chunks/572e6d65a9e8f2b4.js","async":true}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],"loading":null,"isPartial":false}
-4:{}
-5:"$0:rsc:props:children:0:props:serverProvidedParams:params"
-8:null

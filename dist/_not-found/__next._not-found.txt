@@ -1,4 +1,0 @@
-1:"$Sreact.fragment"
-2:I[90029,["/chinese-naming-app/_next/static/chunks/454b7d9bc1649043.js"],"default"]
-3:I[21649,["/chinese-naming-app/_next/static/chunks/454b7d9bc1649043.js"],"default"]
-0:{"buildId":"14fj3dc7n5AQ5z9uA8Wld","rsc":["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","template":["$","$L3",null,{}]}]]}],"loading":null,"isPartial":false}

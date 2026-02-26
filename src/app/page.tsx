@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
-import { Download, X, Smartphone, ArrowUp } from 'lucide-react';
+import { Download, X, Smartphone, ArrowUp, Music } from 'lucide-react';
+import namesData from '../../public/chinese-naming-app/names.json';
 
 interface NameItem {
   name: string;
@@ -13,8 +14,7 @@ interface NameItem {
 }
 
 export default function Home() {
-  const [names, setNames] = useState<NameItem[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [names, setNames] = useState<NameItem[]>(namesData as NameItem[]);
   const [activeStyle, setActiveStyle] = useState('全部');
   const [surname, setSurname] = useState('');
   const [selectedName, setSelectedName] = useState<NameItem | null>(null);
@@ -34,6 +34,8 @@ export default function Home() {
   const [isAIUnlocked, setIsAIUnlocked] = useState(false);
   const [isAIGenerating, setIsAIGenerating] = useState(false);
   const [showConsultModal, setShowConsultModal] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const gridRef = useRef<HTMLDivElement>(null);
   const posterRef = useRef<HTMLDivElement>(null);
   const styles = ['全部', '诗经', '楚辞', '唐诗', '宋词', '现代', '自然'];
@@ -53,20 +55,19 @@ export default function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  // 加载名字数据
-  useEffect(() => {
-    fetch('/chinese-naming-app/names.json')
-      .then(res => res.json())
-      .then(data => {
-        setNames(data);
-        setLoading(false);
-        console.log(`✅ 加载了 ${data.length} 个名字`);
-      })
-      .catch(err => {
-        console.error('加载名字失败:', err);
-        setLoading(false);
-      });
-  }, []);
+  // 背景音乐控制
+  const toggleMusic = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play().catch((err) => {
+          console.log('播放被拦截:', err);
+        });
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
 
   // 简转繁函数
   const toTraditional = (s: string): string => {
@@ -225,7 +226,7 @@ export default function Home() {
       const pageHeight = doc.internal.pageSize.getHeight();
 
       // 公用宣纸背景样式
-      const paperBg = `background-color: #fbf9f4; background-image: url("https://www.transparenttextures.com/patterns/p6.png");`;
+      const paperBg = `background-color: #fbf9f4; background-image: url("/chinese-naming-app/p6.png");`;
 
       // 1. 渲染豪华封面
       const coverContainer = document.createElement('div');
@@ -283,15 +284,10 @@ export default function Home() {
 
             <!-- 主内容区 -->
             <div style="margin-top: 60px;">
-              <div style={{ display: 'flex', alignItems: 'center', marginBottom: '50px', flexWrap: 'nowrap' }}>
-                <h2 style={{ 
-                  fontSize: (surname?.length + item.name.length) > 3 ? '64px' : '88px', 
-                  color: '#B22222', 
-                  fontWeight: 'bold', 
-                  margin: 0, 
-                  letterSpacing: (surname?.length + item.name.length) > 3 ? '8px' : '15px',
-                  whiteSpace: 'nowrap'
-                }}>{surname || ''}{item.name}</h2>
+              <div style="display: flex; align-items: center; margin-bottom: 50px; flex-wrap: nowrap;">
+                <h2 style="font-size: ${(surname || '').length + item.name.length > 3 ? '64px' : '88px'}; color: #B22222; font-weight: bold; margin: 0; letter-spacing: ${(surname || '').length + item.name.length > 3 ? '8px' : '15px'}; white-space: nowrap;">
+                  ${surname || ''}${item.name}
+                </h2>
                 <div style="margin-left: 40px;">
                   <div style="font-size: 24px; color: #999; font-style: italic; letter-spacing: 4px; margin-bottom: 10px;">${item.pinyin.toUpperCase()}</div>
                   <div style="display: inline-block; background: #B22222; color: white; padding: 4px 15px; border-radius: 4px; font-size: 14px; font-weight: bold;">契合度 ${item.harmonyScore}%</div>
@@ -403,19 +399,9 @@ export default function Home() {
     }
   };
 
-  if (loading) {
-    return (
-      <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ fontSize: '24px', color: '#C5A367', marginBottom: '10px' }}>墨香取名</div>
-          <div style={{ fontSize: '14px', color: '#666' }}>正在加载名字数据...</div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', position: 'relative' }}>
+      <audio ref={audioRef} src="/chinese-naming-app/bgm.mp3" loop />
       {/* 全局动画样式 */}
       <style jsx global>{`
         @keyframes shimmer {
@@ -459,12 +445,35 @@ export default function Home() {
       <div style={{
         position: 'fixed',
         inset: 0,
-        backgroundImage: 'url(https://www.transparenttextures.com/patterns/p6.png)',
+        backgroundImage: 'url(/chinese-naming-app/p6.png)',
         opacity: 0.5,
         pointerEvents: 'none'
       }} />
       
-      <header style={{ textAlign: 'center', padding: '40px 20px 30px' }}>
+      <header style={{ textAlign: 'center', padding: '40px 20px 30px', position: 'relative' }}>
+        {/* 音乐按钮 */}
+        <button
+          onClick={toggleMusic}
+          style={{
+            position: 'absolute',
+            top: '20px',
+            right: '20px',
+            background: 'rgba(255,255,255,0.9)',
+            border: '1px solid #C5A367',
+            borderRadius: '50%',
+            width: '48px',
+            height: '48px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            cursor: 'pointer',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.1)',
+            zIndex: 10
+          }}
+          title={isPlaying ? '关闭音乐' : '播放音乐'}
+        >
+          <Music size={24} color={isPlaying ? '#B22222' : '#999'} />
+        </button>
         <div style={{ width: '60px', height: '2px', backgroundColor: '#C5A367', margin: '0 auto 25px', opacity: 0.6 }} />
         <div style={{ fontSize: '10px', color: '#999', letterSpacing: '3px', marginBottom: '15px', textTransform: 'uppercase' }}>Chinese Naming</div>
         <div style={{ display: 'inline-flex', alignItems: 'center', gap: '3px', marginBottom: '12px' }}>
@@ -576,7 +585,7 @@ export default function Home() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  backgroundImage: 'url(https://www.transparenttextures.com/patterns/carbon-fibre.png)',
+                  backgroundImage: 'url(/chinese-naming-app/carbon-fibre.png)',
                   boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
                   position: 'relative',
                   overflow: 'hidden'
@@ -1146,7 +1155,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                backgroundImage: 'url(https://www.transparenttextures.com/patterns/black-linen.png)',
+                backgroundImage: 'url(/chinese-naming-app/black-linen.png)',
                 opacity: 0.4,
                 pointerEvents: 'none'
               }} />
