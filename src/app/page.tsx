@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import { Download, X, Smartphone, ArrowUp, Music } from 'lucide-react';
-import namesData from '../../public/chinese-naming-app/names.json';
+import namesData from '../../public/names.json';
 
 interface NameItem {
   name: string;
@@ -226,7 +226,7 @@ export default function Home() {
       const pageHeight = doc.internal.pageSize.getHeight();
 
       // 公用宣纸背景样式
-      const paperBg = `background-color: #fbf9f4; background-image: url("/chinese-naming-app/p6.png");`;
+      const paperBg = `background-color: #fbf9f4; background-image: url("/p6.png");`;
 
       // 1. 渲染豪华封面
       const coverContainer = document.createElement('div');
@@ -401,7 +401,7 @@ export default function Home() {
 
   return (
     <div style={{ minHeight: '100vh', backgroundColor: '#F9F4E8', position: 'relative' }}>
-      <audio ref={audioRef} src="/chinese-naming-app/bgm.mp3" loop />
+      <audio ref={audioRef} src="/bgm.mp3" loop />
       {/* 全局动画样式 */}
       <style jsx global>{`
         @keyframes shimmer {
@@ -445,7 +445,7 @@ export default function Home() {
       <div style={{
         position: 'fixed',
         inset: 0,
-        backgroundImage: 'url(/chinese-naming-app/p6.png)',
+        backgroundImage: 'url(/p6.png)',
         opacity: 0.5,
         pointerEvents: 'none'
       }} />
@@ -585,7 +585,7 @@ export default function Home() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'space-between',
-                  backgroundImage: 'url(/chinese-naming-app/carbon-fibre.png)',
+                  backgroundImage: 'url(/carbon-fibre.png)',
                   boxShadow: '0 10px 20px rgba(0,0,0,0.2)',
                   position: 'relative',
                   overflow: 'hidden'
@@ -1155,7 +1155,7 @@ export default function Home() {
               <div style={{
                 position: 'absolute',
                 inset: 0,
-                backgroundImage: 'url(/chinese-naming-app/black-linen.png)',
+                backgroundImage: 'url(/black-linen.png)',
                 opacity: 0.4,
                 pointerEvents: 'none'
               }} />
