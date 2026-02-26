@@ -1,15 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* 允许在开发环境下加载图片 */
-  images: {
-    unoptimized: true,
-  },
-  
-  /* 确保 Turbopack 能够正确识别根目录 */
-  turbopack: {
-    root: '.',
-  },
+  // 这里什么都不用写，全权交给 Vercel 自动处理
 };
 
 export default nextConfig;
